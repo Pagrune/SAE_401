@@ -724,6 +724,9 @@ footer .footer_copyright p {
   h1 span {
     font-size: 90px;
   }
+  p {
+    font-size: 24px;
+  }
   header {
     position: initial;
   }
@@ -1218,7 +1221,13 @@ footer .footer_copyright p {
     margin-right: auto;
   }
   #connexion h1 {
-    width: 27%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #connexion form label {
     font-size: 50px;
@@ -1228,15 +1237,15 @@ footer .footer_copyright p {
     margin-right: auto;
   }
   #connexion form input {
-    height: 4vh;
+    height: 7vh;
   }
   #connexion form #me_connecter {
-    width: 28%;
-    height: 4.5vh;
+    width: 32%;
+    height: 10.5vh;
     padding-left: 0;
   }
   #connexion .no_account {
-    width: 36%;
+    width: 52%;
   }
   @-webkit-keyframes slider_animation {
     0% {
