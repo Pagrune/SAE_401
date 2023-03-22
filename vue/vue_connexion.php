@@ -12,7 +12,7 @@
             </label>
             <input id="me_connecter" name="me_connecter" type="submit" value="Me connecter">
         </form>
-        <div>
+        <div class="no_account">
             <p>
                 Je n'ai pas de compte ?
             </p>
