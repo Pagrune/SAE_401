@@ -524,22 +524,26 @@ footer .footer_copyright p {
   width: 100%;
 }
 
-#politique {
+#politique,
+#mention {
   padding-top: 12vh;
   padding-bottom: 4vh;
   margin-left: 4%;
   margin-right: 4%;
 }
 
-#politique h1 {
+#politique h1,
+#mention h1 {
   font-size: 80px;
 }
 
-#politique h2 {
+#politique h2,
+#mention h2 {
   font-size: 40px;
 }
 
-#politique a {
+#politique a,
+#mention a {
   color: #F3A93E;
   text-decoration: none;
   font-weight: bold;
