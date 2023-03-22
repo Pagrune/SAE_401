@@ -523,6 +523,77 @@ footer .footer_copyright p {
   width: 100%;
 }
 
+#connexion {
+  padding-top: 12vh;
+  padding-bottom: 8vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#connexion h1 {
+  font-size: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+#connexion form {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 4vh;
+}
+
+#connexion form label {
+  font-size: 50px;
+  margin-bottom: 1vh;
+}
+
+#connexion form input {
+  width: 100%;
+  height: 3vh;
+  font-size: 30px;
+  padding-left: 4%;
+  border: solid 4px black;
+}
+
+#connexion form #me_connecter {
+  background-color: #AA8773;
+  color: white;
+  width: 80%;
+  height: 3vh;
+  font-size: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#connexion .no_account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 30px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#connexion .no_account a {
+  font-size: 40px;
+  color: #F3A93E;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 #cadeau,
 #contact {
   padding-top: 12vh;
@@ -652,6 +723,9 @@ footer .footer_copyright p {
   }
   h1 span {
     font-size: 90px;
+  }
+  p {
+    font-size: 24px;
   }
   header {
     position: initial;
@@ -1140,6 +1214,38 @@ footer .footer_copyright p {
   #contact .block-1 .block-cadeau form #message_contact,
   #contact .block-1 .block-contact form #message_contact {
     height: 16vh;
+  }
+  #connexion {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #connexion h1 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #connexion form label {
+    font-size: 50px;
+    margin-bottom: 1vh;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #connexion form input {
+    height: 7vh;
+  }
+  #connexion form #me_connecter {
+    width: 32%;
+    height: 10.5vh;
+    padding-left: 0;
+  }
+  #connexion .no_account {
+    width: 52%;
   }
   @-webkit-keyframes slider_animation {
     0% {

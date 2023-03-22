@@ -40,7 +40,7 @@
             <input type="password" id="mdp_confirm" name="mdp_confirm" placeholder="Confirmer mon mot de passe" required>
         </label>
         <div>
-            <input type="checkbox" id="accept_pol" name="accept_pol" checked>
+            <input type="checkbox" id="accept_pol" name="accept_pol" checked required>
             <label for="accept_pol">J'accepte la 
                 <a href="">politique de confidentialité </a>
             </label>
