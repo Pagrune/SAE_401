@@ -5,6 +5,7 @@ require "ctlPage.class.php";
 require "ctlClient.class.php";
 require "ctlAventure.class.php";
 require 'ctlCadeaux.class.php';
+require 'CtlConnexion.class.php';
 
 class ctlRouteur
 {
@@ -16,6 +17,7 @@ class ctlRouteur
     private $ctlClient;
     private $ctlCPage;
     private $ctlCadeau;
+    private $ctlConnexion;
 
 
 
@@ -32,6 +34,7 @@ class ctlRouteur
         $this->ctlEscGame = new ctlAventure();
         $this->ctlPage = new ctlPage();
         $this->ctlCadeau= new ctlCadeau();
+        $this->ctlConnexion= new ctlConnexion();
     }
 
 
@@ -51,7 +54,7 @@ class ctlRouteur
                     //affichage page profil si le client est connecté 
                     //sinon affichage de la page de connexion/création de compte
                     case "connexion" : 
-                        // $this->ctlClient->connexion();
+                        $this->ctlConnexion->connexion_user();
                         break;
 
                     //affichage page paiement    
