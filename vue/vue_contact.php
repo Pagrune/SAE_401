@@ -21,7 +21,7 @@
                 <label for="message_contact">
                     <input type="text" id="message_contact" name="message_contact" placeholder="Votre message">
                 </label>
-                <input id="submit_contact" name="achat_carte" type="submit" value="Envoyer">
+                <input id="submit_contact" name="submit_contact" type="submit" value="Envoyer">
             </form>
     </div>
 </div>
