@@ -54,7 +54,13 @@ class ctlRouteur
                     //affichage page profil si le client est connecté 
                     //sinon affichage de la page de connexion/création de compte
                     case "connexion" : 
-                        $this->ctlConnexion->connexion_user();
+                        if(!isset($_GET["verif"]))
+                            $this->ctlConnexion->connexion_user();
+                        else
+                            if($_GET["verif"]==true)
+                            $this->ctlConnexion->connexion_check();
+                            else
+                            $this->ctlConnexion->connexion_user();
                         break;
 
                     //affichage page paiement    

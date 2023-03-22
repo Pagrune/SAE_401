@@ -3,7 +3,7 @@
         <h1>
             Connexion
         </h1>
-        <form action="">
+        <form action="index.php?action=connexion&verif=true" method='post'>
             <label for="identifiant">
                 <input type="text" id="identifiant" name="identifiant" placeholder="Votre email d'identification" >
             </label>
@@ -12,6 +12,11 @@
             </label>
             <input id="me_connecter" name="me_connecter" type="submit" value="Me connecter">
         </form>
+        <?php
+        if(!empty($message_erreur)){
+           echo $message_erreur;
+        }
+        ?>
         <div>
             <p>
                 Je n'ai pas de compte ?
