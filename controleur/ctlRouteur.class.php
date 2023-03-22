@@ -60,7 +60,7 @@ class ctlRouteur
                             if($_GET["verif"]==true)
                             $this->ctlConnexion->connexion_check();
                             else
-                            $this->ctlConnexion->connexion_user();
+                            
                         break;
 
                     //affichage page paiement    
