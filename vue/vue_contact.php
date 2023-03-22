@@ -10,10 +10,10 @@
                     <input type="text" id="nom_contact" name="nom_contact" placeholder="Votre nom">
                 </label>
                 <label for="email_contact">
-                    <input type="text" id="email_contact" name="email_contact" placeholder="Votre email">
+                    <input type="email" id="email_contact" name="email_contact" placeholder="Votre email">
                 </label>
                 <label for="tel_contact">
-                    <input type="text" id="tel_contact" name="tel_contact" placeholder="Votre numéro de téléphone">
+                    <input type="tel" id="tel_contact" name="tel_contact" placeholder="Votre numéro de téléphone">
                 </label>
                 <label for="sujet_contact">
                     <input type="text" id="sujet_contact" name="sujet_contact" placeholder="Sujet">
