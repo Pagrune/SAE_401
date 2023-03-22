@@ -14,10 +14,10 @@ class cadeau extends database {
     Retour : 
         affichage de la page cadeau      
   *******************************************************/
-    public function EnregCadeau(){
-      $req="INSERT INTO `carte_cadeau` ('carte_id',carte_client_id',carte_value') VALUES (1,1,1);";
-      $cadeaux = $this->execReq($req);
-      var_dump($cadeaux);
+    public function enregCadeau($value_carte, $code){
+      $req="INSERT INTO `carte_cadeau` (carte_client_id, carte_code,carte_value) VALUES (?,?,?)";
+      $cadeaux = $this->execReqPrep($req, [1, $code,$value_carte]);
+      return $cadeaux;
     }
 
 

@@ -64,4 +64,14 @@ abstract class database {
 
     return $this->bdd;
   }
+
+
+  public static function random_string($length=12){
+    $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $string = '';
+    for($i=0; $i<$length; $i++){
+        $string .= $chars[rand(0, strlen($chars)-1)];
+    }
+    return $string;
+}
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement

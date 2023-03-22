@@ -15,9 +15,12 @@ class CtlCadeau{
         $vue->afficher(array());
     }
 
-    public function EnregCadeau(){
-        $new_carte=$this->cadeau->enregCadeau();
-
+    public function EnregCadeau($value_cadeau){
+        $code=database::random_string();
+        var_dump($code);
+        $new_carte=$this->cadeau->enregCadeau($value_cadeau, $code);
+        var_dump($new_carte);
+        $this->cadeau();
     }
 
 }

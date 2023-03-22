@@ -165,7 +165,7 @@
                 </p>
                 <div class="button_ensavoir">
                     <button class="button_plus">
-                        <a href="index.php?action=aventure;id_game=<?=$game["game_id"]?>">En savoir plus</a>
+                        <a href="index.php?action=aventure&id_game=<?=$game["game_id"]?>">En savoir plus</a>
                     </button>
                 </div>
             </div>
@@ -383,7 +383,7 @@
                 </p>
                 <div class="button_ensavoir">
                     <button class="button_plus">
-                        <a href="index.php?action=aventure;id_game=<?=$game["game_id"]?>">En savoir plus</a>
+                        <a href="index.php?action=aventure&id_game=<?=$game["game_id"]?>">En savoir plus</a>
                     </button>
                 </div>
             </div>

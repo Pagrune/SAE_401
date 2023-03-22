@@ -58,7 +58,11 @@ class ctlRouteur
                     case 'paiement':
                         return true;
                         break;
-                        
+                    
+
+                        case "faq":
+                            $this->ctlPage->faq();
+                        break;
                     //affichage page aventures     
                     case "aventures":
                         // require "vue/vue_aventure.php";
@@ -69,7 +73,9 @@ class ctlRouteur
                         break;
                     
                     case "enregcadeaux":
-                        $this->ctlCadeau->enregCadeau();
+                        var_dump($_POST["value_cadeau"]);
+                        $this->ctlCadeau->EnregCadeau($_POST["value_cadeau"]);
+                        break;
 
                     //affichage page aventure information avec vérif de l'id du jeu à afficher    
                     case "aventure":
@@ -80,12 +86,7 @@ class ctlRouteur
                             $this->ctlPage->accueil();///faire la gestion d'erreur avec Zoé
                         }
                         break;
-                       
-                    //affichage page faq    
-                    case "faq":
-                        require "vue/vue_faq.php";
-                        break;
-
+                    
                     //affichage page contact 
                     case "contact":
                         $this->ctlPage->contact();
@@ -101,6 +102,24 @@ class ctlRouteur
                         //     $this -> ctlPage-> connection();
                         // }
                         break;
+
+
+                        //////***************** page CMS ****************////////////
+                       
+                        //affichage page faq    
+                        case "cgv":
+                            $this->ctlPage->cgv();
+                        break;
+                        case "mentions":
+                            $this->ctlPage->mentions();
+                        break;
+                        case "politique":
+                            $this->ctlPage->confi();
+                        break;
+
+
+
+
 
                     default:
                         $this->ctlPage->accueil();
