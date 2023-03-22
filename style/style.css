@@ -587,6 +587,22 @@ footer .footer_copyright p {
   height: 16vh;
 }
 
+#cadeau .block-1 .block-cadeau form input[type=tel], #cadeau .block-1 .block-contact form input[type=tel],
+#contact .block-1 .block-cadeau form input[type=tel],
+#contact .block-1 .block-contact form input[type=tel] {
+  width: 100%;
+  height: 4vh;
+  font-size: 30px;
+}
+
+#cadeau .block-1 .block-cadeau form input[type=email], #cadeau .block-1 .block-contact form input[type=email],
+#contact .block-1 .block-cadeau form input[type=email],
+#contact .block-1 .block-contact form input[type=email] {
+  width: 100%;
+  height: 4vh;
+  font-size: 30px;
+}
+
 #cadeau .block-1 .block-cadeau form input[type=submit], #cadeau .block-1 .block-contact form input[type=submit],
 #contact .block-1 .block-cadeau form input[type=submit],
 #contact .block-1 .block-contact form input[type=submit] {
@@ -1102,6 +1118,20 @@ footer .footer_copyright p {
   #cadeau .block-1 .block-cadeau form input[type=text], #cadeau .block-1 .block-contact form input[type=text],
   #contact .block-1 .block-cadeau form input[type=text],
   #contact .block-1 .block-contact form input[type=text] {
+    width: 100%;
+    height: 4vh;
+    font-size: 30px;
+  }
+  #cadeau .block-1 .block-cadeau form input[type=tel], #cadeau .block-1 .block-contact form input[type=tel],
+  #contact .block-1 .block-cadeau form input[type=tel],
+  #contact .block-1 .block-contact form input[type=tel] {
+    width: 100%;
+    height: 4vh;
+    font-size: 30px;
+  }
+  #cadeau .block-1 .block-cadeau form input[type=email], #cadeau .block-1 .block-contact form input[type=email],
+  #contact .block-1 .block-cadeau form input[type=email],
+  #contact .block-1 .block-contact form input[type=email] {
     width: 100%;
     height: 4vh;
     font-size: 30px;
