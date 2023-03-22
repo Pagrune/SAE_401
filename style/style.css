@@ -23,15 +23,16 @@ h1 span {
 .button_plus {
   padding: 2%;
   width: 70%;
-  border: #3E3535 5px solid;
-  border-radius: 5px;
+  border: none;
   background-color: #F3A93E;
+  color: white;
   cursor: pointer;
 }
 
 .button_plus a {
   font-size: 24px;
   font-family: "Roboto Slab", serif;
+  font-weight: bold;
 }
 
 p {
@@ -523,6 +524,27 @@ footer .footer_copyright p {
   width: 100%;
 }
 
+#politique {
+  padding-top: 12vh;
+  padding-bottom: 4vh;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+#politique h1 {
+  font-size: 80px;
+}
+
+#politique h2 {
+  font-size: 40px;
+}
+
+#politique a {
+  color: #F3A93E;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 #connexion {
   padding-top: 12vh;
   padding-bottom: 8vh;
@@ -650,6 +672,7 @@ footer .footer_copyright p {
   width: 100%;
   height: 4vh;
   font-size: 50px;
+  padding-left: 4%;
 }
 
 #cadeau .block-1 .block-cadeau form #message_contact, #cadeau .block-1 .block-contact form #message_contact,
@@ -664,6 +687,7 @@ footer .footer_copyright p {
   width: 100%;
   height: 4vh;
   font-size: 30px;
+  padding-left: 4%;
 }
 
 #cadeau .block-1 .block-cadeau form input[type=email], #cadeau .block-1 .block-contact form input[type=email],
@@ -672,6 +696,7 @@ footer .footer_copyright p {
   width: 100%;
   height: 4vh;
   font-size: 30px;
+  padding-left: 4%;
 }
 
 #cadeau .block-1 .block-cadeau form input[type=submit], #cadeau .block-1 .block-contact form input[type=submit],
@@ -815,7 +840,7 @@ footer .footer_copyright p {
   footer .footer_navigation a {
     text-decoration: none;
     color: black;
-    font-size: initial;
+    font-size: 24px;
     margin-bottom: 0;
   }
   footer .footer_navigation p {
@@ -848,6 +873,11 @@ footer .footer_copyright p {
   #aventures,
   #cadeau {
     padding-top: 6vh;
+  }
+  #home strong,
+  #aventures strong,
+  #cadeau strong {
+    font-size: 24px;
   }
   #home .block-1,
   #aventures .block-1,
@@ -929,7 +959,7 @@ footer .footer_copyright p {
   #home .block-3 .block-news .news-right .button_news .button_plus a,
   #aventures .block-3 .block-news .news-right .button_news .button_plus a,
   #cadeau .block-3 .block-news .news-right .button_news .button_plus a {
-    font-size: initial;
+    font-size: 30px;
   }
   #home .block-3 .block-avis h3,
   #aventures .block-3 .block-avis h3,
@@ -1034,7 +1064,7 @@ footer .footer_copyright p {
   #home .block-3 .block-popular .popular_button .button_plus a,
   #aventures .block-3 .block-popular .popular_button .button_plus a,
   #cadeau .block-3 .block-popular .popular_button .button_plus a {
-    font-size: initial;
+    font-size: 30px;
   }
   #home .block-4,
   #aventures .block-4,
