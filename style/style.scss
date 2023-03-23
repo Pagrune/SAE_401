@@ -578,8 +578,11 @@ footer{
                     height: 4vh;
                     font-size: 50px;
                 }
+                input{
+                    border: solid 4px black;
+                }
                 input[type=text]{
-                    width: 100%;
+                    width: 95%;
                     height: 4vh;
                     font-size: 50px;
                     padding-left: 4%;
@@ -588,15 +591,15 @@ footer{
                     height: 16vh;
                 }
                 input[type=tel]{
-                    width: 100%;
+                    width: 95%;
                     height: 4vh;
-                    font-size: 30px;
+                    font-size: 50px;
                     padding-left: 4%;
                 }
                 input[type=email]{
-                    width: 100%;
+                    width: 95%;
                     height: 4vh;
-                    font-size: 30px;
+                    font-size: 50px;
                     padding-left: 4%;
                 }
                 input[type=submit]{
@@ -963,18 +966,21 @@ footer{
                 form{
                     display: grid;
                     label{
-                        font-size: 30px;
+                        font-size: 20px;
                         margin-bottom: 2%;
+                    }
+                    input{
+                        border: solid 3px black;
                     }
                     input[type=number]{
                         width: 10vw;
                         height: 4vh;
-                        font-size: 30px;
+                        font-size: 20px;
                     }
                     input[type=submit]{
                         width: 70%;
                         height: 6vh;
-                        font-size: 30px;
+                        font-size: 20px;
                         border: none;
                         background-color: $jaune;
                         color: white;
@@ -983,17 +989,17 @@ footer{
                     input[type=text]{
                         width: 100%;
                         height: 4vh;
-                        font-size: 30px;
+                        font-size: 20px;
                     }
                     input[type=tel]{
                         width: 100%;
                         height: 4vh;
-                        font-size: 30px;
+                        font-size: 20px;
                     }
                     input[type=email]{
                         width: 100%;
                         height: 4vh;
-                        font-size: 30px;
+                        font-size: 20px;
                     }
                     #message_contact{
                         height: 16vh;
@@ -1036,6 +1042,11 @@ footer{
                 padding-left: 0;
                 font-size: 34px;
             }
+            #pays_connex{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+            }
         }
         a{
             font-size: 30px;
@@ -1065,6 +1076,8 @@ footer{
             }
             input{
                 height: 7vh;
+                font-size: 20px;
+                border: solid 2px black;
             }
             #me_connecter{
                 width: 32%;
@@ -1074,7 +1087,10 @@ footer{
             }
         }
         .no_account{
-            width: 52%;
+            width: 45%;
+            a{
+                font-size: 30px;
+            }
         }
     }
 
