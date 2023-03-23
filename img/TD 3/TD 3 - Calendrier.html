@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {}
+
+        .cal {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        .cal>div {
+            padding: 10px;
+            outline: 1px solid #777;
+        }
+
+        .Dimanche,
+        .Samedi {
+            color: red;
+        }
+
+        .Mardi:nth-child(1) {
+            grid-column-start: 2;
+        }
+
+        .Mercredi:nth-child(1) {
+            grid-column-start: 3;
+        }
+
+        .Jeudi:nth-child(1) {
+            grid-column-start: 4;
+        }
+
+        .Vendredi:nth-child(1) {
+            grid-column-start: 5;
+        }
+
+        .Samedi:nth-child(1) {
+            grid-column-start: 6;
+        }
+
+        .Dimanche:nth-child(1) {
+            grid-column-start: 7;
+        }
+
+        .btn_nuit {
+            margin-left: 50px;
+        }
+
+        .nuit {
+            background: #424242;
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <button class=btn_moins>-</button>
+    <button class=btn_plus>+</button>
+
+    <button class=btn_nuit>Mode Nuit</button>
+    <div class="cal"></div>
+
+
+    <script>
+        /* var d = new Date();
+         console.log(d.toLocaleDateString());
+         d.setDate(d.getDate() + 1);
+         console.log(d.toLocaleDateString());
+ 
+         let dates = [];
+         let jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
+         for(var i=0 ; i<100 ; i++){
+             d.setDate(d.getDate() + 1)
+             dates.push([
+                 jours[d.getDay()],
+                 d.toLocaleDateString()
+             ]);
+         }
+         // document.body.innerHTML = String(dates).replace(/,/g, "<br>");
+         dates.forEach(function(e){
+             document.body.innerHTML += `<div class="${e[0]}">${e[0] + e[1]}</div>`
+         });*/
+
+        var currentDate = new Date();
+        let jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
+        currentDate.setDate(1);
+
+        function AfficherMois() {
+            var temp = new Date(currentDate);
+            var output = "";
+            for (var i = 0, fin = FinDuMois(); i < fin; i++) {
+                output += `
+                    <div class="${jours[temp.getDay()]}" data-date="${temp.toLocaleDateString()}">
+                        <div>${temp.toLocaleDateString()}</div>
+                        <textarea>${localStorage.getItem(temp.toLocaleDateString()) || ""}</textarea>
+                    </div>`
+                temp.setDate(temp.getDate() + 1);
+            }
+            document.querySelector(".cal").innerHTML = output;
+            document.querySelectorAll("textarea").forEach(function (e) {
+                e.addEventListener("change", saveData)
+            })
+        }
+
+        function FinDuMois() {
+            var temp = new Date(currentDate.getYear(), currentDate.getMonth() + 1, 0);
+            return temp.getDate();
+        }
+
+
+        document.querySelector(".btn_plus").addEventListener("click", function () {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            AfficherMois();
+        })
+        document.querySelector(".btn_moins").addEventListener("click", function () {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            AfficherMois();
+        })
+
+        AfficherMois();
+        /*****************/
+        /* Gestion du jour nuit */
+        /*****************/
+        document.querySelector(".btn_nuit").addEventListener("click", function () {
+            document.querySelector("body").classList.toggle("nuit");
+            if (localStorage.nuit) {
+                localStorage.removeItem("nuit");
+            } else {
+                localStorage.nuit = "nuit";
+            }
+        })
+
+        if (localStorage.nuit) {
+            document.querySelector("body").classList.add("nuit");
+        }
+        /*****************/
+        /* Gestion des datas */
+        /*****************/
+        function saveData() {
+            localStorage.setItem(this.parentElement.dataset.date, this.value);
+            fetch(`TD3-save.php?date=${this.parentElement.dataset.date}&value=${this.value}`) 
+                .then(function (response) { 
+                    return response.text();
+                })
+                .then(function (txt) {
+                    console.log(txt);
+                });
+        }
+    </script>
+</body>
+
+</html>

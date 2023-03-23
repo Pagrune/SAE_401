@@ -27,6 +27,10 @@ h1{
     }
 }
 
+p{
+    font-size: 20px;
+}
+
 .button_plus{
     padding: 2%;
     width: 70%;
@@ -50,6 +54,7 @@ p{
 header{
     height: 12vh;
     position: fixed;
+    background-image: url("../img/background/fond.jpg");
     .header_logo{
         display: flex;
         a{
@@ -550,6 +555,179 @@ footer{
             text-decoration: none;
             font-weight: bold;
         }
+    }
+}
+
+#aventure_solo{
+    padding-top: 12vh;
+    padding-bottom: 8vh;
+    h2{
+        background-color: $beige;
+        color: white;
+        padding: 1%;
+        font-size: 24px;
+        font-family: $roboto;
+        padding-left: 4%;
+    }
+    .block-1{
+        img{
+            width: 100%;
+        }
+        h1{
+            padding-left: 4%;
+        }
+    }
+    .block-2{
+        img{
+            width: 100%;
+        }
+        .descr{
+            margin: 4%;
+        }
+    }
+    .toggle-calendar{
+        .cal {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            width: 50vw;
+            padding: 3%;
+        }
+
+        .cal>div {
+            padding: 10px;
+            outline: 1px solid #777;
+        }
+
+        .Mardi:nth-child(1) {
+            grid-column-start: 2;
+        }
+
+        .Mercredi:nth-child(1) {
+            grid-column-start: 3;
+        }
+
+        .Jeudi:nth-child(1) {
+            grid-column-start: 4;
+        }
+
+        .Vendredi:nth-child(1) {
+            grid-column-start: 5;
+        }
+
+        .Samedi:nth-child(1) {
+            grid-column-start: 6;
+        }
+
+        .Dimanche:nth-child(1) {
+            grid-column-start: 7;
+        }
+
+    }
+    table{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid black 2px;
+        padding: 2%;
+        td{
+            font-size: 24px;
+            padding: 2%;
+        }
+    }
+    .creneau_offre{
+        display: grid;
+        .offrir{
+            background-color: white;
+            border: solid black 3px;
+            height: 6vh;
+            width: 70vw;
+            margin-left: auto;
+            margin-right: auto;
+            a{
+                font-size: 40px;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+               
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 70px;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+        }
+    }
+
+    .resa_aventure{
+        h3{
+            background-color: $jaune;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+            width: 70vw;
+            font-size: 40px;
+            color: white;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .choix{
+        display: grid;
+        grid-template-columns: 10% auto;
+        align-items: center;
+        padding-left: 4%;
+        width: 90%;
+        p{
+            font-size: 50px;
+        }
+    }
+    .choix_horraire{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        form{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3vw;
+            justify-items: center;
+            div{
+                border: solid black 2px;
+                height: 3vh;
+                width: 9vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                label{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .block-avantage{
+        .grid_avantage{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            .icon_avant{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                width: 80%;
+                gap: 3vw;
+                span{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                p{
+                    margin-top: 0.5vh;
+                }
+            }
+        }   
     }
 }
 
