@@ -50,6 +50,9 @@
     <?php
     if(isset($message)){
         echo $message;
+        if(isset($valeur)){
+            var_dump($valeur);
+        }
     }
     ?>
 </div>
