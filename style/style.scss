@@ -576,6 +576,44 @@ footer{
         h1{
             padding-left: 4%;
         }
+        .grid_genre{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 8vw;
+            .genre{
+                border: solid black 3px;
+                background: white;
+                text-align: center;
+                padding: 2vh;
+                margin: 10%;
+                p{
+                    margin: 0;
+                    text-align: center;
+                }
+                strong{
+                    text-align: center;
+                }
+            }
+        }
+        .flexitude{
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            p{
+                font-size: 40px;
+                margin-left: 4%;
+            }
+        }
+        .dif_aventure{
+            span{
+                font-weight: bold;
+                font-size: 24px;
+                padding-left: 4%;
+            }
+        }
     }
     .block-2{
         img{
@@ -662,8 +700,8 @@ footer{
     .resa_aventure{
         h3{
             background-color: $jaune;
-            padding-top: 3vh;
-            padding-bottom: 3vh;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
             width: 70vw;
             font-size: 40px;
             color: white;
@@ -702,6 +740,23 @@ footer{
                 label{
                     font-size: 20px;
                 }
+            }
+        }
+    }
+    .groupe_choix{
+        display: grid;
+        grid-template-columns: 10% auto;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        input{
+            width: 3vw;
+        }
+        label{
+            display: flex;
+            justify-content: space-between;
+            p{
+                font-size: 28px;
             }
         }
     }
@@ -1269,6 +1324,174 @@ footer{
             a{
                 font-size: 30px;
             }
+        }
+    }
+
+    #aventure_solo{
+        padding-top: 12vh;
+        padding-bottom: 8vh;
+        h2{
+            background-color: $beige;
+            color: white;
+            padding: 1%;
+            font-size: 24px;
+            font-family: $roboto;
+            padding-left: 4%;
+        }
+        .block-1{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            img{
+                width: 100%;
+            }
+            h1{
+                padding-left: 4%;
+            }
+            .grid_genre{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                gap: 8vw;
+                .genre{
+                    border: solid black 3px;
+                    background: white;
+                    text-align: center;
+                    padding: 2vh;
+                    margin: 10%;
+                    p{
+                        margin: 0;
+                        text-align: center;
+                    }
+                    strong{
+                        text-align: center;
+                    }
+                }
+            }
+            .flexitude{
+                p{
+                    margin: 2%;
+                    font-size: 30px;
+                }
+            }
+            .dif_aventure{
+                span{
+                    font-weight: bold;
+                    font-size: 24px;
+                    padding-left: 4%;
+                }
+            }
+        }
+        .block-2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            img{
+                width: 100%;
+            }
+            .descr{
+                margin: 4%;
+            }
+        }
+        .toggle-calendar{
+            .cal {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                width: 50vw;
+                padding: 3%;
+            }
+    
+            .cal>div {
+                padding: 10px;
+                outline: 1px solid #777;
+            }
+    
+            .Mardi:nth-child(1) {
+                grid-column-start: 2;
+            }
+    
+            .Mercredi:nth-child(1) {
+                grid-column-start: 3;
+            }
+    
+            .Jeudi:nth-child(1) {
+                grid-column-start: 4;
+            }
+    
+            .Vendredi:nth-child(1) {
+                grid-column-start: 5;
+            }
+    
+            .Samedi:nth-child(1) {
+                grid-column-start: 6;
+            }
+    
+            .Dimanche:nth-child(1) {
+                grid-column-start: 7;
+            }
+    
+        }
+        table{
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid black 2px;
+            padding: 2%;
+            td{
+                font-size: 24px;
+                padding: 2%;
+            }
+        }
+        .creneau_offre{
+            display: grid;
+            .offrir{
+                background-color: white;
+                border: solid black 3px;
+                height: 6vh;
+                width: 70vw;
+                margin-left: auto;
+                margin-right: auto;
+                a{
+                    font-size: 40px;
+                    text-decoration: none;
+                    color: black;
+                    font-weight: bold;
+                   
+                }
+            }
+            p{
+                text-align: center;
+                font-size: 70px;
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+            }
+        }
+        .block-3{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        
+        .resa_aventure{
+            h3{
+                width: 45vw;
+            }
+        }
+        .choix_horraire{
+            form{
+                div{
+                    height: 9vh;
+                    width: 9vw;
+                }
+            }
+        }
+        .groupe_choix{
+            width: 60%;
+            input{
+                width: 1.5vw;
+            }
+        }
+        .block-avantage{
+            .grid_avantage{
+                grid-template-columns: 1fr 1fr 1fr;
+            }   
         }
     }
 

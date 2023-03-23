@@ -719,6 +719,57 @@ footer .footer_copyright p {
   padding-left: 4%;
 }
 
+#aventure_solo .block-1 .grid_genre {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8vw;
+}
+
+#aventure_solo .block-1 .grid_genre .genre {
+  border: solid black 3px;
+  background: white;
+  text-align: center;
+  padding: 2vh;
+  margin: 10%;
+}
+
+#aventure_solo .block-1 .grid_genre .genre p {
+  margin: 0;
+  text-align: center;
+}
+
+#aventure_solo .block-1 .grid_genre .genre strong {
+  text-align: center;
+}
+
+#aventure_solo .block-1 .flexitude {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#aventure_solo .block-1 .flexitude p {
+  font-size: 40px;
+  margin-left: 4%;
+}
+
+#aventure_solo .block-1 .dif_aventure span {
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 4%;
+}
+
 #aventure_solo .block-2 img {
   width: 100%;
 }
@@ -814,8 +865,8 @@ footer .footer_copyright p {
 
 #aventure_solo .resa_aventure h3 {
   background-color: #F3A93E;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   width: 70vw;
   font-size: 40px;
   color: white;
@@ -872,6 +923,33 @@ footer .footer_copyright p {
 
 #aventure_solo .choix_horraire form div label {
   font-size: 20px;
+}
+
+#aventure_solo .groupe_choix {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% auto;
+      grid-template-columns: 10% auto;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#aventure_solo .groupe_choix input {
+  width: 3vw;
+}
+
+#aventure_solo .groupe_choix label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#aventure_solo .groupe_choix label p {
+  font-size: 28px;
 }
 
 #aventure_solo .block-avantage .grid_avantage {
@@ -1647,6 +1725,169 @@ footer .footer_copyright p {
   }
   #connexion .no_account a {
     font-size: 30px;
+  }
+  #aventure_solo {
+    padding-top: 12vh;
+    padding-bottom: 8vh;
+  }
+  #aventure_solo h2 {
+    background-color: #AA8773;
+    color: white;
+    padding: 1%;
+    font-size: 24px;
+    font-family: "Roboto Slab", serif;
+    padding-left: 4%;
+  }
+  #aventure_solo .block-1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  #aventure_solo .block-1 img {
+    width: 100%;
+  }
+  #aventure_solo .block-1 h1 {
+    padding-left: 4%;
+  }
+  #aventure_solo .block-1 .grid_genre {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 8vw;
+  }
+  #aventure_solo .block-1 .grid_genre .genre {
+    border: solid black 3px;
+    background: white;
+    text-align: center;
+    padding: 2vh;
+    margin: 10%;
+  }
+  #aventure_solo .block-1 .grid_genre .genre p {
+    margin: 0;
+    text-align: center;
+  }
+  #aventure_solo .block-1 .grid_genre .genre strong {
+    text-align: center;
+  }
+  #aventure_solo .block-1 .flexitude p {
+    margin: 2%;
+    font-size: 30px;
+  }
+  #aventure_solo .block-1 .dif_aventure span {
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 4%;
+  }
+  #aventure_solo .block-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  #aventure_solo .block-2 img {
+    width: 100%;
+  }
+  #aventure_solo .block-2 .descr {
+    margin: 4%;
+  }
+  #aventure_solo .toggle-calendar .cal {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[7];
+        grid-template-columns: repeat(7, 1fr);
+    width: 50vw;
+    padding: 3%;
+  }
+  #aventure_solo .toggle-calendar .cal > div {
+    padding: 10px;
+    outline: 1px solid #777;
+  }
+  #aventure_solo .toggle-calendar .Mardi:nth-child(1) {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+  #aventure_solo .toggle-calendar .Mercredi:nth-child(1) {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+  }
+  #aventure_solo .toggle-calendar .Jeudi:nth-child(1) {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+  }
+  #aventure_solo .toggle-calendar .Vendredi:nth-child(1) {
+    -ms-grid-column: 5;
+        grid-column-start: 5;
+  }
+  #aventure_solo .toggle-calendar .Samedi:nth-child(1) {
+    -ms-grid-column: 6;
+        grid-column-start: 6;
+  }
+  #aventure_solo .toggle-calendar .Dimanche:nth-child(1) {
+    -ms-grid-column: 7;
+        grid-column-start: 7;
+  }
+  #aventure_solo table {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid black 2px;
+    padding: 2%;
+  }
+  #aventure_solo table td {
+    font-size: 24px;
+    padding: 2%;
+  }
+  #aventure_solo .creneau_offre {
+    display: -ms-grid;
+    display: grid;
+  }
+  #aventure_solo .creneau_offre .offrir {
+    background-color: white;
+    border: solid black 3px;
+    height: 6vh;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #aventure_solo .creneau_offre .offrir a {
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  #aventure_solo .creneau_offre p {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+  #aventure_solo .block-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  #aventure_solo .resa_aventure h3 {
+    width: 45vw;
+  }
+  #aventure_solo .choix_horraire form div {
+    height: 9vh;
+    width: 9vw;
+  }
+  #aventure_solo .groupe_choix {
+    width: 60%;
+  }
+  #aventure_solo .groupe_choix input {
+    width: 1.5vw;
+  }
+  #aventure_solo .block-avantage .grid_avantage {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
   @-webkit-keyframes slider_animation {
     0% {
