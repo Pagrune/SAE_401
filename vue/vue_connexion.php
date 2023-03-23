@@ -21,7 +21,7 @@
             <p>
                 Je n'ai pas de compte ?
             </p>
-            <a href="">
+            <a href="index.php?action=crea_compte">
                 Créer votre compte
             </a>
         </div>
