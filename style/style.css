@@ -1325,6 +1325,52 @@ footer .footer_copyright p {
   #contact .block-1 .block-contact form #message_contact {
     height: 16vh;
   }
+  #crea_compte form {
+    display: -ms-grid;
+    display: grid;
+  }
+  #crea_compte form label {
+    font-size: 30px;
+  }
+  #crea_compte form .block-duo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+  }
+  #crea_compte form input {
+    width: 100%;
+    height: 3vh;
+    font-size: 20px;
+    padding: 1.5vh;
+    border: solid 2px black;
+  }
+  #crea_compte form .pol_check {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10% auto;
+        grid-template-columns: 10% auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2vh;
+  }
+  #crea_compte form .pol_check input {
+    margin-bottom: 0;
+  }
+  #crea_compte form #submit_compte {
+    width: 32%;
+    height: 8.5vh;
+    padding-left: 0;
+    font-size: 34px;
+  }
+  #crea_compte a {
+    font-size: 30px;
+    color: #F3A93E;
+    text-decoration: none;
+    font-weight: bold;
+  }
   #connexion {
     width: 80%;
     margin-left: auto;

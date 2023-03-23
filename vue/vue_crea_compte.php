@@ -3,7 +3,7 @@
         Créer mon compte
     </h1>
     <form action="index.php?action=new_user" method="post">
-        <div>
+        <div class="block-duo">
             <label for="nom_connex">
                 <input type="text" id="nom_connex" name="nom_connex" placeholder="Nom" required>
             </label>
@@ -11,7 +11,7 @@
                 <input type="text" id="prenom_connex" name="prenom_connex" placeholder="Prénom" required>
             </label>
         </div>
-        <div>
+        <div class="block-duo">
             <label for="tel_contact">
                 <input type="tel" id="tel_connex" name="tel_connex" placeholder="Votre numéro de téléphone">
             </label>
@@ -22,7 +22,7 @@
         <label for="rue_connex">
             <input type="text" id="rue_connex" name="rue_connex" placeholder="N° de Rue" required>
         </label>
-        <div>
+        <div class="block-duo">
             <label for="CP_connex">
                 <input type="text" id="CP_connex" name="CP_connex" placeholder="Code Postal" required>
             </label>
@@ -39,7 +39,7 @@
         <label for="mdp_confirm">
             <input type="password" id="mdp_confirm" name="mdp_confirm_connex" placeholder="Confirmer mon mot de passe" required>
         </label>
-        <div>
+        <div class="pol_check">
             <input type="checkbox" id="accept_pol" name="accept_pol" value="true" required>
             <label for="accept_pol">J'accepte la 
                 <a href="index.php?action=politique">politique de confidentialité </a>
