@@ -30,7 +30,7 @@
         </label>
         <div class="block-duo">
             <label for="CP_connex">
-                <input type="text" id="CP_connex" <?php if(isset($code_postal)) echo'value='.$code_postal ?> name="CP_connex" placeholder="Code Postal" required>
+                <input type="number" id="CP_connex" <?php if(isset($code_postal)) echo'value='.$code_postal ?> name="CP_connex" placeholder="Code Postal" required>
             </label>
             <label for="ville_connex">
                 <input type="text" id="ville_connex" <?php if(isset($ville)) echo'value='.$ville ?> name="ville_connex" placeholder="Ville" required>
