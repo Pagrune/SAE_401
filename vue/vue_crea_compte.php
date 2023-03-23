@@ -1,7 +1,7 @@
 <?php   
-    if(isset($valeur)){
-        extract($valeur); 
-    }
+if(isset($valeur)){
+    extract($valeur);
+}
 ?>
 
 <div id="crea_compte">
@@ -11,33 +11,33 @@
     <form action="index.php?action=new_user" method="post">
         <div class="block-duo">
             <label for="nom_connex">
-                <input type="text" id="nom_connex" <?php if(isset($nom)) echo'value='.$nom ?> name="nom_connex" placeholder="Nom" required>
+                <input type="text" id="nom_connex" <?php if(isset($nom) && !empty($nom)) echo'value='.$nom ?> name="nom_connex" placeholder="Nom" required>
             </label>
             <label for="prenom_connex">
-                <input type="text" id="prenom_connex" <?php if(isset($prenom)) echo'value='.$prenom ?> name="prenom_connex" placeholder="Prénom" required>
+                <input type="text" id="prenom_connex" <?php if(isset($prenom) && !empty($prenom)) echo'value='.$prenom ?> name="prenom_connex" placeholder="Prénom" required>
             </label>
         </div>
         <div class="block-duo">
             <label for="tel_contact">
-                <input type="tel" id="tel_connex" <?php if(isset($tel)) echo'value='.$tel ?> name="tel_connex" placeholder="Votre numéro de téléphone">
+                <input type="tel" id="tel_connex" <?php if(isset($tel) && !empty($tel)) echo'value='.$tel ?> name="tel_connex" placeholder="Votre numéro de téléphone">
             </label>
             <label for="email_connex">
-                <input type="email" id="email_connex" <?php if(isset($email)) echo'value='.$email ?> name="email_connex" placeholder="Mail" required>
+                <input type="email" id="email_connex" <?php if(isset($email) && !empty($email)) echo'value='.$email ?> name="email_connex" placeholder="Mail" required>
             </label>
         </div>
         <label for="rue_connex">
-            <input type="text" id="rue_connex" <?php if(isset($rue)) echo'value='.$rue ?> name="rue_connex" placeholder="N° de Rue" required>
+            <input type="text" id="rue_connex" <?php if(isset($rue) && !empty($rue)) echo'value='.$rue ?> name="rue_connex" placeholder="N° de Rue" required>
         </label>
         <div class="block-duo">
             <label for="CP_connex">
-                <input type="text" id="CP_connex" <?php if(isset($code_postal)) echo'value='.$code_postal ?> name="CP_connex" placeholder="Code Postal" required>
+                <input type="number" id="CP_connex" <?php if(isset($code_postal) && !empty($code_postal)) echo'value='.$code_postal ?> name="CP_connex" placeholder="Code Postal" required>
             </label>
             <label for="ville_connex">
-                <input type="text" id="ville_connex" <?php if(isset($ville)) echo'value='.$ville ?> name="ville_connex" placeholder="Ville" required>
+                <input type="text" id="ville_connex" <?php if(isset($ville) && !empty($ville)) echo'value='.$ville ?> name="ville_connex" placeholder="Ville" required>
             </label>
         </div>
         <label for="pays_connex">
-            <input type="text" id="pays_connex" <?php if(isset($pays)) echo'value='.$pays ?> name="pays_connex" placeholder="Pays" required>
+            <input type="text" id="pays_connex" <?php if(isset($pays) && !empty($pays)) echo'value='.$pays ?> name="pays_connex" placeholder="Pays" required>
         </label>
         <label for="mdp_connex">
             <input type="password" id="mdp_connex" name="mdp_connex" placeholder="Mot de passe" required>
@@ -56,9 +56,6 @@
     <?php
     if(isset($message)){
         echo $message;
-        if(isset($valeur)){
-            var_dump($valeur);
-        }
     }
     ?>
 </div>
