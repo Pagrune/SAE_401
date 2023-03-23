@@ -22,53 +22,59 @@ class ctlConnexion{
 
     public function new_user(){
         $msg_erreur_champs_vide='';
-        if(empty($_POST["nom_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner votre nom';
-        }elseif(empty($_POST["prenom_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner votre nom';
-        }
-        elseif(empty($_POST["tel_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner votre numéro de téléphone';
-        }
-        elseif(empty($_POST["email_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner votre email';
-        }
-        elseif(empty($_POST["rue_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner votre adresse';
-        }
-        elseif(empty($_POST["CP_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner votre code postal';
-        }
-        elseif(empty($_POST["ville_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner votre ville';
-        }
-        elseif(empty($_POST["pays_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner votre ville';
-        }
-        elseif(empty($_POST["mdp_connex"])){
-            $msg_erreur_champs_vide.='veuillez renseigner un mot de passe';
-        }
-        elseif(empty($_POST["mdp_confirm_connex"])){
-            $msg_erreur_champs_vide.='veuillez confirmer votre mot de passe';
-        }
-        elseif(empty($_POST["accept_pol"])&&$_POST["accept_pol"]=='true'){
-            $msg_erreur_champs_vide.='veuillez confirmer votre mot de passe';
-        }
-        elseif(!empty($_POST["mdp_confirm_connex"]) && !empty($_POST["mdp_confirm_connex"])){
+        // if(empty($_POST["nom_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner votre nom';
+        // }elseif(empty($_POST["prenom_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner votre nom';
+        // }
+        // elseif(empty($_POST["tel_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner votre numéro de téléphone';
+        // }
+        // elseif(empty($_POST["email_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner votre email';
+        // }
+        // elseif(empty($_POST["rue_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner votre adresse';
+        // }
+        // elseif(empty($_POST["CP_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner votre code postal';
+        // }
+        // elseif(empty($_POST["ville_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner votre ville';
+        // }
+        // elseif(empty($_POST["pays_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner votre ville';
+        // }
+        // elseif(empty($_POST["mdp_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez renseigner un mot de passe';
+        // }
+        // elseif(empty($_POST["mdp_confirm_connex"])){
+        //     $msg_erreur_champs_vide.='veuillez confirmer votre mot de passe';
+        // }
+        // elseif(empty($_POST["accept_pol"])&&$_POST["accept_pol"]=='true'){
+        //     $msg_erreur_champs_vide.='veuillez confirmer votre mot de passe';
+        // }
+        // elseif(!empty($_POST["mdp_confirm_connex"]) && !empty($_POST["mdp_confirm_connex"])){
+        //     if($_POST["mdp_confirm_connex"]!=$_POST["mdp_connex"]){
+        //         $msg_erreur_champs_vide.='votre mot de passe doit être identique à votre confirmation de mot de passe';
+        //     }
+        // }
+        // else{
             if($_POST["mdp_confirm_connex"]!=$_POST["mdp_connex"]){
                 $msg_erreur_champs_vide.='votre mot de passe doit être identique à votre confirmation de mot de passe';
-            }
-        }
-        else{
-            $new_compte=$this->connexion->CreateNewAccount();
-            if($new_compte!=1){
-                $msg_erreur_champs_vide="Une erreur s'est produite lors de la création de votre compte";
-            }
+                $vue=new vue('crea_compte');
+                $vue->afficher(['message'=>$msg_erreur_champs_vide, 'valeur'=>['pays'=>$_POST["pays_connex"],'pays'=>$_POST["ville_connex"],'code_postal'=>$_POST["CP_connex"],'rue'=>$_POST["rue_connex"],'email'=>$_POST["email_connex"],'tel'=>$_POST["tel_connex"],'nom'=>$_POST["nom_connex"], 'prenom'=>$_POST["prenom_connex"]]]);
+            }else{
+                $new_compte=$this->connexion->CreateNewAccount();
+                if($new_compte!=1){
+                    $msg_erreur_champs_vide="Une erreur s'est produite lors de la création de votre compte";
+                }
             
-            else{
-                $msg_erreur_champs_vide='votre compte a été correctement créé';
+                else{
+                    $msg_erreur_champs_vide='votre compte a été correctement créé';
+                }
             }
-        }
+        // }
         $vue=new vue('crea_compte');
         $vue->afficher(['message'=>$msg_erreur_champs_vide]);
     }
