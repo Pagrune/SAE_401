@@ -63,10 +63,11 @@ class ctlConnexion{
             if($_POST["mdp_confirm_connex"]!=$_POST["mdp_connex"]){
                 $msg_erreur_champs_vide.='votre mot de passe doit être identique à votre confirmation de mot de passe';
                 $vue=new vue('crea_compte');
-                $vue->afficher(['message'=>$msg_erreur_champs_vide, 'valeur'=>['pays'=>$_POST["pays_connex"],'pays'=>$_POST["ville_connex"],'code_postal'=>$_POST["CP_connex"],'rue'=>$_POST["rue_connex"],'email'=>$_POST["email_connex"],'tel'=>$_POST["tel_connex"],'nom'=>$_POST["nom_connex"], 'prenom'=>$_POST["prenom_connex"]]]);
+                $vue->afficher(['message'=>$msg_erreur_champs_vide, 'valeur'=>['pays'=>$_POST["pays_connex"],'ville'=>$_POST["ville_connex"],'code_postal'=>$_POST["CP_connex"],'rue'=>$_POST["rue_connex"],'email'=>$_POST["email_connex"],'tel'=>$_POST["tel_connex"],'nom'=>$_POST["nom_connex"], 'prenom'=>$_POST["prenom_connex"]]]);
             }else{
-                $new_compte=$this->connexion->CreateNewAccount();
+                $new_compte=$this->connexion->CreateNewAccount(['pays'=>$_POST["pays_connex"],'ville'=>$_POST["ville_connex"],'code_postal'=>$_POST["CP_connex"],'rue'=>$_POST["rue_connex"],'email'=>$_POST["email_connex"],'tel'=>$_POST["tel_connex"],'nom'=>$_POST["nom_connex"], 'prenom'=>$_POST["prenom_connex"], 'mdp'=>$_POST["mdp_connex"]]);
                 if($new_compte!=1){
+                    var_dump($new_compte);
                     $msg_erreur_champs_vide="Une erreur s'est produite lors de la création de votre compte";
                 }
             

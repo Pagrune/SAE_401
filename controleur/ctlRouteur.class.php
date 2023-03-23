@@ -74,10 +74,13 @@ class ctlRouteur
                         return true;
                         break;
                     
-
-                        case "faq":
-                            $this->ctlPage->faq();
+                    case 'aventure' : 
+                        $this->ctlEscGame->aventure("id");
                         break;
+                        
+                    case "faq":
+                        $this->ctlPage->faq();
+                    break;
                     //affichage page aventures     
                     case "aventures":
                         // require "vue/vue_aventure.php";

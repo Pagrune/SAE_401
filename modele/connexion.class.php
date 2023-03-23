@@ -23,8 +23,12 @@ class connexion extends database {
         return $result;
     }
 
-    public function CreateNewAccount(){
-        return 1;
+    public function CreateNewAccount($infos){
+        extract($infos);
+        var_dump($rue);
+        $req='INSERT INTO `user` (`user_nom`, `user_pays`, `user_adresse`, `user_telephone`, `user_ville`, `user_codepostal`, `user_prenom`, `user_mdp`, `user_mail`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?);';
+        $result= $this->execReqPrep($req, [$nom, $pays, $rue, $tel, $ville, $code_postal, $prenom, $mdp, $email]);
+        return $result;
     }
 
 }
