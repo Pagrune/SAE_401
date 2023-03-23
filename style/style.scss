@@ -422,7 +422,8 @@ footer{
 }
 
 #politique,
-#mention{
+#mention,
+#cgv{
     padding-top: 12vh;
     padding-bottom: 4vh;
     margin-left: 4%;
@@ -574,13 +575,18 @@ footer{
 @media screen and (min-width: 1024px){
     h1{
         text-align: initial;
+        margin-bottom: 2vh;
         span{
             font-size: 90px;
         }
     }
 
     p{
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    li{
+        font-size: 20px;
     }
 
     header{
@@ -650,7 +656,7 @@ footer{
             a{
                 text-decoration: none;
                 color: black;
-                font-size: 24px;
+                font-size: 18px;
                 margin-bottom: 0;
             }
             p{
@@ -964,8 +970,9 @@ footer{
             }
             #me_connecter{
                 width: 32%;
-                height: 10.5vh;
+                height: 8.5vh;
                 padding-left: 0;
+                font-size: 34px;
             }
         }
         .no_account{

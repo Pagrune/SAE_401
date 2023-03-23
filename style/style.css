@@ -525,7 +525,8 @@ footer .footer_copyright p {
 }
 
 #politique,
-#mention {
+#mention,
+#cgv {
   padding-top: 12vh;
   padding-bottom: 4vh;
   margin-left: 4%;
@@ -533,17 +534,20 @@ footer .footer_copyright p {
 }
 
 #politique h1,
-#mention h1 {
+#mention h1,
+#cgv h1 {
   font-size: 80px;
 }
 
 #politique h2,
-#mention h2 {
+#mention h2,
+#cgv h2 {
   font-size: 40px;
 }
 
 #politique a,
-#mention a {
+#mention a,
+#cgv a {
   color: #F3A93E;
   text-decoration: none;
   font-weight: bold;
@@ -749,12 +753,16 @@ footer .footer_copyright p {
 @media screen and (min-width: 1024px) {
   h1 {
     text-align: initial;
+    margin-bottom: 2vh;
   }
   h1 span {
     font-size: 90px;
   }
   p {
-    font-size: 24px;
+    font-size: 20px;
+  }
+  li {
+    font-size: 20px;
   }
   header {
     position: initial;
@@ -844,7 +852,7 @@ footer .footer_copyright p {
   footer .footer_navigation a {
     text-decoration: none;
     color: black;
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 0;
   }
   footer .footer_navigation p {
@@ -1275,8 +1283,9 @@ footer .footer_copyright p {
   }
   #connexion form #me_connecter {
     width: 32%;
-    height: 10.5vh;
+    height: 8.5vh;
     padding-left: 0;
+    font-size: 34px;
   }
   #connexion .no_account {
     width: 52%;
