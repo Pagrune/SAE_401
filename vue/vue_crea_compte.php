@@ -2,7 +2,7 @@
     <h1>
         Créer mon compte
     </h1>
-    <form action="">
+    <form action="index.php?action=new_user" method="post">
         <div>
             <label for="nom_connex">
                 <input type="text" id="nom_connex" name="nom_connex" placeholder="Nom" required>
@@ -13,7 +13,7 @@
         </div>
         <div>
             <label for="tel_contact">
-                <input type="tel" id="tel_contact" name="tel_contact" placeholder="Votre numéro de téléphone">
+                <input type="tel" id="tel_connex" name="tel_connex" placeholder="Votre numéro de téléphone">
             </label>
             <label for="email_connex">
                 <input type="email" id="email_connex" name="email_connex" placeholder="Mail" required>
@@ -37,15 +37,19 @@
             <input type="password" id="mdp_connex" name="mdp_connex" placeholder="Mot de passe" required>
         </label>
         <label for="mdp_confirm">
-            <input type="password" id="mdp_confirm" name="mdp_confirm" placeholder="Confirmer mon mot de passe" required>
+            <input type="password" id="mdp_confirm" name="mdp_confirm_connex" placeholder="Confirmer mon mot de passe" required>
         </label>
         <div>
-            <input type="checkbox" id="accept_pol" name="accept_pol" checked required>
+            <input type="checkbox" id="accept_pol" name="accept_pol" value="true" required>
             <label for="accept_pol">J'accepte la 
-                <a href="">politique de confidentialité </a>
+                <a href="index.php?action=politique">politique de confidentialité </a>
             </label>
         </div>
         <input id="submit_compte" name="submit_compte" type="submit" value="Créer mon compte">
     </form>
-
+    <?php
+    if(isset($message)){
+        echo $message;
+    }
+    ?>
 </div>

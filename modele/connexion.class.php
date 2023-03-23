@@ -23,4 +23,8 @@ class connexion extends database {
         return $result;
     }
 
+    public function CreateNewAccount(){
+        return 1;
+    }
+
 }

@@ -3,18 +3,17 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 22 mars 2023 à 22:33
+-- Généré le : jeu. 23 mars 2023 à 08:26
 -- Version du serveur : 5.7.33
 -- Version de PHP : 7.4.27
 
-drop database if exists sae_401;
+drop database sae_401;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
 create database sae_401;
 use sae_401;
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -145,6 +144,11 @@ CREATE TABLE `review` (
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
   `user_nom` varchar(50) DEFAULT NULL,
+  `user_pays` varchar(20) NOT NULL,
+  `user_adresse` varchar(50) NOT NULL,
+  `user_telephone` varchar(16) NOT NULL,
+  `user_ville` varchar(16) NOT NULL,
+  `user_codepostal` int(5) NOT NULL,
   `user_prenom` varchar(20) NOT NULL,
   `user_mdp` varchar(100) DEFAULT NULL,
   `user_mail` varchar(50) DEFAULT NULL
@@ -154,9 +158,9 @@ CREATE TABLE `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`user_id`, `user_nom`, `user_prenom`, `user_mdp`, `user_mail`) VALUES
-(1, 'test', 'test', 'test_mdp', 'test@mail.test'),
-(2, 'test2', 'test2', 'test2_mdp', 'test2@mail.test2');
+INSERT INTO `user` (`user_id`, `user_nom`, `user_pays`, `user_adresse`, `user_telephone`, `user_ville`, `user_codepostal`, `user_prenom`, `user_mdp`, `user_mail`) VALUES
+(1, 'test', '', '', '', '', 0, 'test', 'test_mdp', 'test@mail.test'),
+(2, 'test2', '', '', '', '', 0, 'test2', 'test2_mdp', 'test2@mail.test2');
 
 --
 -- Index pour les tables déchargées

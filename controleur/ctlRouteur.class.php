@@ -65,7 +65,9 @@ class ctlRouteur
                     case "crea_compte" : 
                         $this->ctlConnexion->crea_compte();
                         break;
-
+                    
+                        case 'new_user':
+                            $this->ctlConnexion->new_user();
 
                     //affichage page paiement    
                     case 'paiement':
