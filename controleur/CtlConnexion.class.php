@@ -15,6 +15,10 @@ class ctlConnexion{
         $vue=new vue('connexion');
         $vue->afficher([]);
     }
+    public function crea_compte(){
+        $vue=new vue('crea_compte');
+        $vue->afficher([]);
+    }
 
 
     /******************************
