@@ -6,6 +6,7 @@ require "ctlClient.class.php";
 require "ctlAventure.class.php";
 require 'ctlCadeaux.class.php';
 require 'CtlConnexion.class.php';
+require 'CtlCheckout.class.php';
 
 class ctlRouteur
 {
@@ -18,6 +19,7 @@ class ctlRouteur
     private $ctlCPage;
     private $ctlCadeau;
     private $ctlConnexion;
+    private $ctlCheckout;
 
 
 
@@ -35,6 +37,7 @@ class ctlRouteur
         $this->ctlPage = new ctlPage();
         $this->ctlCadeau= new ctlCadeau();
         $this->ctlConnexion= new ctlConnexion();
+        $this->ctlCheckout= new CtlCheckout();
     }
 
 
@@ -73,6 +76,10 @@ class ctlRouteur
                     case 'paiement':
                         return true;
                         break;
+
+                    case 'panier';
+                    $this->ctlCheckout->panier();
+                    break;
                     
                     case 'aventure' : 
                         if(isset($_GET["id_game"])){
