@@ -13,46 +13,69 @@ function toggle_menu(){
     }
 }
 
-var currentDate = new Date();
-        let jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
-        currentDate.setDate(1);
+let letoggle= document.querySelectorAll(".el-toggle");
 
-        function AfficherMois() {
-            var temp = new Date(currentDate);
-            var output = "";
-            for (var i = 0, fin = FinDuMois(); i < fin; i++) {
-                output += `
-                    <div class="${jours[temp.getDay()]}" data-date="${temp.toLocaleDateString()}">
-                        <form action='' method='post'>
-                        <input type="checkbox" id="date_jour" name="date_jour" value="true">
-                        <div>${temp.toLocaleDateString()}</div>
-                    
-                    </div>`
-                temp.setDate(temp.getDate() + 1);
-            }
-            document.querySelector(".cal").innerHTML = output;
-            // document.querySelectorAll("textarea").forEach(function (e) {
-            //     e.addEventListener("change", saveData)
-            // })
+letoggle.forEach(e=>
+    e.addEventListener("click", toggle_faq)
+);
+
+function toggle_faq(){
+    this.nextElementSibling.classList.toggle('open');
+    if(document.querySelector('.open')){
+        this.querySelector('img').style.transform ='rotate(180deg)';
+        this.querySelector('img').style.paddingRight ='0';
+        this.querySelector('img').style.paddingLeft ='4%';
+    }
+    else{
+        this.querySelector('img').style.transform ='rotate(0deg)';
+        this.querySelector('img').style.paddingRight ='4%';
+        this.querySelector('img').style.paddingLeft ='0';
+    }
+}
+
+if(document.querySelector('.btn_plus')){
+
+    var currentDate = new Date();
+    let jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
+    currentDate.setDate(1);
+
+    function AfficherMois() {
+        var temp = new Date(currentDate);
+        var output = "";
+        for (var i = 0, fin = FinDuMois(); i < fin; i++) {
+            output += `
+                <div class="${jours[temp.getDay()]}" data-date="${temp.toLocaleDateString()}">
+                    <form action='' method='post'>
+                    <input type="checkbox" id="date_jour" name="date_jour" value="true">
+                    <div>${temp.toLocaleDateString()}</div>
+                
+                </div>`
+            temp.setDate(temp.getDate() + 1);
         }
+        document.querySelector(".cal").innerHTML = output;
+        // document.querySelectorAll("textarea").forEach(function (e) {
+        //     e.addEventListener("change", saveData)
+        // })
+    }
 
 
-        function FinDuMois() {
-            var temp = new Date(currentDate.getYear(), currentDate.getMonth() + 1, 0);
-            return temp.getDate();
-        }
+    function FinDuMois() {
+        var temp = new Date(currentDate.getYear(), currentDate.getMonth() + 1, 0);
+        return temp.getDate();
+    }
 
 
-        document.querySelector(".btn_plus").addEventListener("click", function () {
-            currentDate.setMonth(currentDate.getMonth() + 1);
-            AfficherMois();
-        })
-        document.querySelector(".btn_moins").addEventListener("click", function () {
-            currentDate.setMonth(currentDate.getMonth() - 1);
-            AfficherMois();
-        })
-
-        
-        // document.querySelector(".month").innerHTML = currentDate.getMonth();
-
+    document.querySelector(".btn_plus").addEventListener("click", function () {
+        currentDate.setMonth(currentDate.getMonth() + 1);
         AfficherMois();
+    })
+    document.querySelector(".btn_moins").addEventListener("click", function () {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        AfficherMois();
+    })
+
+    
+    // document.querySelector(".month").innerHTML = currentDate.getMonth();
+
+    AfficherMois();
+}

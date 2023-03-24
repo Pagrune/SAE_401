@@ -558,6 +558,50 @@ footer{
     }
 }
 
+#faq{
+    padding-top: 12vh;
+    padding-bottom: 8vh;
+    h1{
+        font-size: 80px;
+        text-align: center;
+    }
+    h2{
+        font-size: 30px;
+        font-family: $ultra;
+        padding-left: 4%;
+    }
+    .toggle{
+        margin: 4%;
+        .el-toggle{
+            background-color: $jaune;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+                padding-left: 4%;
+                font-size: 24px;
+            }
+            img{
+                padding-right: 4%;
+                cursor: pointer;
+            }
+        }
+        .contenu_faq{
+            display: none;
+            &.open{
+                display: block;
+                padding: 4%;
+                border: solid black 3px;
+                background-color: white;
+                p{
+                    font-size: 14px;
+                }
+                
+            }
+        }
+    }
+}
+
 #aventure_solo{
     padding-top: 12vh;
     padding-bottom: 8vh;
@@ -1241,6 +1285,26 @@ footer{
             }
         }
     }
+
+    #faq{
+        .toggle{
+            margin-left: 4%;
+            margin-right: 4%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            .el-toggle{
+                h3{
+                    font-size: 20px;
+                }  
+            .contenu_faq{
+                &.open{
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }    
     
     #crea_compte{
         form{

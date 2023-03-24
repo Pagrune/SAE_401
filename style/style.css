@@ -697,6 +697,64 @@ footer .footer_copyright p {
   font-weight: bold;
 }
 
+#faq {
+  padding-top: 12vh;
+  padding-bottom: 8vh;
+}
+
+#faq h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+#faq h2 {
+  font-size: 30px;
+  font-family: "Ultra", serif;
+  padding-left: 4%;
+}
+
+#faq .toggle {
+  margin: 4%;
+}
+
+#faq .toggle .el-toggle {
+  background-color: #F3A93E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#faq .toggle .el-toggle h3 {
+  padding-left: 4%;
+  font-size: 24px;
+}
+
+#faq .toggle .el-toggle img {
+  padding-right: 4%;
+  cursor: pointer;
+}
+
+#faq .toggle .contenu_faq {
+  display: none;
+}
+
+#faq .toggle .contenu_faq.open {
+  display: block;
+  padding: 4%;
+  border: solid black 3px;
+  background-color: white;
+}
+
+#faq .toggle .contenu_faq.open p {
+  font-size: 14px;
+}
+
 #aventure_solo {
   padding-top: 12vh;
   padding-bottom: 8vh;
@@ -1632,6 +1690,44 @@ footer .footer_copyright p {
   #contact .block-1 .block-cadeau form #message_contact,
   #contact .block-1 .block-contact form #message_contact {
     height: 16vh;
+  }
+  #faq .toggle {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  #faq .toggle .el-toggle {
+    background-color: #F3A93E;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #faq .toggle .el-toggle h3 {
+    padding-left: 4%;
+    font-size: 20px;
+  }
+  #faq .toggle .el-toggle img {
+    padding-right: 4%;
+    cursor: pointer;
+  }
+  #faq .toggle .contenu_faq {
+    display: none;
+  }
+  #faq .toggle .contenu_faq.open {
+    display: block;
+    padding: 4%;
+    border: solid black 3px;
+    background-color: white;
+  }
+  #faq .toggle .contenu_faq.open p {
+    font-size: 14px;
   }
   #crea_compte form {
     display: -ms-grid;
