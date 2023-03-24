@@ -17,10 +17,16 @@ class CtlAventure{
     }
 
     public function aventure($id_game){
-        // $infos_aventure = $this->aventure->getEscGame($id_game);
-        $vue=new vue("aventure");
-        // $vue->afficher(array("infos"=>$infos_aventure));
-        $vue->afficher(array());
+        $infos_aventure = $this->aventure->getEscGame($id_game);
+        if($infos_aventure==false){
+            $this->aventure_list();
+        }
+        else{
+            $vue=new vue("aventure");
+            var_dump($infos_aventure[0]);
+            $vue->afficher(array("infos"=>$infos_aventure[0]));
+        }
+        
     }
 
 

@@ -75,7 +75,12 @@ class ctlRouteur
                         break;
                     
                     case 'aventure' : 
-                        $this->ctlEscGame->aventure("id");
+                        if(isset($_GET["id_game"])){
+                            $this->ctlEscGame->aventure($_GET["id_game"]);
+                        }
+                        else{
+                            $this->ctlEscGame->aventure_list();
+                        }
                         break;
                         
                     case "faq":

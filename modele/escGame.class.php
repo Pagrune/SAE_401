@@ -22,24 +22,30 @@ class EscGame extends database {
   }
 
   /*******************************************************
-  Retourne les informations d'un client 
+  Retourne les informations d'un jeu 
     Entrée : 
-      idClient [int] : Identifiant du client
+      idClient [int] : Identifiant du jeu
 
     Retour : 
-      [array] : Tableau associatif contenant les information du client ou FALSE en cas d'erreur
+      [array] : Tableau associatif contenant les information du jeu ou FALSE en cas d'erreur
   *******************************************************/
-  public function getEscGame($idClient) {
-    $req = 'SELECT * FROM esc_game WHERE id_esc_game=?';
-    $resultat = $this->execReqPrep($req, array($idClient));
-
-    if(isset($resultat[0]))   // Le client se trouve dans la 1ère ligne de $resultat
-      return $resultat[0];
-    else
-      return FALSE;           // Retourne FALSE si le client n'existe pas
-    
-    // Ou :
-    //return isset($resultat[0]) ? $resultat[0] : FALSE;    // Retourne FALSE si le client n'existe pas
+  public function getEscGame($id_game){
+    $req='SELECT *FROM `game`where game_id=?;';
+    $resultat= $this->execReqPrep($req, array($id_game));
+    return $resultat; 
   }
+  
+  // public function getEscGame($idClient) {
+  //   $req = 'SELECT * FROM esc_game WHERE id_esc_game=?';
+  //   $resultat = $this->execReqPrep($req, array($idClient));
+
+  //   if(isset($resultat[0]))   // Le client se trouve dans la 1ère ligne de $resultat
+  //     return $resultat[0];
+  //   else
+  //     return FALSE;           // Retourne FALSE si le client n'existe pas
+    
+  //   // Ou :
+  //   //return isset($resultat[0]) ? $resultat[0] : FALSE;    // Retourne FALSE si le client n'existe pas
+  // }
 
 }

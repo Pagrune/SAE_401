@@ -1,9 +1,15 @@
+<?php
+    var_dump($infos);
+    extract($infos);
+    
+?>
 <div id="aventure_solo">
     <div class="block-1">
         <img src="img/kredo/kredo.png" alt="escape game Kredo castello">
         <div class="block_carac">
             <h1>
-                Kredo Castello
+            <?=$game_nom?>
+
             </h1>
             <h2>
                 Caractéristiques
@@ -13,11 +19,11 @@
                     <p>
                         Genre :
                     </p>
-                    <strong>Fantastique</strong>
+                    <strong><?=$game_genre?></strong>
                 </div>
                 <div class="genre">
                    <strong>
-                    Outdoor
+                    <?=$game_environnement?>
                    </strong>
                    <p>
                     Escape
@@ -30,7 +36,7 @@
                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                 </svg>
                 <p>
-                    Durée : 3 heures | environ 4 km</p>
+                    Durée : <?=$game_duree?> heures | environ <?=$game_parcours?> km</p>
             </div>
             <div class="flexitude">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#3E3535" class="bi bi-geo-alt" viewBox="0 0 16 16">
@@ -39,12 +45,12 @@
                 </svg>
                 <p>
                     à 
-                    Ihringen
+                    <?=$game_lieu?>
                 </p>
             </div>
             <p class="dif_aventure">
                 <span>
-                    Convient aux joueurs débutants
+                    Convient aux joueurs <?=$game_categorie?>
                 </span>
             </p>
         </div>
@@ -78,47 +84,51 @@
             <table>
                <tr>
                 <td>Prix de groupe avec 2 - 3 personnes</td>
-                <td>69,00€</td>
+                <td>
+                    <?=$game_prix_3?>€
+                </td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 4 personnes</td>
-                <td>91,00€</td>
+                <td>
+                <?=$game_prix_4?>€
+                </td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 5 personnes</td>
-                <td>114,00€</td>
+                <td><?=$game_prix_5?>€</td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 6 personnes</td>
-                <td>135,00€</td>
+                <td><?=$game_prix_6?>€</td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 7 personnes</td>
-                <td>158,00€</td>
+                <td><?=$game_prix_7?>€</td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 8 personnes</td>
-                <td>178,00€</td>
+                <td><?=$game_prix_8?>€</td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 9 personnes</td>
-                <td>198,00€</td>
+                <td><?=$game_prix_9?>€</td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 10 personnes</td>
-                <td>219,00€</td>
+                <td><?=$game_prix_10?>€</td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 11 personnes</td>
-                <td>240,00€</td>
+                <td><?=$game_prix_11?>€</td>
                </tr>
                <tr>
                 <td>Prix de groupe avec 12 personnes</td>
-                <td>261,00€</td>
+                <td><?=$game_prix_12?>€</td>
                </tr>
                <tr>
                 <td>Prix de groupe avec plus de 12 personnes</td>
-                <td>299,00€</td>
+                <td><?=$game_prix_groupe?>€</td>
                </tr>
             </table>
         </div>
