@@ -12,7 +12,7 @@ class CtlCheckout{
 
     public function panier(){
         $vue=new vue('panier');
-        $vue=>afficher(array());
+        $vue->afficher(array());
     }
 
 
