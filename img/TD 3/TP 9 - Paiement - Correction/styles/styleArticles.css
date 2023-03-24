@@ -1,0 +1,132 @@
+main{
+	padding: 0 64px 32px 64px;
+}
+.articles{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(534px, 1fr));
+	gap: 64px;
+}
+.articles>div{
+	display: flex;
+	gap: 16px;
+}
+.articles h2{
+	color: #09C;
+	margin: 0;
+}
+.articles>div>div:nth-child(2){
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 390px;
+}
+.articles .prix{
+	color: rgb(204, 65, 0);
+	font-size: 24px;
+}
+.articles .stock{
+	color: #0C9;
+}
+.quantite{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #AAA;
+	margin-top: auto;
+	font-size: 20px;
+}
+.quantite>span:nth-child(1),
+.quantite>span:nth-child(3){
+	padding: 8px 16px;
+	font-size: 24px;
+	cursor: pointer;
+}
+button{
+	background: #09C;
+	color: #FFF;
+	border: none;
+	border-radius: 4px;
+	font-size: 20px;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+/***************/
+/* CSS en plus */
+/***************/
+.red{
+	color:rgb(204, 65, 0);
+}
+
+/************************/
+/* Zone de filtre / tri */
+/************************/
+.tri{
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+	padding: 32px 0;
+	top: 124px;
+	background: linear-gradient(#FFF 70%, transparent);
+}
+.tri>button{
+	background: #0C9;
+}
+.tri input{
+	padding: 8px 16px;
+	font-size: 18px;
+	width: 50px;
+}
+select{
+	padding: 8px 16px;
+	font-size: 18px;
+}
+.tri>.toutStock{
+	background: rgb(116, 207, 185);
+}
+.articles>.masque{
+	display: none;
+}
+
+/***********/
+/* Message */
+/***********/
+.message{
+	position: fixed;
+	top: 0;
+	left: 50%;
+	z-index: 10;
+	max-width: 30vw;
+	background: #09C;
+	color: #FFF;
+	transform: translate(-50%, -100%);
+	font-size: 24px;
+	padding: 32px;
+	border-radius: 0 0 16px 16px;
+	box-shadow: 0 4px 4px rgba(0,0,0,0.26);
+	animation: message 2s;
+}
+@keyframes message{
+	20%{transform: translate(-50%, 0%)}
+	80%{transform: translate(-50%, 0%)}
+}
+
+/**********/
+/* Panier */
+/**********/
+header>a{
+	position: relative;
+}
+.nbPanier{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background:rgb(204, 65, 0);
+	border-radius: 100%;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 18px;
+}
