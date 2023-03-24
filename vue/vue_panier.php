@@ -3,6 +3,13 @@
     <div>
 
     </div>
+    
+    <button>
+            <img src="" alt="">
+            <p>
+                Valider mon panier
+            </p>
+    </button>
     <div class="paiement">
         <div>
             <h2>Paiement</h2>
@@ -25,7 +32,7 @@
 				        <input type="text" class="nom" placeholder="M(e) PRENOM NOM">
                         <div>
                             <p>Numéro secret</p>
-                            <input type="number" placeholder="000">
+                            <input type="text" placeholder="000">
                         </div>
                     </div>
                     <input type="submit" value="Confirmer mon paiement">
@@ -36,8 +43,12 @@
                 <p>
                     69€
                 </p>
+                <button>
+                    <p>
+                        Revenir à mon panier
+                    </p>
+                </button>
             </div>
         </div>
     </div>
-
 </div>

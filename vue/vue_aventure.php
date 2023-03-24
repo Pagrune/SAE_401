@@ -228,6 +228,13 @@
                                     69,00€
                                 </p>
                             </label>
+                            <button class="add">
+                                <img src="img/header/paniers.png" alt="Icone panier">
+                                <p>Ajouter au panier</p>
+                            </button>
+                            <div class="add-to-cart">
+
+                            </div>
                         </div>
                     </div>
                 </div>
