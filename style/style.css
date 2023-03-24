@@ -697,6 +697,64 @@ footer .footer_copyright p {
   font-weight: bold;
 }
 
+#faq {
+  padding-top: 12vh;
+  padding-bottom: 8vh;
+}
+
+#faq h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+#faq h2 {
+  font-size: 30px;
+  font-family: "Ultra", serif;
+  padding-left: 4%;
+}
+
+#faq .toggle {
+  margin: 4%;
+}
+
+#faq .toggle .el-toggle {
+  background-color: #F3A93E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#faq .toggle .el-toggle h3 {
+  padding-left: 4%;
+  font-size: 24px;
+}
+
+#faq .toggle .el-toggle img {
+  padding-right: 4%;
+  cursor: pointer;
+}
+
+#faq .toggle .contenu_faq {
+  display: none;
+}
+
+#faq .toggle .contenu_faq.open {
+  display: block;
+  padding: 4%;
+  border: solid black 3px;
+  background-color: white;
+}
+
+#faq .toggle .contenu_faq.open p {
+  font-size: 14px;
+}
+
 #aventure_solo {
   padding-top: 12vh;
   padding-bottom: 8vh;
@@ -885,10 +943,19 @@ footer .footer_copyright p {
           align-items: center;
   padding-left: 4%;
   width: 90%;
+  cursor: pointer;
 }
 
 #aventure_solo .choix p {
   font-size: 50px;
+}
+
+#aventure_solo .toggle {
+  display: none;
+}
+
+#aventure_solo .toggle.open {
+  display: block;
 }
 
 #aventure_solo .choix_horraire {
@@ -1633,6 +1700,18 @@ footer .footer_copyright p {
   #contact .block-1 .block-contact form #message_contact {
     height: 16vh;
   }
+  #faq .toggle {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  #faq .toggle .el-toggle h3 {
+    font-size: 20px;
+  }
+  #faq .toggle .contenu_faq.open p {
+    font-size: 18px;
+  }
   #crea_compte form {
     display: -ms-grid;
     display: grid;
@@ -1726,57 +1805,19 @@ footer .footer_copyright p {
   #connexion .no_account a {
     font-size: 30px;
   }
-  #aventure_solo {
-    padding-top: 12vh;
-    padding-bottom: 8vh;
-  }
-  #aventure_solo h2 {
-    background-color: #AA8773;
-    color: white;
-    padding: 1%;
-    font-size: 24px;
-    font-family: "Roboto Slab", serif;
-    padding-left: 4%;
-  }
   #aventure_solo .block-1 {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  #aventure_solo .block-1 img {
-    width: 100%;
-  }
-  #aventure_solo .block-1 h1 {
-    padding-left: 4%;
-  }
-  #aventure_solo .block-1 .grid_genre {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 8vw;
-  }
-  #aventure_solo .block-1 .grid_genre .genre {
-    border: solid black 3px;
-    background: white;
-    text-align: center;
-    padding: 2vh;
-    margin: 10%;
-  }
-  #aventure_solo .block-1 .grid_genre .genre p {
-    margin: 0;
-    text-align: center;
-  }
-  #aventure_solo .block-1 .grid_genre .genre strong {
-    text-align: center;
+  #aventure_solo .block-1 .block_carac h2 {
+    text-align: right;
+    padding-right: 4%;
   }
   #aventure_solo .block-1 .flexitude p {
     margin: 2%;
-    font-size: 30px;
+    font-size: 24px;
   }
   #aventure_solo .block-1 .dif_aventure span {
     font-weight: bold;
@@ -1789,18 +1830,25 @@ footer .footer_copyright p {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  #aventure_solo .block-2 img {
-    width: 100%;
-  }
   #aventure_solo .block-2 .descr {
     margin: 4%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  #aventure_solo .block-2 .descr .left-column {
+    margin-right: 4%;
+  }
+  #aventure_solo .block-2 .descr .right-column {
+    margin-left: 4%;
   }
   #aventure_solo .toggle-calendar .cal {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[7];
         grid-template-columns: repeat(7, 1fr);
-    width: 50vw;
+    width: 30vw;
     padding: 3%;
   }
   #aventure_solo .toggle-calendar .cal > div {
@@ -1832,39 +1880,28 @@ footer .footer_copyright p {
         grid-column-start: 7;
   }
   #aventure_solo table {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid black 2px;
-    padding: 2%;
+    width: 80%;
   }
   #aventure_solo table td {
-    font-size: 24px;
-    padding: 2%;
+    font-size: 20px;
   }
-  #aventure_solo .creneau_offre {
-    display: -ms-grid;
-    display: grid;
+  #aventure_solo .creneaux h2 {
+    text-align: right;
+    padding-right: 4%;
+  }
+  #aventure_solo .creneaux .resa_aventure h3 {
+    width: 35vw;
+    font-size: 30px;
   }
   #aventure_solo .creneau_offre .offrir {
-    background-color: white;
-    border: solid black 3px;
-    height: 6vh;
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
+    height: 12vh;
+    width: 35vw;
   }
   #aventure_solo .creneau_offre .offrir a {
-    font-size: 40px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+    font-size: 30px;
   }
   #aventure_solo .creneau_offre p {
-    text-align: center;
-    font-size: 70px;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    font-size: 50px;
   }
   #aventure_solo .block-3 {
     display: -ms-grid;
@@ -1872,18 +1909,24 @@ footer .footer_copyright p {
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
   }
-  #aventure_solo .resa_aventure h3 {
-    width: 45vw;
+  #aventure_solo .choix p {
+    font-size: 30px;
+  }
+  #aventure_solo .choix_horraire form {
+    gap: 1vw;
   }
   #aventure_solo .choix_horraire form div {
     height: 9vh;
     width: 9vw;
   }
   #aventure_solo .groupe_choix {
-    width: 60%;
+    width: 80%;
   }
   #aventure_solo .groupe_choix input {
     width: 1.5vw;
+  }
+  #aventure_solo .groupe_choix label p {
+    font-size: 24px;
   }
   #aventure_solo .block-avantage .grid_avantage {
     -ms-grid-columns: 1fr 1fr 1fr;
