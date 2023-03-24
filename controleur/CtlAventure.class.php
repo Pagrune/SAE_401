@@ -23,7 +23,6 @@ class CtlAventure{
         }
         else{
             $vue=new vue("aventure");
-            var_dump($infos_aventure[0]);
             $vue->afficher(array("infos"=>$infos_aventure[0]));
         }
         
