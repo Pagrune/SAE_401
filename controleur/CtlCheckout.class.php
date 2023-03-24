@@ -1,7 +1,7 @@
 <?php
 
 require_once "vue/vue.class.php";
-require_once "modele/chekcout.class.php";
+require_once "modele/checkout.class.php";
 
 class CtlCheckout{
     private $aventure;
