@@ -33,6 +33,16 @@ function toggle_faq(){
     }
 }
 
+let ave = document.querySelectorAll(".choix");
+
+ave.forEach(e=>
+    e.addEventListener("click", toggle_ave)
+);
+
+function toggle_ave(){
+    this.nextElementSibling.classList.toggle('open');
+}
+
 if(document.querySelector('.btn_plus')){
 
     var currentDate = new Date();

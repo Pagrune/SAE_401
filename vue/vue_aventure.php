@@ -59,7 +59,7 @@
                     Voyagez dans des époques différentes et plongez-vous dans les histoires de "Kredo Castello", "Spiritus Sancti" et "Vinea Flamara". Découvrez où se cache le secret - Qu'est-ce que le Codex ? Vous serez époustouflé - promis !
                 </p>
             </div>
-            <div class="rigt-column">
+            <div class="right-column">
                 <p>
                     Une aventure sauvage vous attend et nous vous promettons que des choses se produiront auxquelles vous ne vous attendiez pas !
                 </p>
@@ -207,7 +207,7 @@
                             Choisir le nombre de personnes
                         </p>
                     </div>
-                    <div>
+                    <div class="toggle">
                         <div class="groupe_choix">
                             <input type="checkbox" id="taille_groupe" name="taille_groupe">
                             <label for="">

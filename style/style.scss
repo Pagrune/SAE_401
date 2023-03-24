@@ -761,8 +761,16 @@ footer{
         align-items: center;
         padding-left: 4%;
         width: 90%;
+        cursor: pointer;
         p{
             font-size: 50px;
+        }
+    }
+
+    .toggle{
+        display: none;
+        &.open{
+            display: block;
         }
     }
     .choix_horraire{
@@ -1296,6 +1304,7 @@ footer{
                 h3{
                     font-size: 20px;
                 }  
+            }
             .contenu_faq{
                 &.open{
                     p{
@@ -1392,49 +1401,19 @@ footer{
     }
 
     #aventure_solo{
-        padding-top: 12vh;
-        padding-bottom: 8vh;
-        h2{
-            background-color: $beige;
-            color: white;
-            padding: 1%;
-            font-size: 24px;
-            font-family: $roboto;
-            padding-left: 4%;
-        }
         .block-1{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            img{
-                width: 100%;
-            }
-            h1{
-                padding-left: 4%;
-            }
-            .grid_genre{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-                gap: 8vw;
-                .genre{
-                    border: solid black 3px;
-                    background: white;
-                    text-align: center;
-                    padding: 2vh;
-                    margin: 10%;
-                    p{
-                        margin: 0;
-                        text-align: center;
-                    }
-                    strong{
-                        text-align: center;
-                    }
+            .block_carac{
+                h2{
+                    text-align: right;
+                    padding-right: 4%;
                 }
             }
             .flexitude{
                 p{
                     margin: 2%;
-                    font-size: 30px;
+                    font-size: 24px;
                 }
             }
             .dif_aventure{
@@ -1448,18 +1427,23 @@ footer{
         .block-2{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            img{
-                width: 100%;
-            }
             .descr{
                 margin: 4%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .left-column{
+                    margin-right: 4%;
+                }
+                .right-column{
+                    margin-left: 4%;
+                }
             }
         }
         .toggle-calendar{
             .cal {
                 display: grid;
                 grid-template-columns: repeat(7, 1fr);
-                width: 50vw;
+                width: 30vw;
                 padding: 3%;
             }
     
@@ -1494,52 +1478,50 @@ footer{
     
         }
         table{
-            width: 70%;
-            margin-left: auto;
-            margin-right: auto;
-            border: solid black 2px;
-            padding: 2%;
+            width: 80%;
             td{
-                font-size: 24px;
-                padding: 2%;
+                font-size: 20px;
+            }
+        }
+        .creneaux{
+            h2{
+                text-align: right;
+                padding-right: 4%;
+            }
+            .resa_aventure{
+                h3{
+                    width: 35vw;
+                    font-size: 30px;
+                }
             }
         }
         .creneau_offre{
-            display: grid;
             .offrir{
-                background-color: white;
-                border: solid black 3px;
-                height: 6vh;
-                width: 70vw;
-                margin-left: auto;
-                margin-right: auto;
+                height: 12vh;
+                width: 35vw;
                 a{
-                    font-size: 40px;
-                    text-decoration: none;
-                    color: black;
-                    font-weight: bold;
-                   
+                    font-size: 30px;                   
                 }
             }
             p{
-                text-align: center;
-                font-size: 70px;
-                margin-top: 2vh;
-                margin-bottom: 2vh;
+                font-size: 50px;
             }
         }
         .block-3{
             display: grid;
             grid-template-columns: 50% 50%;
         }
-        
-        .resa_aventure{
-            h3{
-                width: 45vw;
+
+        .choix{
+            p{
+                font-size: 30px;
             }
         }
+        
+        
         .choix_horraire{
             form{
+                gap: 1vw;
                 div{
                     height: 9vh;
                     width: 9vw;
@@ -1547,9 +1529,14 @@ footer{
             }
         }
         .groupe_choix{
-            width: 60%;
+            width: 80%;
             input{
                 width: 1.5vw;
+            }
+            label{
+                p{
+                    font-size: 24px;
+                }
             }
         }
         .block-avantage{
