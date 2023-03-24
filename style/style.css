@@ -4,6 +4,7 @@ body {
   margin: 0;
   background-image: url("../img/background/fond.jpg");
   font-family: "Roboto Slab", serif;
+  position: relative;
 }
 
 h1 {

@@ -1,8 +1,18 @@
 <div id="panier">
     <h1>Mon panier</h1>
-    <div>
+    <div class=panier>
+			<div class=entete>Articles</div>
+			<div class=entete>Quantité</div>
 
-    </div>
+			<div>Premier article</div>
+			<div>2</div>
+			<div>1.99 €</div>
+			<div>3.98 €</div>
+
+			<div>Deuxième article</div>
+			<div>1</div>
+			<div>2.99 €</div>
+			<div>2.99
     
     <button>
             <img src="" alt="">
@@ -30,7 +40,7 @@
                             <input type="text" class="date" placeholder="MM/AA">
                         </div>
 				        <input type="text" class="nom" placeholder="M(e) PRENOM NOM">
-                        <div>
+                        <div class="dosCarte">
                             <p>Numéro secret</p>
                             <input type="text" placeholder="000">
                         </div>
@@ -52,3 +62,30 @@
         </div>
     </div>
 </div>
+
+<?php
+
+	if(
+		!isset($_POST['montant']) || 
+		!isset($_POST['numero']) || 
+		!isset($_POST['date']) || 
+		!isset($_POST['nom']) || 
+		!isset($_POST['cle'])
+	) {
+
+		echo '{"erreur": "Données non transmises"}';
+
+	} elseif(rand(0, 1) == 1) { /* Une chance sur deux que le paiement soit accepté */
+
+		/* Simulation d'un délai d'attente pour valider le paiement */
+		sleep(rand(1,2));
+		echo '{"statut": "Paiement accepté"}';
+
+	} else {
+
+		/* Simulation d'un délai d'attente pour valider le paiement */
+		sleep(rand(1,2));
+		echo '{"statut": "Paiement refusé par la banque"}';
+
+	}
+?>

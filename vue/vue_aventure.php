@@ -231,16 +231,23 @@
                                 <img src="img/header/paniers.png" alt="Icone panier">
                                 <p>Ajouter au panier</p>
                             </button>
-                            <div class="add-to-cart">
-
-                            </div>
                         </div>
                     </div>
                 </div>
                 
             </div>
         </div>
-
+    <!-- <div class="add-to-cart">
+        <div class="choix_panier">
+            <button>
+                <p>Continuer mes achats</p>
+            </button>
+            <button class="add">
+                <img src="img/header/paniers.png" alt="Icone panier">
+                <p>Aller au panier</p>
+            </button>
+        </div>               
+    </div> -->
     </div>
     <div class="block-avantage">
         <h2>
