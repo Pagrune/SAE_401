@@ -184,14 +184,14 @@ class ctlConnexion{
             $email=$_POST["identifiant"];
             $mdp=$_POST["mdp"];
             $verif=$this->connexion->CheckConnexion($email, $mdp);
-            var_dump($verif);
-            if($verif==0 || $verif==false)
+            // var_dump($verif);
+            if($verif==0 || $verif==false || $verif>=1)
                 $message_erreur="erreur de mot de passe ou d'identifiant";
             else
-                $message_erreur='';
-                $cookie=$this->SetSession($verif);
-                $vue=new vue('connexion');
-                return $vue->afficher(['message_erreur'=>$message_erreur]);
+                $message_erreur='votre compte est bon';
+                $session=$this->SetSession($verif);
+                $vue=new vue('account');
+                return $vue->afficher(['message_erreur'=>$message_erreur, 'infos_client'=>$verif]);
         }
         else{
             $message_erreur="Les deux champs doivent être remplis";
@@ -223,4 +223,9 @@ class ctlConnexion{
         }
         
     }
-} 
+
+    static public function SetSession($infos){
+        return true;
+    }
+    
+}    

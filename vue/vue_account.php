@@ -1,0 +1,1 @@
+<?=$infos_client[0]?>
