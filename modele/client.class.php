@@ -29,8 +29,8 @@ class client extends database {
    * Retour : 
    *    [array] : tableau associatif contenant toutes les réservations du client ou FALSE si il n'a jamais commandé
    ***********************************/
-  public function getClientsResa($id_client){
-    $req = 'SELECT * FROM commande'.
+  public function getClientResa($id_client){
+    $req = 'SELECT * FROM booking'.
     'LEFT JOIN resa on client.id_client=resa.id_client'.
     'WHERE client.id_client=?;';
 
@@ -54,7 +54,7 @@ class client extends database {
       [array] : Tableau associatif contenant les information du client ou FALSE en cas d'erreur
   *******************************************************/
   public function getClient($idClient) {
-    $req = 'SELECT * FROM client WHERE id_client=?';
+    $req = 'SELECT * FROM user WHERE user_id=?';
     $resultat = $this->execReqPrep($req, array($idClient));
 
     if(isset($resultat[0]))   // Le client se trouve dans la 1ère ligne de $resultat

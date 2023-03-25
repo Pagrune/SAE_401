@@ -24,9 +24,14 @@ class ctlClient{
      ********************************************/
     public function client($id_client){
         $client_infos_perso = $this -> client->getClient($id_client);
-        $client_resa = $this -> client ->getClientResa($id_client);
-        $vue = new vue("client");
-        $vue->afficher(array("client"=>$client_infos_perso,"resa"=>$client_resa));
-
-    }
+        var_dump($client_infos_perso);
+        if($client_infos_perso==FALSE){
+            echo "erreur dans l'accès à votre compte client";
+        }
+        else{
+            $client_resa = $this -> client ->getClientResa($id_client);
+            $vue = new vue("account");
+            $vue->afficher(array("client"=>$client_infos_perso,"resa"=>$client_resa));
+        }
+}
 }

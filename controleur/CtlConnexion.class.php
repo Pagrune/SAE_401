@@ -23,14 +23,33 @@ class ctlConnexion{
       
   *******************************************************/
 
+
+
+  /*********************************
+  *Affichage de la page de connection
+  * Entrée : 
+  *   
+  * Sortie :
+  ***********************************/
     public function connexion_user(){
         $vue=new vue('connexion');
         $vue->afficher([]);
     }
+
+
+    /*********************************
+  *Affichage de la page de création de compte
+  * Entrée : 
+  *   
+  * Sortie :
+  ***********************************/
     public function crea_compte(){
         $vue=new vue('crea_compte');
         $vue->afficher([]);
     }
+
+
+
 
 
 /*******************************************************
@@ -191,7 +210,7 @@ class ctlConnexion{
                 $message_erreur='votre compte est bon';
                 $session=$this->SetSession($verif);
                 $vue=new vue('account');
-                return $vue->afficher(['message_erreur'=>$message_erreur, 'infos_client'=>$verif]);
+                $vue->afficher(['message_erreur'=>$message_erreur, 'client'=>$verif]);
         }
         else{
             $message_erreur="Les deux champs doivent être remplis";
@@ -213,19 +232,33 @@ class ctlConnexion{
 
       
   *******************************************************/
-    static public function CheckSession(){
-        if(isset($_COOKIE)){
-            return true;
-        }
-        else{
-            // SetSession()
-            return false;
-        }
+    // static public function CheckSession(){
+    //     if(isset($_COOKIE)){
+    //         return true;
+    //     }
+    //     else{
+    //         // SetSession()
+    //         return false;
+    //     }
         
-    }
+    // }
 
     static public function SetSession($infos){
-        return true;
+        $infos=$infos[0];
+        $_SESSION["nom"]=$infos["user_nom"];
+        $_SESSION["prénom"]=$infos["user_nom"];
+        $_SESSION['id']=$infos["user_id"];
+    }
+    
+    public function logout(){
+        //suppression du cookie de session
+        setcookie(session_name(), "", time()-3600, "/");
+        // Détruire la session
+        session_unset();
+        session_destroy();
+        //redirection vers la page d'accueil
+        $vue=new vue('accueil');
+        $vue->afficher([]);
     }
     
 }    

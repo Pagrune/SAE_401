@@ -36,7 +36,7 @@ class ctlPage {
     
 
     public function erreur($message){
-        $vue = new vue("Erreur"); // Instancie la vue appropriée
+        $vue = new vue("erreur"); // Instancie la vue appropriée
         $vue->afficher(array("message" => $message)); // Affiche la liste des erreur dans la vue
     }
 }

@@ -57,20 +57,34 @@ class ctlRouteur
                     //affichage page profil si le client est connecté 
                     //sinon affichage de la page de connexion/création de compte
                     case "connexion" : 
-                        if(!isset($_GET["verif"]))
-                            $this->ctlConnexion->connexion_user();
-                        else
-                            if($_GET["verif"]==true)
-                            $this->ctlConnexion->connexion_check();
-                            else
-                            $this->ctlConnexion->connexion_user();
+                        if(isset($_SESSION["id"])){
+                            // var_dump((int)$_SESSION["id"]);
+                            $this->ctlClient->client((int)$_SESSION["id"]);
+                        }else{
+                            if(!isset($_GET["verif"]))
+                                $this->ctlConnexion->connexion_user();
+                            else{
+                                if($_GET["verif"]==true)
+                                $this->ctlConnexion->connexion_check();
+                                else
+                                $this->ctlConnexion->connexion_user();
+                            }
+                        }
                         break;
                     case "crea_compte" : 
                         $this->ctlConnexion->crea_compte();
                         break;
                     
-                        case 'new_user':
-                            $this->ctlConnexion->new_user();
+                    case 'new_user':
+                        $this->ctlConnexion->new_user();
+                    break;
+                    
+                    case 'deconnexion':
+                        $this->ctlConnexion->logout();
+
+
+
+
 
                     //affichage page paiement    
                     case 'paiement':
@@ -88,24 +102,27 @@ class ctlRouteur
                         else{
                             $this->ctlEscGame->aventure_list();
                         }
-                        break;
+                    break;
                         
                     case "faq":
                         $this->ctlPage->faq();
                     break;
+
+
                     //affichage page aventures     
                     case "aventures":
                         // require "vue/vue_aventure.php";
                         $this->ctlEscGame->aventure_list();
-                        break;
+                    break;
+
                     case "cadeaux":
                         $this->ctlCadeau->cadeau();
-                        break;
+                    break;
                     
                     case "enregcadeaux":
                         var_dump($_POST["value_cadeau"]);
                         $this->ctlCadeau->EnregCadeau($_POST["value_cadeau"]);
-                        break;
+                    break;
 
                     //affichage page aventure information avec vérif de l'id du jeu à afficher    
                     case "aventure":
@@ -115,22 +132,21 @@ class ctlRouteur
                         else{
                             $this->ctlPage->accueil();///faire la gestion d'erreur avec Zoé
                         }
-                        break;
+                    break;
                     
                     //affichage page contact 
                     case "contact":
                         $this->ctlPage->contact();
                         break;
                     case "client": //affichage de la page d'infos client
-                        // if(isset("connect")){ //vérification si le visiteur est connecté
-                        //     if(isset($GET_['id_client'])){//vérif que l'id client passé en paramètre soit bien un integer (protection contre injection)
-                        //         $id_client = (int)$GET_['id_client'];
-                        //         if($id_client>0)
-                        //         $this-> ctrClient -> client($id_client);//affichage de la vue
-                        //     }
-                        // }else{// si pas connecté affichage de la page de connection
-                        //     $this -> ctlPage-> connection();
-                        // }
+                        //vérification si le visiteur est connecté
+                        if(isset($_SESSION["user_id"])){//vérif que l'id client passé en paramètre soit bien un integer (protection contre injection)
+                            $id_client = (int)$_SESSION["user_id"];
+                            if($id_client>0)
+                            $this-> ctrClient -> client($id_client);//affichage de la vue
+                        }else{
+                             $this -> ctlPage-> connection();
+                        }
                         break;
 
 
@@ -158,7 +174,7 @@ class ctlRouteur
             } else
                 $this->ctlPage->accueil();
         } catch (Exception $e) {
-            echo $e->getMessage();
+            $this->ctlPage->erreur($e->getMessage());
         }
     }
 }
