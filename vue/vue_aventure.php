@@ -227,7 +227,7 @@
                                     69,00€
                                 </p>
                             </label>
-                            <button class="add">
+                            <button class="add" data-id="<?=$game_id?>">
                                 <img src="img/header/paniers.png" alt="Icone panier">
                                 <p>Ajouter au panier</p>
                             </button>
