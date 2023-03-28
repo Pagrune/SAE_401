@@ -48,6 +48,16 @@
   </footer>  
   <script src="js/custom.js"></script>
   <script src="js/panier.js"></script>
+  <script>
+    let target_lang = document.querySelectorAll(".choix_lang");
+      target_lang.forEach(e=>{
+     e.addEventListener("click", function(){
+          let lang=this.getAttribute("data-lang");
+          document.cookie = "lang="+lang;
+          console.log(document.cookie);
+          });
+      });
+</script>
   <!-- <script src="js/scriptpanier.js"></script> -->
 </body>
 </html>

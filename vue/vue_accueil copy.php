@@ -6,10 +6,10 @@
         </div>
         <div class="block-2">
             <div class="texte-block-1">
-            <?=lang::accueuil_text_block_1?>
+                <?=lang::text_block_1?>
             </div>
             <div class="text-block-2">
-            
+                <?=lang::text_block_2?>
             </div>
         </div>
     </div>
@@ -17,13 +17,12 @@
         <div class="block-3-1">      
             <div class="block-news">
                 <div class="news-left">
-                    <?=lang::accueuil_left_news?>
+                    <?=lang::left_news?>
                     <img src="img/kredo/kredo.png" alt="Kredo castello escape game">
                 </div>
                 <div class="news-right">
                     <div>
-                    <?=lang::accueuil_right_news?>
-                        
+                    <?=lang::right_news?>
                     </div>
                     <div>
                         <p>
@@ -43,7 +42,7 @@
                 </div>
             </div>
             <div class="block-avis">
-                <?=lang::accueuil_bloc_avis?>
+                <h3><?=lang::bloc_avis?></h3>
                 <div class="block_slider">   
                     <img class="arrow_slider arrow_gauche" src="img/slidder/arrow_left.png" alt="icône flèche gauche">
                     <div id="slider">
@@ -91,7 +90,7 @@
             </div>
         </div>
         <div class="block-popular">
-            <?=lang::accueuil_bloc_popular?>
+            <?=lang::bloc_popular?>
             <div class="popular-img">
                 <img src="img/kredo/kredo.png" alt="Kredo castello escape game">
                 <div>
@@ -114,18 +113,26 @@
     </div>
     <div class="block-4">
         <div>
-            <?=lang::accueuil_bloc_4?>
+            <?=lang::bloc_4?>
         </div>
         <div>
             <img src="img/kredo/home.png" alt="">
         </div>
     </div>
     <div class="block-5">
-        <?=lang::accueuil_bloc_5_tire?>
+        <?=lang::bloc_5_titre?>
         <div class="block-5-1">
             <img src="img/kredo/home_2.png" alt="">
             <div class="text-block-team-building">
-                <?=lang::accueuil_bloc_5?>
+                <p>
+                    Notre Escape Game en extérieur est également une excellente activité de team building pour les entreprises et les organisations. Les jeux sont conçus pour encourager la communication, la coopération et la résolution de problèmes en groupe.
+                </p>
+                <p>
+                    En travaillant ensemble pour résoudre les énigmes et les défis, les membres de l'équipe renforcent leur confiance et leur esprit d'équipe. Les jeux sont également personnalisables en fonction des besoins de l'équipe et peuvent être adaptés pour inclure des objectifs de formation ou des messages spécifiques.
+                </p>
+                <p>
+                    De plus, l'environnement en plein air offre un changement de décor agréable pour les membres de l'équipe, les aidant à se détendre et à se connecter avec leurs collègues d'une manière nouvelle et amusante. Si vous cherchez une activité de team building originale et stimulante, notre Escape Game en extérieur est le choix idéal pour vous.
+                </p>
             </div>
         </div>
         

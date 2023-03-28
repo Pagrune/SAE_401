@@ -1,6 +1,5 @@
 <?php
 
-
 require "ctlPage.class.php";
 require "ctlClient.class.php";
 require "ctlAventure.class.php";
