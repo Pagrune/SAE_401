@@ -14,12 +14,12 @@
     </div>
     <div class="header-selector">
       <div class="header-langue">
-        <a href="">
+        <button class="choix_lang" data-lang='fr'>
           <img src="img/header/la-france.png" alt="Drapeau français">
-        </a>
-        <a href="">
+        </button>
+        <button class="choix_lang" data-lang='eng'>
           <img src="img/header/royaume-uni.png" alt="Drapeau Royaume-Uni">
-        </a>
+        </button>
         
       </div>
       <div class="menu_icon_mobile">
