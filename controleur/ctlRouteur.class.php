@@ -137,16 +137,6 @@ class ctlRouteur
                     case "contact":
                         $this->ctlPage->contact();
                         break;
-                    case "client": //affichage de la page d'infos client
-                        //vérification si le visiteur est connecté
-                        if(isset($_SESSION["user_id"])){//vérif que l'id client passé en paramètre soit bien un integer (protection contre injection)
-                            $id_client = (int)$_SESSION["user_id"];
-                            if($id_client>0)
-                            $this-> ctrClient -> client($id_client);//affichage de la vue
-                        }else{
-                             $this -> ctlPage-> connection();
-                        }
-                        break;
 
 
                         //////***************** page CMS ****************////////////

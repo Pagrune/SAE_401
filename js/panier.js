@@ -1,7 +1,14 @@
 if(document.querySelector("#aventure_solo")){
     bouton = document.querySelector(".add");
     bouton.addEventListener("click", AddToCart);
+
+    document.querySelectorAll("input[type=radio]").forEach(e=>{
+        e.addEventListener("click", function(){
+            console.log(this.parentElement.dataset.date);
+        })
+    })
 }
+
 
 function AddToCart(){
     let a = this.dataset.id;
@@ -14,5 +21,6 @@ function AddToCart(){
             console.log(window.localStorage.getItem(a));
         }
 }
+
 
 

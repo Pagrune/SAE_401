@@ -2,13 +2,16 @@
 
 require_once "vue/vue.class.php";
 require_once "modele/connexion.class.php";
+require_once "modele/resa.class.php";
 
 class ctlConnexion{
 
     private $connexion; 
+    private $resa; 
 
     public function __construct(){
         $this->connexion = new connexion();
+        $this->resa= new resa();
     }
 
     /*******************************************************
@@ -203,14 +206,18 @@ class ctlConnexion{
             $email=$_POST["identifiant"];
             $mdp=$_POST["mdp"];
             $verif=$this->connexion->CheckConnexion($email, $mdp);
-            // var_dump($verif);
-            if($verif==0 || $verif==false || $verif>=1)
+            if($verif==0 || $verif==false || $verif<=1){
+                $vue=new vue('connexion');
                 $message_erreur="erreur de mot de passe ou d'identifiant";
-            else
+                $vue->afficher(['message_erreur'=>$message_erreur]);
+            }else{
                 $message_erreur='votre compte est bon';
                 $session=$this->SetSession($verif);
+                $get_resa=$this->resa->GetResaClient($verif[0]['user_id']);
                 $vue=new vue('account');
-                $vue->afficher(['message_erreur'=>$message_erreur, 'client'=>$verif]);
+                $vue->afficher(['message_erreur'=>$message_erreur, 'client'=>$verif, 'resa'=>$get_resa]);
+            }
+            
         }
         else{
             $message_erreur="Les deux champs doivent être remplis";

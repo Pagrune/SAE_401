@@ -56,7 +56,7 @@ if(document.querySelector('.btn_plus')){
             output += `
                 <div class="${jours[temp.getDay()]}" data-date="${temp.toLocaleDateString()}">
                     <form action='' method='post'>
-                    <input type="checkbox" id="date_jour" name="date_jour" value="true">
+                    <input type="radio" id="date_jour" name="date_jour" value="true">
                     <div>${temp.toLocaleDateString()}</div>
                 
                 </div>`
