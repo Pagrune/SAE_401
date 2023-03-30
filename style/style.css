@@ -112,10 +112,20 @@ header .header-selector {
 
 header .header-selector .header-langue {
   margin-left: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 6vh;
 }
 
-header .header-selector .header-langue img {
-  width: 10%;
+header .header-selector .header-langue button {
+  width: 40%;
+  border: none;
+  background: none;
+}
+
+header .header-selector .header-langue button img {
+  width: 50%;
   margin-left: 4%;
 }
 
@@ -1262,8 +1272,11 @@ footer .footer_copyright p {
   header .header-selector .header-langue {
     margin-left: 16%;
   }
-  header .header-selector .header-langue img {
-    width: 12%;
+  header .header-selector .header-langue button {
+    width: 30%;
+  }
+  header .header-selector .header-langue button img {
+    width: 50%;
     margin-left: 4%;
   }
   header .header-selector .block_menu_mobile {
