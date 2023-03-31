@@ -6,3 +6,15 @@
 - faire en sorte que les créneaux déjà réservés soient invalides 
 - faq
 - page accueil
+- faire les reviews
+
+
+
+
+
+Pauline : 
+- leaflet 
+- page account 
+- finir la page panier
+- faire une zone de review sur la page aventure
+- faire le header et le footer en anglais
