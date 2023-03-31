@@ -1,48 +1,51 @@
 <?php
 class lang{
 
-    const accueuil_titre = "The biggest Escape Game <span>in the World</span>";
+    const accueuil_titre = "The world's largest <span>escape game</span>";
+
+    const accueuil_text_block_1 = "<p>Our outdoor Escape Game company offers a unique experience for fans of challenges, adventure, and exploration.</p>
     
-    const accueuil_text_block_1 = "<p>Notre entreprise d'Escape Game en extérieur offre une expérience unique pour les amateurs de défis, d'aventure et d'exploration.</p>
-<p>Nos jeux ont lieu dans des lieux pittoresques en plein air, tels que des parcs, des forêts, des rues historiques ou des quartiers animés, ce qui permet aux joueurs de découvrir de nouveaux endroits tout en résolvant des énigmes et en travaillant en équipe.</p>
-<p>Les jeux sont conçus pour tous les niveaux de compétence et peuvent être personnalisés pour les groupes, les événements d'entreprise ou les fêtes d'anniversaire.</p>
-<p>Nos décors et accessoires soigneusement conçus ainsi que nos énigmes complexes garantissent une expérience de jeu immersive et excitante.</p>";
-
-    const accueuil_text_block_2 = '<p>
-    Préparez-vous à affronter des défis uniques et à vivre une aventure inoubliable en plein air grâce à notre Escape Game en extérieur&nbsp;!
-</p>';
-
+    <p>Our games take place in picturesque outdoor locations, such as parks, forests, historic streets, or lively neighborhoods. It's an experience that allows players to discover new places while solving puzzles and working as a team.</p>
+    <p>The games are designed for all skill levels and can be customized for groups, corporate events, or birthday parties.</p>";
+    const accueuil_text_block_2 = '<p>Our sets and props are carefully designed, and our complex puzzles ensure an immersive and exciting gameplay experience.</p>
+    
+    <p>
+    Get ready to face unique challenges and have an unforgettable outdoor adventure with our outdoor Escape Game!
+    </p>';
     const accueuil_left_news = '<h2>News</h2>
-<h3>Une nouvelle aventure est sortie</h3>';
-
-    const accueuil_right_news = '<p>Voyagez à travers différentes époques et plongez-vous dans les histoires de "Kredo Castello", "Spiritus Sancti" et "Vinea Flamara".</p>
-<p>Découvrez où se trouve le secret - Qu\'est-ce que le Codex? Ça va vous étonner - promis!</p>';
-
-    const accueuil_bloc_avis = "Les derniers avis";
-
-    const accueuil_bloc_popular = "<h2>Popular</h2><h3>Découvrez l’aventure préférée des enquêteurs</h3>";
-
-    const accueuil_bloc_4="<h3>En famille ou entre amis</h3>
-            <p>
-                Notre Escape Game en extérieur est une activité amusante et excitante qui peut être appréciée en famille ou entre amis. En travaillant ensemble pour résoudre des énigmes, vous renforcez les liens et créez des souvenirs inoubliables.
-            </p>
-            <p>
-                Les jeux sont conçus pour tous les âges et tous les niveaux d'expérience, donc tout le monde peut participer. Que vous soyez un enfant de cinq ans ou un adulte de cinquante ans, vous êtes sûr de vous amuser en jouant à notre Escape Game en extérieur.
-                <br>
-                En plus, les lieux pittoresques en plein air offrent une ambiance relaxante et agréable, ce qui vous permet de profiter de l'expérience tout en passant du temps dans la nature. Alors, rassemblez vos amis et votre famille, et venez profiter d'une aventure palpitante avec notre Escape Game en extérieur !
-            </p>";
-
+    
+    <h3>A new adventure coming soon</h3>';
+    const accueuil_right_news = '<p>Travel through different eras and immerse yourself in the stories of "Kredo Castello," "Spiritus Sancti," and "Vinea Flamara."</p>
+    
+    <p>Discover where the secret lies - What is the Codex? It will surprise you - promise!</p>';
+    const accueuil_bloc_avis = "Latest Reviews";
+    
+    const accueuil_bloc_popular = "<h2>Popular</h2><h3>Discover the favorite adventure of investigators</h3>";
+    
+    const accueuil_bloc_4="<h3>With Family or Friends</h3>
+    <p>
+    Our outdoor Escape Games are fun and exciting activities that can be enjoyed with family or friends. By working together to solve puzzles, you strengthen bonds and create unforgettable memories.
+    </p>
+    <p>
+    The games are designed for all ages and experience levels, so everyone can participate. Whether you're a five-year-old child or a fifty-year-old adult, you're sure to have fun playing one of our Escape Games.
+    <br>
+    Plus, the picturesque outdoor locations offer a relaxing and enjoyable ambiance, allowing you to enjoy the experience while spending time in nature. So, gather your friends and family, and come enjoy an exciting adventure with our outdoor Escape Games!
+    </p>";
+    
     const accueuil_bloc_5_tire = '<h3>Team Building</h3>';
-
+    
     const accueuil_bloc_5 = "<p>
-    Notre Escape Game en extérieur est également une excellente activité de team building pour les entreprises et les organisations. Les jeux sont conçus pour encourager la communication, la coopération et la résolution de problèmes en groupe.
-</p>
-<p>
-    En travaillant ensemble pour résoudre les énigmes et les défis, les membres de l'équipe renforcent leur confiance et leur esprit d'équipe. Les jeux sont également personnalisables en fonction des besoins de l'équipe et peuvent être adaptés pour inclure des objectifs de formation ou des messages spécifiques.
-</p>
-<p>
-    De plus, l'environnement en plein air offre un changement de décor agréable pour les membres de l'équipe, les aidant à se détendre et à se connecter avec leurs collègues d'une manière nouvelle et amusante. Si vous cherchez une activité de team building originale et stimulante, notre Escape Game en extérieur est le choix idéal pour vous.
-</p>";
+    Your company or organization wants to develop cohesion within its teams and is looking for a team building activity. Look no further, you've come to the right place.
+    By selecting one of our Escape Games, you will reinforce cooperation, communication, and group problem-solving skills, while offering a cultural break in nature.
+    
+    </p>
+    <p>
+        By working together to solve puzzles and challenges, team members strengthen their confidence and team spirit. The games are also customizable based on the team's needs and can be adapted to include training objectives or specific messages.
+    </p>
+    <p>
+    Additionally, the outdoor environment offers a pleasant change of scenery for team members, helping them relax and connect with their colleagues in a new and fun way. If you're looking for an original and stimulating team building activity, our outdoor Escape Game is the perfect choice for you.
+    </p>";
+
 
 
 
@@ -94,4 +97,28 @@ const mention = "<div id=\"mention\">
         We reserve the right to amend this legal notice at any time. We encourage you to check this page regularly to stay informed of any changes.
     </p>
 </div>";
+
+const carte_titre= "Gift Card";
+
+const carte_text_1="Don't know what to give for a birthday or any other occasion? Are you looking for an original gift that will surprise the recipient?";
+
+const carte_text_2="Look no further, you're in the right place!";
+
+const carte_montant="Gift card amount in €";
+
+const carte_value="Buy a gift card";
+
+
+
+const contact_nom="Your name";
+
+const contact_mail="Your email";
+
+const contact_tel="Your phone number";
+
+const contact_sujet="Subject";
+
+const contact_msg="Your message";
+
+const contact_send="Send";
 }
