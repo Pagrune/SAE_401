@@ -565,6 +565,52 @@ footer .footer_copyright p {
   width: 100%;
 }
 
+#panier {
+  padding-top: 12vh;
+  padding-bottom: 4vh;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+#panier .paiement {
+  border: solid 4px black;
+}
+
+#panier .paiement .title_paiement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#panier .paiement .title_paiement h2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  max-width: 70%;
+}
+
+#panier .paiement .title_paiement .logo_cb {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#panier .paiement .title_paiement .logo_cb img {
+  width: 30%;
+}
+
 #politique,
 #mention,
 #cgv {

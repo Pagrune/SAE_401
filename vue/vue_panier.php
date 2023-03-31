@@ -21,11 +21,11 @@
             </p>
     </button>
     <div class="paiement">
-        <div>
+        <div class="title_paiement">
             <h2>Paiement</h2>
-            <div>
-                <img src="" alt="">
-                <img src="" alt="">
+            <div class="logo_cb">
+                <img src="img/paiement/Visa_Inc._logo.svg.webp" alt="logo Visa">
+                <img src="img/paiement/MasterCard_Logo.png" alt="Logo Mastercard">
             </div>
         </div>
         <div>
