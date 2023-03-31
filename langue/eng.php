@@ -43,4 +43,55 @@ class lang{
 <p>
     De plus, l'environnement en plein air offre un changement de décor agréable pour les membres de l'équipe, les aidant à se détendre et à se connecter avec leurs collègues d'une manière nouvelle et amusante. Si vous cherchez une activité de team building originale et stimulante, notre Escape Game en extérieur est le choix idéal pour vous.
 </p>";
+
+
+
+const mention = "<div id=\"mention\">
+    <h1>
+        Legal notice
+    </h1>
+    <p>
+        This website is published by We-Escape GmbH, a simplified joint-stock company registered with the commercial and companies register of Freiburg im Breisgau under number HRB 725194.
+    </p>
+    <p>
+        Registered office: Am Krebsbach 2G 79241 Ihringen
+    </p>
+    <p>
+        Phone number: 0176 66810096
+    </p>
+    <p>
+        Contact email address: <a href=\"booking@we-escape.de\">booking@we-escape.de</a>
+    </p>
+    <p>
+        Publisher: Thilo Konstanzer
+    </p>
+    <p>
+        Site host: Mathias Kliem - V9
+    </p>
+    <h2>
+        General terms and conditions of sale
+    </h2>
+    <p>
+        The general terms and conditions of sale governing the sale of products and services on our website are available at the following address:
+        <a href=\"\">consult our T&Cs</a>. By placing an order on our site, you accept these general terms and conditions of sale.
+    </p>
+    <h2>
+        Intellectual property
+    </h2>
+    <p>
+        All elements present on our website, such as texts, images, logos, trademarks, videos, sounds, graphic charters, source codes and software, are protected by copyright, trademarks and/or any other intellectual property right. Any reproduction, representation, use or adaptation, in any form whatsoever, of all or part of these elements without the prior written permission of <a href=\"index.php\">We-Escape GmbH</a> is strictly prohibited.
+    </p>
+    <h2>
+        Links to third-party sites
+    </h2>
+    <p>
+        Our website may contain links to third-party websites. These links are provided for your convenience only and we are not responsible for the content of these third-party sites. We do not control these sites and assume no responsibility for their content or privacy policy.
+    </p>
+    <h2>
+        Amendment of legal notice
+    </h2>
+    <p>
+        We reserve the right to amend this legal notice at any time. We encourage you to check this page regularly to stay informed of any changes.
+    </p>
+</div>";
 }
