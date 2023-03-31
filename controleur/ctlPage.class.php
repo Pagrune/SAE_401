@@ -1,8 +1,14 @@
 <?php
 require_once "vue/vue.class.php";
+require_once "modele/faq.class.php";
 
 class ctlPage {
     private $page;
+    private $faq;
+
+    public function __construct(){
+        $this->faq = new FAQ();
+    }
 
     public function accueil(){
         $vue = new vue("accueil"); // Instancie la vue appropriée
@@ -14,8 +20,9 @@ class ctlPage {
         $vue->afficher(array());
     }
     public function faq(){
+        $faq=$this->faq->getFaq();
         $vue=new vue("faq");
-        $vue->afficher(array());
+        $vue->afficher(array("faq"=>$faq));
     }
 
 
