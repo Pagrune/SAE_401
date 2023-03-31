@@ -53,11 +53,6 @@
                 <p>
                     69€
                 </p>
-                <button>
-                    <p>
-                        Revenir à mon panier
-                    </p>
-                </button>
             </div>
         </div>
     </div>

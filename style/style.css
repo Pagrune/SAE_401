@@ -573,6 +573,10 @@ footer .footer_copyright p {
   margin-right: 4%;
 }
 
+#panier h1 {
+  font-size: 70px;
+}
+
 #panier .paiement {
   border: solid 4px black;
 }
@@ -584,19 +588,27 @@ footer .footer_copyright p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 1vh;
 }
 
 #panier .paiement .title_paiement h2 {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 70%;
-          flex: 0 0 70%;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
   max-width: 70%;
+  font-family: "Ultra", serif;
+  font-size: 70px;
+  color: #3E3535;
+  font-weight: initial;
+  margin-left: 1vh;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #panier .paiement .title_paiement .logo_cb {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,7 +621,7 @@ footer .footer_copyright p {
 }
 
 #panier .paiement .title_paiement .logo_cb img {
-  width: 30%;
+  width: 40%;
 }
 
 #politique,

@@ -458,23 +458,34 @@ footer{
     padding-bottom: 4vh;
     margin-left: 4%;
     margin-right: 4%;
+    h1{
+        font-size: 70px;
+    }
     .paiement{
         border: solid 4px black;
         .title_paiement{
             display: flex;
             align-items: center;
+            margin-top: 1vh;
             h2{
-                flex: 0 0 70%;
+                flex: 0 0 60%;
                 max-width: 70%;
+                font-family: "Ultra", serif;
+                font-size: 70px;
+                color: #3E3535;
+                font-weight: initial;
+                margin-left: 1vh;
+                margin-top: 0;
+                margin-bottom: 0;
             }
             .logo_cb{
-                flex: 0 0 30%;
+                flex: 0 0 35%;
                 width: 30%;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 img{
-                    width: 30%;
+                    width: 40%;
                 }
             }
         }
