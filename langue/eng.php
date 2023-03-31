@@ -1,7 +1,7 @@
 <?php
 class lang{
 
-    const accueuil_titre = "Le plus grand escape game <span>du monde</span>";
+    const accueuil_titre = "The biggest Escape Game <span>in the World</span>";
     
     const accueuil_text_block_1 = "<p>Notre entreprise d'Escape Game en extérieur offre une expérience unique pour les amateurs de défis, d'aventure et d'exploration.</p>
 <p>Nos jeux ont lieu dans des lieux pittoresques en plein air, tels que des parcs, des forêts, des rues historiques ou des quartiers animés, ce qui permet aux joueurs de découvrir de nouveaux endroits tout en résolvant des énigmes et en travaillant en équipe.</p>

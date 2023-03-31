@@ -9,7 +9,7 @@
             <?=lang::accueuil_text_block_1?>
             </div>
             <div class="text-block-2">
-            
+            <?=lang::accueuil_text_block_2?>
             </div>
         </div>
     </div>
