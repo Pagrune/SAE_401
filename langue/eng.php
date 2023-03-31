@@ -94,4 +94,88 @@ const mention = "<div id=\"mention\">
         We reserve the right to amend this legal notice at any time. We encourage you to check this page regularly to stay informed of any changes.
     </p>
 </div>";
+
+const cgv="<div id=\"cgv\">
+<h1>Terms and Conditions of Sale</h1>
+<h2>
+    1. Purpose
+</h2>
+<p>
+    These general terms and conditions of sale (CGV) govern the sales of products and services offered on the website [site name]. By placing an order on our site, you accept these CGVs.
+</p>
+<h2>
+    2. Products and services
+</h2>
+<p>
+    The products and services offered on our site are described as accurately as possible. However, errors or omissions may occur. In this case, we reserve the right to correct these errors or omissions and to modify the product or service information at any time.
+</p>
+<h2>
+    3. Order
+</h2>
+<div>
+    <p>
+        To place an order on our site, you must follow these steps:
+    </p>
+    <ul>
+        <li>
+            Select the product or service you wish to purchase.
+        </li>
+        <li>
+            Add the product or service to your cart.
+        </li>
+        <li>
+            Check the information relating to your order, including the quantity and the total price.
+        </li>
+        <li>
+            Validate your order.
+        </li>
+        <li>
+            Make the payment.
+        </li>
+    </ul>
+    <p>
+        Once your order has been placed, you will receive a confirmation email summarizing the details of your order.
+    </p>
+</div>
+<h2>
+    4. Prices
+</h2>
+<p>
+    The prices of products and services are indicated in euros, including all taxes (TTC). Delivery charges are not included in the price and are billed separately.
+</p>
+<p>
+    We reserve the right to modify prices at any time. However, products and services will be invoiced at the price in effect at the time of order validation.
+</p>
+<h2>
+    5. Payment
+</h2>
+<p>
+    Payment can be made by credit card or by any other means of payment accepted by We-Escape GmbH. Payment is secure and made via a third-party payment provider.
+</p>
+<h2>
+    6. Delivery
+</h2>
+<p>
+    Products and services are delivered to the address you provided when placing your order. Delivery times are indicated on our site and are given for information purposes only.
+</p>
+<h2>
+    7. Right of withdrawal
+</h2>
+<p>
+    In accordance with the legal provisions in force, you have a period of 14 days from receipt of the products or acceptance of the offer to exercise your right of withdrawal. To exercise this right, you must contact us at the following address: <a href=\"booking@we-escape.de\">booking@we-escape.de</a>.
+</p>
+<h2>
+    8. Liability
+</h2>
+<p>
+    We cannot be held liable for any direct or indirect damage resulting from the use of the products or services offered on our site, except in cases of gross negligence or willful misconduct.
+</p>
+<h2>
+    9. Intellectual property
+</h2>
+<p>
+    All elements present on our website, such as texts, images, logos, trademarks, videos, sounds, graphic charters, source codes, and software, are protected to find an amicable solution. Failing that, any disputes will be subject to the jurisdiction of the competent courts.
+    </p>
+    
+    </div>";
 }

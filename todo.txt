@@ -1,0 +1,8 @@
+- ajouter les coordonnées dans la carte leaflet
+- système de Paiement
+- trouver une solution pour la page contact
+- faire le panier
+- faire le système de validation de réservation
+- faire en sorte que les créneaux déjà réservés soient invalides 
+- faq
+- page accueil
