@@ -13,7 +13,7 @@ else{
         echo 'langue/fr.php';
     }
     if($_COOKIE['lang']=='eng'){
-        require_once './langue/fr.php';
+        require_once './langue/eng.php';
         echo 'langue/eng.php';
     }
     if(!isset($_COOKIE['lang'])){

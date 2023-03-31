@@ -3,17 +3,16 @@ if(document.querySelector("#aventure_solo")){
     bouton.addEventListener("click", AddToCart);
 
     document.querySelectorAll("input[type=radio]").forEach(e=>{
-        e.addEventListener("click", function(){
-            console.log(this.parentElement.dataset.date);
-        })
+        e.addEventListener("click", AddToCart);
     })
 }
 
 
 function AddToCart(){
-    let a = this.dataset.id;
-        if(window.localStorage.getItem(a)==null){//si non je l'ajoute
-            window.localStorage.setItem(a,a);
+    let id = this.dataset.id;
+    let infos = this.dataset.date.toString();
+        if(window.localStorage.getItem(id)==null){//si non je l'ajoute
+            window.localStorage.setItem(id,a);
             console.log(localStorage);
         }
         else{//si oui le supprime

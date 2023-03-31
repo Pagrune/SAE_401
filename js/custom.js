@@ -54,9 +54,9 @@ if(document.querySelector('.btn_plus')){
         var output = "";
         for (var i = 0, fin = FinDuMois(); i < fin; i++) {
             output += `
-                <div class="${jours[temp.getDay()]}" data-date="${temp.toLocaleDateString()}">
+                <div class="${jours[temp.getDay()]}">
                     <form action='' method='post'>
-                    <input type="radio" id="date_jour" name="date_jour" value="true">
+                    <input type="radio" id="date_jour" name="date_jour" data-date="${temp.toLocaleDateString()}" value="true">
                     <div>${temp.toLocaleDateString()}</div>
                 
                 </div>`
