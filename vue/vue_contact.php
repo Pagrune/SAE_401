@@ -7,21 +7,21 @@
             </h1>            
             <form action="">
                 <label for="nom_contact">
-                    <input type="text" id="nom_contact" name="nom_contact" placeholder="Votre nom">
+                    <input type="text" id="nom_contact" name="nom_contact" placeholder="<?=lang::contact_nom?>">
                 </label>
                 <label for="email_contact">
-                    <input type="email" id="email_contact" name="email_contact" placeholder="Votre email">
+                    <input type="email" id="email_contact" name="email_contact" placeholder="<?=lang::contact_mail?>">
                 </label>
                 <label for="tel_contact">
-                    <input type="tel" id="tel_contact" name="tel_contact" placeholder="Votre numéro de téléphone">
+                    <input type="tel" id="tel_contact" name="tel_contact" placeholder="<?=lang::contact_tel?>">
                 </label>
                 <label for="sujet_contact">
-                    <input type="text" id="sujet_contact" name="sujet_contact" placeholder="Sujet">
+                    <input type="text" id="sujet_contact" name="sujet_contact" placeholder="<?=lang::contact_sujet?>">
                 </label>
                 <label for="message_contact">
-                    <input type="text" id="message_contact" name="message_contact" placeholder="Votre message">
+                    <input type="text" id="message_contact" name="message_contact" placeholder="<?=lang::contact_msg?>">
                 </label>
-                <input id="submit_contact" name="submit_contact" type="submit" value="Envoyer">
+                <input id="submit_contact" name="submit_contact" type="submit" value="<?=lang::contact_send?>">
             </form>
     </div>
 </div>
