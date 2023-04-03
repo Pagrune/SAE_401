@@ -191,43 +191,43 @@ extract($infos);
                     <div class="toggle choix_horraire">
                         <form action="" method="post">
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='09' name="heure_jour">
                                 <label for="">9h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='10' name="heure_jour">
                                 <label for="">10h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='11' name="heure_jour">
                                 <label for="">11h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='12' name="heure_jour">
                                 <label for="">12h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='13' name="heure_jour">
                                 <label for="">13h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='14' name="heure_jour">
                                 <label for="">14h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='15' name="heure_jour">
                                 <label for="">15h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='16' name="heure_jour">
                                 <label for="">16h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='17' name="heure_jour">
                                 <label for="">17h</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="heure_jour" name="heure_jour">
+                                <input type="radio" id="heure_jour" data-heure ='18' name="heure_jour">
                                 <label for="">18h</label>
                             </div>
                         </form>
