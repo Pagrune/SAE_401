@@ -1,5 +1,6 @@
 <?php
 extract($infos);
+var_dump($infos);
 
 ?>
 <div id="aventure_solo">
@@ -240,13 +241,104 @@ extract($infos);
                     </div>
                     <div class="toggle">
                         <div class="groupe_choix">
-                            <input type="checkbox" id="taille_groupe" name="taille_groupe">
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_3?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 2 - 3 personnes
                                 </p>
                                 <p>
-                                    69,00€
+                                    <?=$game_prix_3?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_4?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 4 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_4?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_5?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 5 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_5?>
+                                </p>
+                            </label>
+                            
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_6?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 6 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_6?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_7?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 7 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_7?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_8?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 8 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_8?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_9?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 9 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_9?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_10?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 10 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_10?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_11?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 11 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_11?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_12?>>
+                            <label for="">
+                                <p>
+                                    Prix de groupe avec 12 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_12?>
+                                </p>
+                            </label>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-prix=<?=$game_prix_groupe?>>
+                            <label for="">
+                                <p>
+                                    Prix de grand groupe  +12 personnes
+                                </p>
+                                <p>
+                                    <?=$game_prix_groupe?>
                                 </p>
                             </label>
                             <button class="add" data-id="<?= $game_id ?>">
