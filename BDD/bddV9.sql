@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `sae_401`
 --
+drop DATABASE if exists sae_401;
 CREATE DATABASE IF NOT EXISTS `sae_401` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `sae_401`;
 

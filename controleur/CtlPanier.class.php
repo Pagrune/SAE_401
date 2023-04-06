@@ -14,12 +14,12 @@ class ctlPanier {
     
     public function panier(){
         if(isset($_SESSION["id"])){
-            $with_session='';
+            $req=$this->panier->getPanier($_SESSION["id"], session_id());
         }
         else{
-            $with_session=true;
+            $req=$this->panier->getPanier('',session_id());
         }  
-        $req=$this->panier->getPanier($with_session, session_id());
+        
         $vue=new Vue('panier');
         var_dump($req);
         $vue->afficher(array('reponse'=>$req));
