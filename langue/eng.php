@@ -243,4 +243,88 @@ const me_connecter="Log me in";
 const identification="Your identification email";
 const votre_mdp="Your password";
 
+
+const politique_titre="Privacy Policy";
+const politique="
+
+<p>
+        At <a href=\"index.php\">KaiserStuhl Escape</a>, we take the privacy of our customers very seriously. This privacy policy explains how we collect, use, and protect your personal data when you visit our website, purchase products, use our services, or contact us.
+    </p>
+    <h2>
+        Collection and Use of Personal Information
+    </h2>
+    <p>
+        When you create a customer account on our site, we collect your personal information such as your name, email address, and postal address in order to process your orders and communicate with you. If you purchase gift cards, we also collect information about the gift card recipient.
+    </p>
+    <p>
+        We may also collect information about your use of our website, such as the pages you view and the products you purchase, as well as information about your device and internet connection.
+    </p>
+    <p>
+        We use this information to process your orders, personalize your user experience, and improve our products and services. We may also use your information to contact you for direct marketing purposes, but we will only do so if you have expressly consented to receiving these communications.
+    </p>
+    <h2>
+        Disclosure of Personal Information
+    </h2>
+    <p>
+        We do not sell, rent, or disclose your personal information to third parties unless it is necessary to process your order or we are legally required to do so. We may also disclose your information to third-party service providers, such as web hosting providers or online payment services, to the extent necessary to provide our services.
+    </p>
+    <h2>
+        Security of Personal Information
+    </h2>
+    <p>
+        We take reasonable measures to protect the personal information we collect against loss, theft, unauthorized access, disclosure, alteration, or destruction. We use standard security protocols to protect payment information, such as SSL encryption.
+    </p>
+    <h2>
+        Contact Form
+    </h2>
+    <p>
+        If you use our contact form to ask us a question or send us a comment, we will collect your name, email address, and any information you provide in your message. We will use this information to respond to your request or to improve our services.
+    </p>
+    <h2>
+        Cookies
+    </h2>
+    <p>
+        Our site uses cookies to enhance your user experience and to collect information about your use of our website. Cookies are small text files that are stored on your computer or mobile device when you visit our site. We use session cookies to identify you when you log into your customer account, as well as persistent cookies to save your preferences and to track your browsing behavior on our site. You can disable cookies in your browser settings, but this may affect your user experience on our site.
+    </p>
+    <h2>
+        Changes to Our Privacy Policy
+    </h2>
+    <p>
+        We may update this privacy policy from time to time. If we make significant changes to this policy, we will notify you by email or by posting an announcement on our website.
+    </p>
+    <h2>
+        Contact Us
+    </h2>
+    <p>
+        If you have any questions or concerns about our privacy policy or how we use your personal information, please do not hesitate to <a href=\"index.php?action=contact\">contact us using our contact form</a>. We will do our best to answer your questions and address your concerns.
+    </p>
+    <h2>
+        Conclusion
+    </h2>
+    <p>
+    At <a href=\"index.php\">Kaiserstuhl Escape</a>, we are committed to protecting the privacy of our customers. We collect and use your personal information in a responsible and transparent manner. If you have any questions or concerns about our privacy policy, please contact us and we will be happy to assist you.
+</p>";
+
+/** Page aventures sommaire */
+const liste_h1="Dive into the heart of ";
+const liste_h1_span="our adventures";
+const liste_block1_1="Our outdoor Escape Game company offers a unique experience for enthusiasts of challenges, adventure, and exploration.";
+
+const liste_block1_2="Our games take place in picturesque outdoor locations such as parks, forests, historic streets or lively neighborhoods, allowing players to discover new places while solving puzzles and working as a team.";
+const liste_block2="Get ready to face unique challenges and experience an unforgettable outdoor adventure with our Escape Game !";
+
+const liste_h2_famille="Adventures to do with family";
+const liste_h2_novice="Adventures for beginners";
+const liste_h2_confirme="Adventures for the most experienced";
+const liste_h2_avenir="Upcoming Escape Games";
+
+const genre_esc="Genre:";
+const duree_esc="Duration:";
+const heures_esc="hours | approximately ";
+const where_esc="in";
+const niv_debutant="Suitable for beginner players";
+const niv_confirme="Suitable for experienced players";
+
+const esp="Learn more";
+
 }
