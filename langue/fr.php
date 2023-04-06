@@ -252,4 +252,21 @@ const compte_ville="Ville";
 const compte_pays="Pays";
 const compte_mdp="Mot de passe";
 const compte_conf_mdp="Confirmer mon mot de passe";
+
+
+/** Page creation de compte */
+const compte_accept_pol="J'accepte la";
+const compte_pol="politique de confidentialité";
+const compte_crea="Créer mon compte";
+
+
+/** Page de connexion */
+const connexion="Connexion";
+const no_compte="Je n'ai pas de compte";
+const me_connecter="Me connecter";
+const identification="Votre email d'identification";
+const votre_mdp="Votre mot de passe";
+
+
+
 }
