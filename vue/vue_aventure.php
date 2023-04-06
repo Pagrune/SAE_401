@@ -249,6 +249,9 @@
         </div>               
     </div> -->
     </div>
+    <div class="carte">
+        <div id="map"></div>
+    </div>
     <div class="block-avantage">
         <h2>
             Les avantages de la réservation
