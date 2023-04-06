@@ -51,10 +51,13 @@
     <?php
 
     
-    var_dump($client);
-    var_dump($resa);
+    // var_dump($client);
+    // var_dump($resa);
     if($resa==false){
-        echo '<div class="no_resa">pas de réservation</br></div>';
+        echo '<div class="no_resa">
+        <img src="img/icons/manque.png" alt="icône rien">
+        <p>Pas de réservation</p>
+        </div>';
     }
     else{
         echo '<div class="mes_resa">
