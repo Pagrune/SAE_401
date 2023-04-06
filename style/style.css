@@ -1108,8 +1108,18 @@ footer .footer_copyright p {
 #mon_compte h2 {
   font-size: 4rem;
 }
+#mon_compte .no_resa {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#mon_compte .no_resa p {
+  margin-left: 4%;
+  font-size: 2rem;
+}
 #mon_compte .deconnexion {
   background-color: #F3A93E;
+  margin-top: 4%;
   color: white;
   cursor: pointer;
   width: 30%;
