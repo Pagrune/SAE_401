@@ -61,7 +61,7 @@ p {
 }
 
 header {
-  height: 12vh;
+  height: 9vh;
   position: fixed;
   background-image: url("../img/background/fond.jpg");
 }
@@ -438,8 +438,105 @@ footer .footer_copyright p {
 #panier h1 {
   font-size: 70px;
 }
+#panier .panier .mes_resa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 5px black;
+  width: 80%;
+  margin-left: auto;
+  padding: 2%;
+  margin-right: auto;
+  margin-bottom: 4%;
+}
+#panier .panier .mes_resa .info_resa h3 {
+  font-size: 3rem;
+  margin-bottom: 8%;
+  margin-top: 8%;
+}
+#panier .panier .mes_resa .info_resa .resa_nbr {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#panier .panier .mes_resa .info_resa .tarif {
+  font-size: 3rem;
+  text-align: center;
+}
+#panier .panier .mes_resa .creneau_resa {
+  background-color: #F3A93E;
+  width: 44%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#panier .panier .mes_resa .creneau_resa h4 {
+  font-size: 2rem;
+  margin-bottom: 3%;
+}
+#panier .panier .mes_resa .creneau_resa .line {
+  border: solid 1px black;
+  width: 40%;
+}
+#panier .panier .mes_resa .creneau_resa .date_resa {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+#panier .panier .mes_resa .creneau_resa .heure_resa {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 6%;
+  margin-top: 0;
+}
+#panier .panier .mes_resa .supp_jeu {
+  color: #98251E;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+#panier .panier .mes_resa .supp_jeu:hover {
+  text-decoration: underline;
+}
+#panier .panier .valid_panier {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#panier .panier .valid_panier .code_cadeau {
+  width: 62%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4%;
+}
+#panier .panier .valid_panier .code_cadeau input[type=text] {
+  padding: 5%;
+  font-size: 1.2rem;
+}
+#panier .panier .valid_panier .code_cadeau input[type=submit] {
+  padding: 2%;
+  font-size: 1.2rem;
+}
+#panier .panier .valid_panier .btn_valid_panier {
+  padding: 2%;
+  width: 48%;
+  background-color: #F3A93E;
+  border: none;
+  margin-bottom: 8%;
+}
+#panier .panier .valid_panier .btn_valid_panier a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+}
 #panier .paiement {
   border: solid 4px black;
+  padding: 3%;
 }
 #panier .paiement .title_paiement {
   display: flex;
@@ -453,7 +550,6 @@ footer .footer_copyright p {
   font-size: 70px;
   color: #3E3535;
   font-weight: initial;
-  margin-left: 1vh;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -466,6 +562,30 @@ footer .footer_copyright p {
 }
 #panier .paiement .title_paiement .logo_cb img {
   width: 40%;
+}
+#panier .paiement .partie_paiement {
+  display: flex;
+  justify-content: center;
+}
+#panier .paiement .partie_paiement form {
+  flex: 0 0 50%;
+}
+#panier .paiement .partie_paiement .recap_commande {
+  padding: 2%;
+  width: 34%;
+  background-color: #AA8773;
+  border: none;
+  color: white;
+}
+#panier .paiement .partie_paiement .recap_commande h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 3%;
+}
+#panier .paiement .partie_paiement .recap_commande p {
+  text-align: center;
+  margin-top: 8%;
+  font-size: 4rem;
 }
 
 #politique,
@@ -957,6 +1077,7 @@ footer .footer_copyright p {
 
 #mon_compte {
   padding-top: 12vh;
+  margin: 4%;
 }
 #mon_compte h2 {
   font-size: 4rem;
@@ -1011,6 +1132,10 @@ footer .footer_copyright p {
   font-size: 1.6rem;
   margin-left: auto;
   margin-right: auto;
+  background-color: #F3A93E;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 #mon_compte form #pays_compte {
   width: 50%;
@@ -1777,6 +1902,141 @@ footer .footer_copyright p {
   }
   #aventure_solo .block-avantage .grid_avantage {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #mon_compte h2 {
+    font-size: 2rem;
+  }
+  #mon_compte form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 86%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #mon_compte form label {
+    font-size: 30px;
+    margin-bottom: 1vh;
+  }
+  #mon_compte form .block-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+  }
+  #mon_compte form input {
+    width: 100%;
+    height: 5vh;
+    font-size: 1.3rem;
+    padding: 1.5vh;
+    border: solid 2px black;
+  }
+  #mon_compte form #submit_compte {
+    height: 9vh;
+  }
+  #mon_compte form #pays_compte {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  #mon_compte .mes_jeux .mes_resa {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: solid 4px black;
+    width: 90%;
+  }
+  #mon_compte .mes_jeux .mes_resa .info_resa h3 {
+    font-size: 3rem;
+    margin-bottom: 8%;
+    margin-top: 8%;
+  }
+  #mon_compte .mes_jeux .mes_resa .info_resa .resa_nbr {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #mon_compte .mes_jeux .mes_resa .info_resa .tarif {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #mon_compte .mes_jeux .mes_resa .creneau_resa {
+    background-color: #F3A93E;
+    width: 20%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #mon_compte .mes_jeux .mes_resa .creneau_resa h4 {
+    font-size: 2rem;
+    margin-bottom: 3%;
+  }
+  #mon_compte .mes_jeux .mes_resa .creneau_resa .line {
+    border: solid 1px black;
+    width: 40%;
+  }
+  #mon_compte .mes_jeux .mes_resa .creneau_resa .date_resa {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  #mon_compte .mes_jeux .mes_resa .creneau_resa .heure_resa {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 6%;
+    margin-top: 0;
+  }
+  #panier .panier .mes_resa {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: solid 4px black;
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  #panier .panier .mes_resa .info_resa h3 {
+    font-size: 3rem;
+    margin-bottom: 8%;
+    margin-top: 8%;
+  }
+  #panier .panier .mes_resa .info_resa .resa_nbr {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #panier .panier .mes_resa .info_resa .tarif {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #panier .panier .mes_resa .creneau_resa {
+    background-color: #F3A93E;
+    width: 20%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #panier .panier .mes_resa .creneau_resa h4 {
+    font-size: 2rem;
+    margin-bottom: 3%;
+  }
+  #panier .panier .mes_resa .creneau_resa .line {
+    border: solid 1px black;
+    width: 40%;
+  }
+  #panier .panier .mes_resa .creneau_resa .date_resa {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  #panier .panier .mes_resa .creneau_resa .heure_resa {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 6%;
+    margin-top: 0;
+  }
+  #panier .panier .mes_resa .supp_jeu {
+    flex: 0 0 95%;
+    text-align: right;
+    font-size: 1.5rem;
   }
   @keyframes slider_animation {
     0% {

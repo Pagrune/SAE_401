@@ -1,4 +1,5 @@
 <div id='mon_compte'>
+    <h1>Mon compte</h1>
     <div class="modif_compte">
         <h2>Mes informations</h2>
         <form action="" method="post">
@@ -43,6 +44,10 @@
     </div>
     
 
+    
+
+<div class="mes_jeux">
+    <h2>Mes jeux réservés</h2>
     <?php
 
     
@@ -51,14 +56,8 @@
     if($resa==false){
         echo '<div class="no_resa">pas de réservation</br></div>';
     }
-    // else{
-    //     echo '<div class="mes_resa">'
-    // }
-    ?>
-
-<div class="mes_jeux">
-    <h2>Mes jeux réservés</h2>
-    <div class="mes_resa">
+    else{
+        echo '<div class="mes_resa">
         <img src="img/kredo/kredo.png" alt="">
         <div class="info_resa">
             <h3>Kredo Castello</h3>
@@ -76,7 +75,10 @@
             <p class="date_resa">27/04/2023</p>
             <p class="heure_resa"> 15h30</p>
         </div>
-    </div>
+    </div>';
+    }
+    ?>
+    
 </div>
    
 

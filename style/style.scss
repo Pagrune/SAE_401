@@ -7,6 +7,7 @@ $ultra : 'Ultra', serif;
 $gris :#3E3535;
 $beige : #AA8773;
 $jaune : #F3A93E;
+$bordeau : #98251E;
 
 body{
     margin: 0;
@@ -71,7 +72,7 @@ p{
 }
 
 header{
-    height: 12vh;
+    height: 9vh;
     position: fixed;
     background-image: url("../img/background/fond.jpg");
     .header_logo{
@@ -461,8 +462,111 @@ footer{
     h1{
         font-size: 70px;
     }
+    .panier{
+        .mes_resa{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: solid 5px black;
+            width: 80%;
+            margin-left: auto;
+            padding: 2%;
+            margin-right: auto;
+            margin-bottom: 4%;
+            .info_resa{
+                h3{
+                    font-size: 3rem;
+                    margin-bottom: 8%;
+                    margin-top: 8%;
+                }
+                .resa_nbr{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+                .tarif{
+                    font-size: 3rem;
+                    text-align: center;
+                }
+            }
+            .creneau_resa{
+                background-color: $jaune;
+                width: 44%;
+                padding: 2%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h4{
+                    font-size: 2rem;
+                    margin-bottom: 3%;
+                }
+                .line{
+                    border: solid 1px black;
+                    width: 40%;
+                }
+                .date_resa{
+                    font-size: 2rem;
+                    font-weight: bolder;
+                }
+                .heure_resa{
+                    color: white;
+                    font-size: 3rem;
+                    margin-bottom: 6%;
+                    margin-top: 0;
+                }
+            }   
+            .supp_jeu{
+                color: $bordeau;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 2.5rem;
+                font-weight: bolder;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .valid_panier{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .code_cadeau{
+                width: 62%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 4%;
+                input[type=text]{
+                    padding: 5%;
+                    font-size: 1.2rem;
+                }
+                input[type=submit]{
+                    padding: 2%;
+                    font-size: 1.2rem;
+                }
+            }
+            .btn_valid_panier{
+                padding: 2%;
+                width: 48%;
+                background-color: #F3A93E;
+                border: none;
+                margin-bottom: 8%;
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+        
+        
+    }
     .paiement{
         border: solid 4px black;
+        padding: 3%;
         .title_paiement{
             display: flex;
             align-items: center;
@@ -474,7 +578,6 @@ footer{
                 font-size: 70px;
                 color: #3E3535;
                 font-weight: initial;
-                margin-left: 1vh;
                 margin-top: 0;
                 margin-bottom: 0;
             }
@@ -486,6 +589,30 @@ footer{
                 align-items: center;
                 img{
                     width: 40%;
+                }
+            }
+        }
+        .partie_paiement{
+            display: flex;
+            justify-content: center;
+            form{
+                flex: 0 0 50%;
+            }
+            .recap_commande{
+                padding: 2%;
+                width: 34%;
+                background-color: $beige;
+                border: none;
+                color: white;
+                h3{
+                    text-align: center;
+                    font-size: 1.6rem;
+                    margin-bottom: 3%;
+                }
+                p{
+                    text-align: center;
+                    margin-top: 8%;
+                    font-size: 4rem;
                 }
             }
         }
@@ -984,7 +1111,7 @@ footer{
 
 #mon_compte{
     padding-top: 12vh;
-
+    margin: 4%;
     h2{
         font-size: 4rem;
     }
@@ -1037,6 +1164,10 @@ footer{
             font-size: 1.6rem;
             margin-left: auto;
             margin-right: auto;
+            background-color: $jaune;
+            border: none;
+            color: white;
+            cursor: pointer;
         }
         #pays_compte{
             width: 50%;
@@ -1792,6 +1923,157 @@ footer{
             }   
         }
     }
+
+    #mon_compte{
+        h2{
+            font-size: 2rem;
+        }
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 86%;
+            margin-right: auto;
+            margin-left: auto;
+            label{
+                font-size: 30px; 
+                margin-bottom: 1vh;
+            }
+            .block-duo{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4vw;
+            }
+            input{
+                width: 100%;
+                height: 5vh;
+                font-size: 1.3rem;
+                padding: 1.5vh;
+                border: solid 2px black;
+            }
+            #submit_compte{
+                height: 9vh;
+            }
+            #pays_compte{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .mes_jeux{
+            .mes_resa{
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                border: solid 4px black;
+                width: 90%;
+                .info_resa{
+                    h3{
+                        font-size: 3rem;
+                        margin-bottom: 8%;
+                        margin-top: 8%;
+                    }
+                    .resa_nbr{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
+                    .tarif{
+                        font-size: 3rem;
+                        text-align: center;
+                    }
+                }
+                .creneau_resa{
+                    background-color: $jaune;
+                    width: 20%;
+                    padding: 1%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h4{
+                        font-size: 2rem;
+                        margin-bottom: 3%;
+                    }
+                    .line{
+                        border: solid 1px black;
+                        width: 40%;
+                    }
+                    .date_resa{
+                        font-size: 2rem;
+                        font-weight: bolder;
+                    }
+                    .heure_resa{
+                        color: white;
+                        font-size: 3rem;
+                        margin-bottom: 6%;
+                        margin-top: 0;
+                    }
+                }   
+            }
+        }
+    }
+
+    #panier{
+        .panier{
+            .mes_resa{
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                border: solid 4px black;
+                width: 90%;
+                flex-wrap: wrap;
+                .info_resa{
+                    h3{
+                        font-size: 3rem;
+                        margin-bottom: 8%;
+                        margin-top: 8%;
+                    }
+                    .resa_nbr{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
+                    .tarif{
+                        font-size: 3rem;
+                        text-align: center;
+                    }
+                }
+                .creneau_resa{
+                    background-color: $jaune;
+                    width: 20%;
+                    padding: 1%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h4{
+                        font-size: 2rem;
+                        margin-bottom: 3%;
+                    }
+                    .line{
+                        border: solid 1px black;
+                        width: 40%;
+                    }
+                    .date_resa{
+                        font-size: 2rem;
+                        font-weight: bolder;
+                    }
+                    .heure_resa{
+                        color: white;
+                        font-size: 3rem;
+                        margin-bottom: 6%;
+                        margin-top: 0;
+                    }
+                } 
+                .supp_jeu{
+                    flex: 0 0 95%;
+                    text-align: right;
+                    font-size: 1.5rem;
+                }  
+            }
+        }
+        
+    }
+
 
     @keyframes slider_animation{
         0%{

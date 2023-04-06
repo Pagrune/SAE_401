@@ -1,25 +1,44 @@
 <div id="panier">
     <h1>Mon panier</h1>
     <div class=panier>
-			<div class=entete>Articles</div>
-			<div class=entete>Quantité</div>
-
-			<div>Premier article</div>
-			<div>2</div>
-			<div>1.99 €</div>
-			<div>3.98 €</div>
-
-			<div>Deuxième article</div>
-			<div>1</div>
-			<div>2.99 €</div>
-			<div>2.99
+        <div class="mes_resa">
+            <img src="img/kredo/kredo.png" alt="">
+            <div class="info_resa">
+                <h3>Kredo Castello</h3>
+                <div class="resa_nbr">
+                    <img src="img/icons/contact.png" alt="icône nombre de personne">
+                    <p>
+                        2-3 personnes
+                    </p>
+                </div>
+                <p class="tarif">69€</p>
+            </div>
+            <div class="creneau_resa">
+                <h4>Mon créneau</h4>
+                <div class="line"></div>
+                <p class="date_resa">27/04/2023</p>
+                <p class="heure_resa"> 15h30</p>
+            </div>
+            <a class="supp_jeu" href="">Supprimer ce jeu</a>
+        </div>
+       <div class="valid_panier">
+            <div class="code_cadeau">
+                <label for="">
+                    <input type="text" placeholder="Mon code cadeau">
+                </label>
+                <input type="submit" value="Utiliser mon code">
+            </div>
+            <button class="btn_valid_panier">
+                <a href="">
+                    <img src="img/header/paniers.png" alt="icône panier">
+                    <span>
+                        Valider mon panier
+                    </span>
+                </a>
+            </button>
+       </div>
     
-    <button>
-            <img src="" alt="">
-            <p>
-                Valider mon panier
-            </p>
-    </button>
+    </div>
     <div class="paiement">
         <div class="title_paiement">
             <h2>Paiement</h2>
@@ -29,7 +48,7 @@
             </div>
         </div>
         <div>
-            <div>
+            <div class="partie_paiement">
                 <form action="">
                     <div>
                         <input type="text" class="numero" placeholder="0000 0000 0000 0000">
@@ -44,15 +63,19 @@
                             <p>Numéro secret</p>
                             <input type="text" placeholder="000">
                         </div>
+                        <input type="submit" value="Confirmer mon paiement">
                     </div>
-                    <input type="submit" value="Confirmer mon paiement">
+                    
                 </form>
-                <h3>
-                    Récapitulatif de la commande
-                </h3>
-                <p>
-                    69€
-                </p>
+                <div class='recap_commande'>
+                    <h3>
+                        Récapitulatif de la commande
+                    </h3>
+                    <p>
+                        69€
+                    </p>
+                </div>
+                
             </div>
         </div>
     </div>
