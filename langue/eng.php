@@ -231,4 +231,16 @@ const compte_pays="Country";
 const compte_mdp="Password";
 const compte_conf_mdp="Confirm password";
 
+/** Page creation de compte */
+const compte_accept_pol="I accept the";
+const compte_pol="privacy policy";
+const compte_crea="Create my account";
+
+/** Page de connexion */
+const connexion="Login";
+const no_compte="I don't have an account";
+const me_connecter="Log me in";
+const identification="Your identification email";
+const votre_mdp="Your password";
+
 }

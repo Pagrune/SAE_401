@@ -1,16 +1,16 @@
 <div id="connexion">
     <div >
         <h1>
-            Connexion
+            <?=lang::connexion?>
         </h1>
         <form action="index.php?action=connexion&verif=true" method='post'>
             <label for="identifiant">
-                <input type="text" id="identifiant" name="identifiant" placeholder="Votre email d'identification" >
+                <input type="text" id="identifiant" name="identifiant" placeholder="<?=lang::identification?>" >
             </label>
             <label for="mdp">
-                <input type="password" id="mdp" name="mdp" placeholder="Votre mot de passe" >
+                <input type="password" id="mdp" name="mdp" placeholder="<?=lang::votre_mdp?>" >
             </label>
-            <input id="me_connecter" name="me_connecter" type="submit" value="Me connecter">
+            <input id="me_connecter" name="me_connecter" type="submit" value="<?=lang::me_connecter?>">
         </form>
         <?php
         if(!empty($message_erreur)){
@@ -19,10 +19,10 @@
         ?>
         <div class="no_account">
             <p>
-                Je n'ai pas de compte ?
+                <?=lang::no_compte?>
             </p>
             <a href="index.php?action=crea_compte">
-                Créer votre compte
+                <?=lang::compte_crea?>
             </a>
         </div>
     </div>
