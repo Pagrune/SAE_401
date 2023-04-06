@@ -108,6 +108,7 @@ class ctlRouteur
                         else
                         $this->ctlPanier->panier();
                     break;
+
                     
 
                     //affichage d'une aventure

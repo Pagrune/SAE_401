@@ -21,7 +21,6 @@ class panier extends database {
 
 
     public function getPanier($id_user_log, $session_id){
-
         if(!empty($id_user_log)){
             $req='SELECT * from panier where panier_id_client=?;';
             $result=$this->execReqPrep($req,array($id_user_log));
@@ -35,6 +34,12 @@ class panier extends database {
     public function delEltPanier($id_elt){
         $req='DELETE FROM `panier` WHERE `panier_elt` = ?;';
         $result=$this->execReqPrep($req,array($id_elt));
+        return $result;
+    }
+
+    public function updatePanier($id_session, $id_user){
+        $req="UPDATE `panier` SET `panier_id_client`='?' WHERE `panier_session_client`=?;";
+        $result=$this->execReqPrep($req, array((int)$id_user,$id_session));
         return $result;
     }
 }

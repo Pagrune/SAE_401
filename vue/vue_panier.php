@@ -2,6 +2,7 @@
     <h1>Mon panier</h1>
     <div class=panier>
         <?php
+        if($reponse>0){
         foreach ($reponse as $gay){
             ?>
         
@@ -25,16 +26,17 @@
             </div>
             <a class="supp_jeu" href="index.php?action=supp_panier&del_id_elt=<?=$gay['panier_elt']?>">Supprimer ce jeu</a>
         </div>
-        <?php }?>
+        <?php }
+        ?>
        <div class="valid_panier">
             <div class="code_cadeau">
                 <label for="">
                     <input type="text" placeholder="Mon code cadeau">
                 </label>
-                <input type="submit" value="Utiliser mon code">
+                <input type="submit"  id='verif_carte' value="Utiliser mon code">
             </div>
             <button class="btn_valid_panier">
-                <a href="">
+                <a href="index.php?action=connexion">
                     <img src="img/header/paniers.png" alt="icône panier">
                     <span>
                         Valider mon panier
@@ -87,6 +89,10 @@
 </div>
 
 <?php
+}
+else{
+    echo ' votre panier est vide';
+}
 
 	if(
 		!isset($_POST['montant']) || 

@@ -3,15 +3,18 @@
 require_once "vue/vue.class.php";
 require_once "modele/connexion.class.php";
 require_once "modele/resa.class.php";
+require_once "modele/panier.class.php";
 
 class ctlConnexion{
 
     private $connexion; 
     private $resa; 
+    private $panier;
 
     public function __construct(){
         $this->connexion = new connexion();
         $this->resa= new resa();
+        $this->panier=new panier();
     }
 
     /*******************************************************
@@ -215,6 +218,8 @@ class ctlConnexion{
                 $session=$this->SetSession($verif);
                 $get_resa=$this->resa->GetResaClient($verif[0]['user_id']);
                 $vue=new vue('account');
+                $copie=$this->panier->updatePanier(session_id(), $verif[0]['user_id']);
+                var_dump($copie);
                 $vue->afficher(['message_erreur'=>$message_erreur, 'client'=>$verif, 'resa'=>$get_resa]);
             }
             

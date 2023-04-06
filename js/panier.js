@@ -73,25 +73,20 @@ function AddToCart(){
             console.log(text);
         })
         
-
-
-
-        if(window.localStorage.getItem('panier')){
-            let panier_actuel=window.localStorage.getItem('panier');
-            console.log(panier_actuel);
-            window.localStorage.setItem('panier',panier_actuel+'|'+(new_elt));
-        }
-        else{
-            window.localStorage.setItem('panier',new_elt);
-        }
-        
-        console.log(localStorage);
     }
     else{
         console.log("echec");
     }
         
 }
+
+function verifCadeau(){
+    
+}
+
+
+
+
 
 
 
