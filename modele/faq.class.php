@@ -16,7 +16,7 @@ class FAQ extends database
      *******************************************************/
     public function getFaq()
     {
-        $req = 'SELECT * FROM faq_sujet';
+        $req = 'SELECT * FROM faq';
         // $req = 'SELECT id_client AS "N° Client", nom AS "NOM", prenom AS "Prénom" FROM client ORDER BY nom, prenom;';
         $resultat = $this->execReq($req);
         return $resultat;

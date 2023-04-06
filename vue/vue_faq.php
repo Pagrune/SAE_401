@@ -1,4 +1,4 @@
-<!-- <?php
+ <!-- <?php
 var_dump($faq);
 ?> -->
 <div id="faq">
@@ -15,13 +15,37 @@ var_dump($faq);
     <div class="toggle">
         <div class="el-toggle">
             <h3>
-                <?=$quest['faqsj_quest'];?>
+                <?php 
+                if(!isset($_COOKIE["lang"])){
+                    echo $quest['faq_titre'];
+                }
+                else{
+                    if($_COOKIE["lang"]=='fr'){
+                        echo $quest['faq_titre'];
+                    }
+                    if($_COOKIE['lang']=='eng'){
+                        echo $quest['faq_titre_eng'];
+                    }
+                }
+                ?>
             </h3>
             <img src="img/icons/fleche_bas.svg" alt="icone flèche bas">
         </div>
         <div class="contenu_faq">
             <p>
-                <?=$quest['Faqsj_rep']?>
+            <?php 
+                if(!isset($_COOKIE["lang"])){
+                    echo $quest['faq_rep'];
+                }
+                else{
+                    if($_COOKIE["lang"]=='fr'){
+                        echo $quest['faq_rep'];
+                    }
+                    if($_COOKIE['lang']=='eng'){
+                        echo $quest['faq_rep_eng'];
+                    }
+                }
+                ?>
             </p>
         </div>
     </div>
