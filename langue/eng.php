@@ -205,4 +205,30 @@ const cgv="<div id=\"cgv\">
     </p>
     
     </div>";
+
+/** Page account */
+const compte_titre="My account";
+const compte_h2_info="My information";
+const compte_modif_info="Edit my information";
+const compte_h2_jeux="My reserved games";
+
+const compte_no_resa="No reservation";
+
+const compte_personne="people";
+const compte_creneau="My time slot";
+
+const compte_deconnexion="Log out";
+
+/** variables for the account forms */
+const compte_nom="Last name";
+const compte_prenom="First name";
+const compte_tel="Phone";
+const compte_mail="Email";
+const compte_rue="Street number";
+const compte_cp="Zip code";
+const compte_ville="City";
+const compte_pays="Country";
+const compte_mdp="Password";
+const compte_conf_mdp="Confirm password";
+
 }

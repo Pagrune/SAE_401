@@ -227,4 +227,29 @@ const cgv="<div id=\"cgv\">
 </p>
 </div>";
 
+
+/** Page account */
+const compte_titre="Mon compte";
+const compte_h2_info="Mes informations";
+const compte_modif_info="Modifier mes informations";
+const compte_h2_jeux="Mes jeux réservés";
+
+const compte_no_resa="Pas de réservation";
+
+const compte_personne="personnes";
+const compte_creneau="Mon créneau";
+
+const compte_deconnexion="Déconnexion";
+
+/** variables pour les formulaires de compte */
+const compte_nom="Nom";
+const compte_prenom="Prenom";
+const compte_tel="Téléphone";
+const compte_mail="Mail";
+const compte_rue="N° de rue";
+const compte_cp="Code Postal";
+const compte_ville="Ville";
+const compte_pays="Pays";
+const compte_mdp="Mot de passe";
+const compte_conf_mdp="Confirmer mon mot de passe";
 }

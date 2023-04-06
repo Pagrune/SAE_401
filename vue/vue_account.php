@@ -1,45 +1,46 @@
 <div id='mon_compte'>
-    <h1>Mon compte</h1>
+    <h1><?=lang::compte_titre?></h1>
     <div class="modif_compte">
-        <h2>Mes informations</h2>
+        <h2><?=lang::compte_h2_info?></h2>
         <form action="" method="post">
             <div class="block-duo">
                 <label for="nom_compte">
-                    <input type="text" id="nom_compte" <?php if(isset($nom) && !empty($user_nom)) echo'value='.$nom ?> name="nom_compte" placeholder="Nom" required>
+                    <input type="text" id="nom_compte" <?php if(isset($client['user_nom']) && !empty($client['user_nom'])) echo'value='.$client['user_nom'] ?> name="nom_compte" placeholder="<?=lang::compte_nom?>" required>
                 </label>
                 <label for="prenom_compte">
-                    <input type="text" id="prenom_compte" <?php if(isset($user_prenom) && !empty($user_prenom)) echo'value='.$user_prenom ?> name="prenom_compte" placeholder="Prénom" required>
+                    <input type="text" id="prenom_compte" <?php
+                    if(isset($client['user_prenom']) && !empty($client['user_prenom'])) echo'value='.$client['user_prenom'] ?> name="prenom_compte" placeholder="<?=lang::compte_prenom?>" required>
                 </label>
             </div>
             <div class="block-duo">
                 <label for="tel_compte">
-                    <input type="tel" id="tel_compte" <?php if(isset($tel) && !empty($tel)) echo'value='.$tel ?> name="tel_compte" placeholder="Votre numéro de téléphone">
+                    <input type="tel" id="tel_compte" <?php if(isset($client['user_telephone']) && !empty($client['user_telephone'])) echo'value='.$client['user_telephone'] ?> name="tel_compte" placeholder="<?=lang::compte_tel?>">
                 </label>
                 <label for="email_compte">
-                    <input type="email" id="email_compte" <?php if(isset($email) && !empty($email)) echo'value='.$email ?> name="email_compte" placeholder="Mail" required>
+                    <input type="email" id="email_compte" <?php if(isset($client['user_mail']) && !empty($client['user_mail'])) echo'value='.$client['user_mail'] ?> name="email_compte" placeholder="<?=lang::compte_mail?>" required>
                 </label>
             </div>
             <label for="rue_compte">
-                <input type="text" id="rue_compte" <?php if(isset($rue) && !empty($rue)) echo'value='.$rue ?> name="rue_compte" placeholder="N° de Rue" required>
+                <input type="text" id="rue_compte" <?php if(isset($client['user_adresse']) && !empty($client['user_adresse'])) echo'value='.$client['user_adresse'] ?> name="rue_compte" placeholder="<?=lang::compte_rue?>" required>
             </label>
             <div class="block-duo">
                 <label for="CP_compte">
-                    <input type="number" id="CP_compte" <?php if(isset($code_postal) && !empty($code_postal)) echo'value='.$code_postal ?> name="CP_compte" placeholder="Code Postal" required>
+                    <input type="text" id="CP_compte" <?php if(isset($client['user_codepostal']) && !empty($client['user_codepostal'])) echo'value='.$client['user_codepostal'] ?> name="CP_compte" placeholder="<?=lang::compte_cp?>" required>
                 </label>
                 <label for="ville_compte">
-                    <input type="text" id="ville_compte" <?php if(isset($ville) && !empty($ville)) echo'value='.$ville ?> name="ville_compte" placeholder="Ville" required>
+                    <input type="text" id="ville_compte" <?php if(isset($client['user_ville']) && !empty($client['user_ville'])) echo'value='.$client['user_ville'] ?> name="ville_compte" placeholder="<?=lang::compte_ville?>" required>
                 </label>
             </div>
             <label for="pays_connex">
-                <input type="text" id="pays_connex" <?php if(isset($pays) && !empty($pays)) echo'value='.$pays ?> name="pays_connex" placeholder="Pays" required>
+                <input type="text" id="pays_connex" <?php if(isset($client['user_pays']) && !empty($client['user_pays'])) echo'value='.$client['user_pays'] ?> name="pays_connex" placeholder="<?=lang::compte_pays?>" required>
             </label>
             <label for="mdp_connex">
-                <input type="password" id="mdp_connex" name="mdp_connex" placeholder="Mot de passe" required>
+                <input type="password" id="mdp_connex" name="mdp_connex" placeholder="<?=lang::compte_mdp?>" required>
             </label>
             <label for="mdp_confirm">
-                <input type="password" id="mdp_confirm" name="mdp_confirm_connex" placeholder="Confirmer mon mot de passe" required>
+                <input type="password" id="mdp_confirm" name="mdp_confirm_connex" placeholder="<?=lang::compte_conf_mdp?>" required>
             </label>
-            <input id="submit_compte" name="submit_compte" type="submit" value="Modifier mes informations">
+            <input id="submit_compte" name="submit_compte" type="submit" value="<?=lang::compte_modif_info?>">
         </form>
     </div>
     
@@ -47,7 +48,7 @@
     
 
 <div class="mes_jeux">
-    <h2>Mes jeux réservés</h2>
+    <h2><?=lang::compte_h2_jeux?></h2>
     <?php
 
     
@@ -56,7 +57,7 @@
     if($resa==false){
         echo '<div class="no_resa">
         <img src="img/icons/manque.png" alt="icône rien">
-        <p>Pas de réservation</p>
+        <p>'.lang::compte_no_resa.'</p>
         </div>';
     }
     else{
@@ -67,13 +68,13 @@
             <div class="resa_nbr">
                 <img src="img/icons/contact.png" alt="icône nombre de personne">
                 <p>
-                    2-3 personnes
+                    2-3 '.lang::compte_personne.'
                 </p>
             </div>
             <p class="tarif">69€</p>
         </div>
         <div class="creneau_resa">
-            <h4>Mon créneau</h4>
+            <h4>'.lang::compte_creneau.'</h4>
             <div class="line"></div>
             <p class="date_resa">27/04/2023</p>
             <p class="heure_resa"> 15h30</p>
@@ -87,7 +88,7 @@
 
     <button class="deconnexion">
         <img src="img/page_compte/logout.png" alt="icône de déconnexion">
-        <a href="index.php?action=deconnexion">Déconnexion</a>
+        <a href="index.php?action=deconnexion"><?=lang::compte_deconnexion?></a>
     </button>
 
 
