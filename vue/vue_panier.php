@@ -50,7 +50,7 @@
         <div>
             <div class="partie_paiement">
                 <form action="">
-                    <div>
+                    <div class="form_paiement">
                         <input type="text" class="numero" placeholder="0000 0000 0000 0000">
                         <div>
                             <p>

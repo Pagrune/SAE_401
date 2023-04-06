@@ -594,9 +594,33 @@ footer{
         }
         .partie_paiement{
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            flex-direction: column;
             form{
-                flex: 0 0 50%;
+                width: 100%;
+                .form_paiement{
+                    display: flex;
+                    flex-direction: column;
+                }
+                p{
+                    text-align: center;
+                    font-size: 2rem;
+                }
+                input[type=text]{
+                    width: 100%;
+                    padding: 2%;
+                    font-size: 2rem;
+                    margin-bottom: 2%;
+                }
+                input[type=submit]{
+                    width: 100%;
+                    padding: 2%;
+                    font-size: 3rem;
+                    margin-bottom: 2%;
+                    background-color: $jaune;
+                    border: none;
+                    color: white;
+                }
             }
             .recap_commande{
                 padding: 2%;
@@ -604,6 +628,8 @@ footer{
                 background-color: $beige;
                 border: none;
                 color: white;
+                margin-left: auto;
+                margin-right: auto;
                 h3{
                     text-align: center;
                     font-size: 1.6rem;
@@ -2071,7 +2097,45 @@ footer{
                 }  
             }
         }
-        
+        .partie_paiement{
+            flex-direction: row;
+            form{
+                flex: 0 0 50%;
+                input[type=text]{
+                    width: 100%;
+                }
+            }
+            .recap_commande{
+                padding: 2%;
+                width: 34%;
+                background-color: $beige;
+                border: none;
+                color: white;
+                h3{
+                    text-align: center;
+                    font-size: 1.6rem;
+                    margin-bottom: 3%;
+                }
+                p{
+                    text-align: center;
+                    margin-top: 8%;
+                    font-size: 4rem;
+                }
+            }
+        }
+        .code_cadeau{
+                width: 62%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 4%;
+                input[type=text]{
+                    padding: 5%;
+                    font-size: 1.2rem;
+                }
+            input[type=submit]{
+                padding: 1%;
+            }
+        }
     }
 
 

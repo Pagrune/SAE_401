@@ -565,10 +565,34 @@ footer .footer_copyright p {
 }
 #panier .paiement .partie_paiement {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 #panier .paiement .partie_paiement form {
-  flex: 0 0 50%;
+  width: 100%;
+}
+#panier .paiement .partie_paiement form .form_paiement {
+  display: flex;
+  flex-direction: column;
+}
+#panier .paiement .partie_paiement form p {
+  text-align: center;
+  font-size: 2rem;
+}
+#panier .paiement .partie_paiement form input[type=text] {
+  width: 100%;
+  padding: 2%;
+  font-size: 2rem;
+  margin-bottom: 2%;
+}
+#panier .paiement .partie_paiement form input[type=submit] {
+  width: 100%;
+  padding: 2%;
+  font-size: 3rem;
+  margin-bottom: 2%;
+  background-color: #F3A93E;
+  border: none;
+  color: white;
 }
 #panier .paiement .partie_paiement .recap_commande {
   padding: 2%;
@@ -576,6 +600,8 @@ footer .footer_copyright p {
   background-color: #AA8773;
   border: none;
   color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 #panier .paiement .partie_paiement .recap_commande h3 {
   text-align: center;
@@ -2037,6 +2063,45 @@ footer .footer_copyright p {
     flex: 0 0 95%;
     text-align: right;
     font-size: 1.5rem;
+  }
+  #panier .partie_paiement {
+    flex-direction: row;
+  }
+  #panier .partie_paiement form {
+    flex: 0 0 50%;
+  }
+  #panier .partie_paiement form input[type=text] {
+    width: 100%;
+  }
+  #panier .partie_paiement .recap_commande {
+    padding: 2%;
+    width: 34%;
+    background-color: #AA8773;
+    border: none;
+    color: white;
+  }
+  #panier .partie_paiement .recap_commande h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 3%;
+  }
+  #panier .partie_paiement .recap_commande p {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 4rem;
+  }
+  #panier .code_cadeau {
+    width: 62%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+  }
+  #panier .code_cadeau input[type=text] {
+    padding: 5%;
+    font-size: 1.2rem;
+  }
+  #panier .code_cadeau input[type=submit] {
+    padding: 1%;
   }
   @keyframes slider_animation {
     0% {
