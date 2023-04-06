@@ -7,16 +7,34 @@ Classe chargée de la gestion des panier des clients dans la base de données
 class panier extends database {
 
 
-    public function EnregPanier($idgame, $id_client, $panier_id_client, $date, $heure, $nb_personne, $prix){
-        if (!empty($panier_id_client)){
+    public function EnregPanier($idgame, $id_client, $panier_id_session, $date, $heure, $nb_personne, $prix){
+        if (!empty($id_client)){
         $req='INSERT INTO panier (panier_id_client, panier_idgame, panier_date, panier_heure, panier_prix, panier_nbpersonne, panier_session_client) VALUES (?,?,?,?,?,?,?);';
-        $result=$this->execReqPrep($req, array($id_client, $idgame, $date,$heure, $nb_personne, $prix, $panier_id_client));
+        $result=$this->execReqPrep($req, array($id_client, $idgame, $date,$heure, $prix,$nb_personne, $panier_id_client));
     } else{
-            $req='INSERT INTO panier ( panier_idgame, panier_date, panier_heure, panier_prix, panier_nbpersonne, panier_session_client) VALUES (?,?,?,?,?,?,?);';
-            $result=$this->execReqPrep($req, array($idgame, $date,$heure, $nb_personne, $prix, $panier_id_client));
+            $req='INSERT INTO panier ( panier_idgame, panier_date, panier_heure, panier_prix, panier_nbpersonne, panier_session_client) VALUES (?,?,?,?,?,?);';
+            $result=$this->execReqPrep($req, array($idgame, $date,$heure, $prix,$nb_personne,  $panier_id_session));
     }
     return $result;
 
 }
 
+
+    public function getPanier($id_user_log, $session_id){
+
+        if(!empty($id_user_log)){
+            $req='SELECT * from panier where panier_id_client=?;';
+            $result=$this->execReqPrep($req,array($id_user_log));
+        }{
+            $req='SELECT * from panier where panier_session_client=?;';
+            $result=$this->execReqPrep($req,array($session_id));
+        }
+        return $result;
+    }
+
+    public function delEltPanier($id_elt){
+        $req='DELETE FROM `panier` WHERE `panier_elt` = ?;';
+        $result=$this->execReqPrep($req,array($id_elt));
+        return $result;
+    }
 }

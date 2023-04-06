@@ -6,6 +6,7 @@ require "ctlAventure.class.php";
 require 'ctlCadeaux.class.php';
 require 'CtlConnexion.class.php';
 require 'CtlCheckout.class.php';
+require 'CtlPanier.class.php';
 
 class ctlRouteur
 {
@@ -19,6 +20,7 @@ class ctlRouteur
     private $ctlCadeau;
     private $ctlConnexion;
     private $ctlCheckout;
+    private $ctlPanier;
 
 
 
@@ -37,6 +39,7 @@ class ctlRouteur
         $this->ctlCadeau= new ctlCadeau();
         $this->ctlConnexion= new ctlConnexion();
         $this->ctlCheckout= new CtlCheckout();
+        $this->ctlPanier= new ctlPanier();
     }
 
 
@@ -70,17 +73,20 @@ class ctlRouteur
                             }
                         }
                         break;
+
+                    //création d'un nouveau compte
                     case "crea_compte" : 
                         $this->ctlConnexion->crea_compte();
                         break;
                     
+                    //création d'un nouveau compte
                     case 'new_user':
                         $this->ctlConnexion->new_user();
                     break;
                     
+                    //déconnexion et redirection vers la page home
                     case 'deconnexion':
                         $this->ctlConnexion->logout();
-
 
 
 
@@ -90,10 +96,21 @@ class ctlRouteur
                         return true;
                         break;
 
+                    //affichage du panier
                     case 'panier';
-                    $this->ctlCheckout->panier();
+                        $this->ctlPanier->panier();
+                    break;
+
+                    //suppression d'un élément du panier
+                    case 'supp_panier':
+                        if(isset($_GET["del_id_elt"]))
+                        $this->ctlPanier->del_elt_panier($_GET["del_id_elt"]);
+                        else
+                        $this->ctlPanier->panier();
                     break;
                     
+
+                    //affichage d'une aventure
                     case 'aventure' : 
                         if(isset($_GET["id_game"])){
                             $this->ctlEscGame->aventure($_GET["id_game"]);
@@ -103,6 +120,7 @@ class ctlRouteur
                         }
                     break;
                         
+                    //affichage de la page FAQ
                     case "faq":
                         $this->ctlPage->faq();
                     break;
@@ -114,10 +132,13 @@ class ctlRouteur
                         $this->ctlEscGame->aventure_list();
                     break;
 
+
+                    //affichage page cadeau
                     case "cadeaux":
                         $this->ctlCadeau->cadeau();
                     break;
                     
+                    //enregistrement d'une nouvelle carte cadeau
                     case "enregcadeaux":
                         var_dump($_POST["value_cadeau"]);
                         $this->ctlCadeau->EnregCadeau($_POST["value_cadeau"]);
@@ -141,7 +162,7 @@ class ctlRouteur
 
                         //////***************** page CMS ****************////////////
                        
-                        //affichage page faq    
+                        //affichage des pages CMS
                         case "cgv":
                             $this->ctlPage->cgv();
                         break;

@@ -1,6 +1,10 @@
 <div id="panier">
     <h1>Mon panier</h1>
     <div class=panier>
+        <?php
+        foreach ($reponse as $gay){
+            
+        }
         <div class="mes_resa">
             <img src="img/kredo/kredo.png" alt="">
             <div class="info_resa">
