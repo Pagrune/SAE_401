@@ -4,9 +4,8 @@
 - faire le panier
 - faire le système de validation de réservation
 - faire en sorte que les créneaux déjà réservés soient invalides 
-- faq
-- page accueil
 - faire les reviews
+-faq trad
 
 
 
