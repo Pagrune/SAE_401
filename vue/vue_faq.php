@@ -6,7 +6,7 @@ var_dump($faq);
         FAQ
     </h1>
     <h2>
-        Questions générales
+        <?=lang::question?>
     </h2>
     <?php foreach($faq as $quest) {
                    

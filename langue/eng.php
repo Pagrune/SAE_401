@@ -327,4 +327,6 @@ const niv_confirme="Suitable for experienced players";
 
 const esp="Learn more";
 
+
+const question="General questions";
 }

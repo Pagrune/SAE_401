@@ -353,4 +353,7 @@ const niv_confirme="Convient aux joueurs confirmés";
 
 const esp="En savoir plus";
 
+
+/** Page FAQ */
+const question="Questions générales";
 }
