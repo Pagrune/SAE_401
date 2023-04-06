@@ -101,11 +101,13 @@ if (document.querySelector('.btn_plus')) {
 }
 
 /** Map */
-var map = L.map('map').setView([48.866667, 2.333333], 6);
+if(document.querySelector('#map')){
+    var map = L.map('map').setView([48.866667, 2.333333], 6);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-var marker = L.marker([47.75, 7.3333]).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    
+    var marker = L.marker([47.75, 7.3333]).addTo(map);
+}

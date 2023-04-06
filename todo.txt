@@ -12,7 +12,6 @@
 
 
 Pauline : 
-- leaflet 
 - page account 
 - finir la page panier
 - faire une zone de review sur la page aventure
