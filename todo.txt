@@ -1,19 +1,21 @@
 - ajouter les coordonnées dans la carte leaflet
 - système de Paiement
+- faire le système de validation de réservation
 - trouver une solution pour la page contact
 - faire le panier [*]
-- faire le système de validation de réservation
 - faire en sorte que les créneaux déjà réservés soient invalides 
 - faire les reviews [*]
-- faq trad
-- politique de confidentialités trad
+- faq trad [*]
+- politique de confidentialités trad [*]
 - script bash pour installer le site sur un serveur
+- carte cadeau faire la vérif de la connection pour acheter [*]
 
 
 
 
 Pauline : 
-- page account 
-- finir la page panier
-- faire une zone de review sur la page aventure
-- faire le header et le footer en anglais
+- faire style du bouton 'valider mon panier' connecté et pas connecté 
+- page account [*]
+- finir la page panier [*]
+- faire une zone de review sur la page aventure [*]
+- faire le header et le footer en anglais [*]

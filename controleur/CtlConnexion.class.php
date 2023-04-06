@@ -218,7 +218,6 @@ class ctlConnexion{
                 $session=$this->SetSession($verif);
                 $get_resa=$this->resa->GetResaClient($verif[0]['user_id']);
                 $copie=$this->panier->updatePanier(session_id(), $verif[0]['user_id']);
-                var_dump($copie);
                 $vue=new vue('account');
                 $vue->afficher(['message_erreur'=>$message_erreur, 'client'=>$verif, 'resa'=>$get_resa]);
             }
