@@ -18,7 +18,7 @@ if(isset($_POST["id"]) && isset($_POST["heure"]) && isset($_POST["date"]) && iss
     var_dump($id_session);
     $id_game=intval($_POST["id"]);
     var_dump($id_game);
-    $id_user=intval($id_user);
+    
     var_dump($id_user);
     $date=$_POST["date"];
     var_dump($date);

@@ -241,7 +241,7 @@ var_dump($infos);
                     </div>
                     <div class="toggle">
                         <div class="groupe_choix">
-                            <input type="radio" id="taille_groupe" name="taille_groupe"  data-grp="game_prix_3" data-prix=<?=$game_prix_3?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe"  data-grp="2-3" data-prix=<?=$game_prix_3?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 2 - 3 personnes
@@ -250,7 +250,7 @@ var_dump($infos);
                                     <?=$game_prix_3?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe"  data-grp="game_prix_4" data-prix=<?=$game_prix_4?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe"  data-grp="4" data-prix=<?=$game_prix_4?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 4 personnes
@@ -259,7 +259,7 @@ var_dump($infos);
                                     <?=$game_prix_4?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_5" data-prix=<?=$game_prix_5?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="5" data-prix=<?=$game_prix_5?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 5 personnes
@@ -269,7 +269,7 @@ var_dump($infos);
                                 </p>
                             </label>
                             
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_6" data-prix=<?=$game_prix_6?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="6" data-prix=<?=$game_prix_6?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 6 personnes
@@ -278,7 +278,7 @@ var_dump($infos);
                                     <?=$game_prix_6?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_7" data-prix=<?=$game_prix_7?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="7" data-prix=<?=$game_prix_7?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 7 personnes
@@ -287,7 +287,7 @@ var_dump($infos);
                                     <?=$game_prix_7?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe"data-grp="game_prix_8" data-prix=<?=$game_prix_8?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe"data-grp="8" data-prix=<?=$game_prix_8?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 8 personnes
@@ -296,7 +296,7 @@ var_dump($infos);
                                     <?=$game_prix_8?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_9" data-prix=<?=$game_prix_9?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="9" data-prix=<?=$game_prix_9?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 9 personnes
@@ -305,7 +305,7 @@ var_dump($infos);
                                     <?=$game_prix_9?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_10" data-prix=<?=$game_prix_10?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="10" data-prix=<?=$game_prix_10?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 10 personnes
@@ -314,7 +314,7 @@ var_dump($infos);
                                     <?=$game_prix_10?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_11" data-prix=<?=$game_prix_11?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="11" data-prix=<?=$game_prix_11?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 11 personnes
@@ -323,7 +323,7 @@ var_dump($infos);
                                     <?=$game_prix_11?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_12" data-prix=<?=$game_prix_12?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="12" data-prix=<?=$game_prix_12?>>
                             <label for="">
                                 <p>
                                     Prix de groupe avec 12 personnes
