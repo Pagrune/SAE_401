@@ -8,11 +8,6 @@ $gris :#3E3535;
 $beige : #AA8773;
 $jaune : #F3A93E;
 
-
-#map { 
-    height: 180px; 
-}
-
 body{
     margin: 0;
     background-image: url("../img/background/fond.jpg");
@@ -894,7 +889,7 @@ footer{
     }
     .carte{
         #map { 
-            height: 180px; 
+            height: 40vh; 
         }
     }
     .block-avantage{

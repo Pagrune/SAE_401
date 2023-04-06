@@ -131,7 +131,4 @@
         
 
     </div>
-    <div class="carte">
-        <div id="map"></div>
-    </div>
 </div>

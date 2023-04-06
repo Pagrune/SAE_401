@@ -14,7 +14,7 @@
         </form>
         <?php
         if(!empty($message_erreur)){
-           echo $message_erreur;
+           echo "<div class='error_no_account'>".$message_erreur."</div>";
         }
         ?>
         <div class="no_account">

@@ -841,6 +841,9 @@ footer .footer_copyright p {
 #aventure_solo .groupe_choix .add {
   grid-column: span 1/3;
 }
+#aventure_solo .carte #map {
+  height: 40vh;
+}
 #aventure_solo .block-avantage .grid_avantage {
   display: grid;
   grid-template-columns: 1fr 1fr;
