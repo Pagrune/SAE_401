@@ -3,8 +3,8 @@
     <div class=panier>
         <?php
         foreach ($reponse as $gay){
-            
-        }
+            ?>
+        
         <div class="mes_resa">
             <img src="img/kredo/kredo.png" alt="">
             <div class="info_resa">
@@ -12,19 +12,20 @@
                 <div class="resa_nbr">
                     <img src="img/icons/contact.png" alt="icône nombre de personne">
                     <p>
-                        2-3 personnes
+                        <?=$gay['panier_nbpersonne']?> personnes
                     </p>
                 </div>
-                <p class="tarif">69€</p>
+                <p class="tarif"><?=$gay['panier_prix']?>€</p>
             </div>
             <div class="creneau_resa">
                 <h4>Mon créneau</h4>
                 <div class="line"></div>
-                <p class="date_resa">27/04/2023</p>
-                <p class="heure_resa"> 15h30</p>
+                <p class="date_resa"><?=$gay['panier_date']?></p>
+                <p class="heure_resa"> <?=$gay['panier_heure']?>h</p>
             </div>
-            <a class="supp_jeu" href="">Supprimer ce jeu</a>
+            <a class="supp_jeu" href="index.php?action=supp_panier&del_id_elt=<?=$gay['panier_elt']?>">Supprimer ce jeu</a>
         </div>
+        <?php }?>
        <div class="valid_panier">
             <div class="code_cadeau">
                 <label for="">
@@ -110,4 +111,3 @@
 		echo '{"statut": "Paiement refusé par la banque"}';
 
 	}
-?>

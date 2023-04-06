@@ -64,7 +64,7 @@
      e.addEventListener("click", function(){
           let lang=this.getAttribute("data-lang");
           document.cookie = "lang="+lang;
-          console.log(document.cookie);
+          window.location.reload();
           });
       });
 </script>
