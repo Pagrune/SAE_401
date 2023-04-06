@@ -2,7 +2,7 @@ if(document.querySelector("#aventure_solo")){
     let date;
     let heure;
     let nombre_personne;
-
+    let prix;
 
     bouton = document.querySelector(".add");
     bouton.addEventListener("click", AddToCart);
@@ -31,9 +31,9 @@ function saveHeure(){
     return heure;
 }
 function saveNbpersonne(){
-    nombre_personne = this.dataset.prix;
-    console.log(nombre_personne);
-    return nombre_personne;
+    prix = this.dataset.prix;
+    nombre_personne=this.dataset.grp;
+    return nombre_personne, prix ;
 }
 
 
@@ -55,7 +55,27 @@ function AddToCart(){
         let new_elt= [id, date, heure, nombre_personne];
         console.log(new_elt);
         // panier_transi.push(new_elt);
-        // window.localStorage.setItem('panier',panier_transi);
+        // window.localStorage.setItem('panier',panier_transi);ù
+        console.log(id,heure, date, nombre_personne, prix);
+        fetch("./js/dossier_fetch/ajout_panier_bdd.php", 
+        {
+            method: "post",
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body: `id=${id}&date=${date}&heure=${heure}&nombre_personne=${nombre_personne}&prix=${prix}`
+        }
+        )
+        .then(function(response) {  // Prétraitement de la réponse.
+            return response.text(); 
+        })
+        .then(function(text) {       // Utilisation de la réponse.
+            console.log(text);
+        })
+        
+
+
+
         if(window.localStorage.getItem('panier')){
             let panier_actuel=window.localStorage.getItem('panier');
             console.log(panier_actuel);

@@ -53,11 +53,11 @@ class resa extends database {
      *      [array]: si la réservation s'est effectué
      *      [bool]: si il y a eu une erreur
      */
-      public function EnregNewResa($id_client, $horraire, $id_game){
-        $verif_dispo = $this-> GetResaGame($horraire,$id_game);
+      public function EnregNewResa($id_client, $horraire, $id_game, $nb_personne, $date){
+        $verif_dispo = $this-> GetResaGame($date, $horraire,$id_game);
         if(!count($verif_dispo)){
-            $req="INSERT INTO booking (resa_horaire, id_user,resa_idgame) VALUES (?,?,?);";
-            $resa = $this->execReqPrep($req, array($horraire, $id_clientn, $id_game ));
+            $req="INSERT INTO booking (resa_horaire, id_user,resa_idgame, resa_idpersonne, resa_date) VALUES (?,?,?,?);";
+            $resa = $this->execReqPrep($req, array($horraire, $id_clientn, $id_game, $nb_personne ));
         }else{
             return FALSE;
         }
