@@ -31,21 +31,37 @@
        <div class="valid_panier">
             <div class="code_cadeau">
                 <label for="">
-                    <input type="text" placeholder="Mon code cadeau">
+                    <input id="code_reduc" type="text" placeholder="Mon code cadeau">
                 </label>
                 <input type="submit"  id='verif_carte' value="Utiliser mon code">
             </div>
-            <button class="btn_valid_panier">
-                <a href="index.php?action=connexion">
-                    <img src="img/header/paniers.png" alt="icône panier">
-                    <span>
-                        Valider mon panier
-                    </span>
-                </a>
+            <div id="verif_carte_message">
+                
+            </div>    
+            
+                <?php if(isset($_SESSION['id'])){
+                    echo '
+                    <button class="btn_valid_panier paiement_js"><img src="img/header/paniers.png" alt="icône panier"><span>Valider mon panier</span>';
+                }
+                else{
+                    echo  '<button class="btn_valid_panier"><a class="" href="index.php?action=connexion">
+                            <img src="img/header/paniers.png" alt="icône panier">
+                            <span>
+                                Me connecter pour valider mon panier
+                            </span>
+                        </a>';
+                }
+                ?>
+                
+                    
             </button>
        </div>
+
     
     </div>
+
+    <?php if(isset($_SESSION['id'])){
+        ?>
     <div class="paiement">
         <div class="title_paiement">
             <h2>Paiement</h2>
@@ -86,6 +102,9 @@
             </div>
         </div>
     </div>
+    <?php
+        };
+    ?>
 </div>
 
 <?php

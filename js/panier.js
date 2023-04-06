@@ -80,7 +80,36 @@ function AddToCart(){
         
 }
 
+
+if(document.querySelector('#verif_carte')){
+    document.querySelector('#verif_carte').addEventListener("click", verifCadeau);
+}
+
+
+
+
+
 function verifCadeau(){
+    let code_check=document.querySelector('#code_reduc').value;
+    fetch("./js/dossier_fetch/verif_code_cadeau.php", 
+        {
+            method: "post",
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body: `code=${code_check}`
+        }
+        )
+        .then(function(response) {  // Prétraitement de la réponse.
+            return response.json(); 
+        })
+        .then(function(json) {       // Utilisation de la réponse.
+            if(json==0){
+                document.querySelector("#verif_carte_message").innerText='Votre code n\'est pas valide';
+            }else{
+                document.querySelector("#verif_carte_message").innerText='Votre code est valide, il va être appliqué au montant de votre commande.'
+            }
+        })
     
 }
 
