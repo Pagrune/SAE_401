@@ -33,10 +33,32 @@
         <img src="img/header/icon_menu.svg" alt="icône de menu">
       </div>
       <div class="block_menu_mobile">
-        <div class="menu"><?= config::MENU ?></div>
+        <div class="menu">
+          <?php 
+          if(isset($_COOKIE["lang"])){
+            echo config::MENU; 
+          }
+          else{
+            echo config::MENUENG;
+          }
+          ?>
+        </div>
       </div>
       <div class="block_menu_ordi">
-        <div class="menu"><?= config::MENU ?></div>
+        <div class="menu"><?php 
+          if(!isset($_COOKIE["lang"])){
+            echo config::MENU; 
+          }
+          else{
+            if($_COOKIE["lang"]=='fr'){
+              echo config::MENU; 
+            }
+            if($_COOKIE['lang']=='eng'){
+              echo config::MENUENG;
+            }
+          }
+          ?>
+          </div>
       </div>
     </div>
   </header>
@@ -46,7 +68,19 @@
   </main>
   <footer>
     <div class="footer_navigation">
-      <?= config::FOOTER ?>
+    <?php 
+          if(!isset($_COOKIE["lang"])){
+            echo config::FOOTER; 
+          }
+          else{
+            if($_COOKIE["lang"]=='fr'){
+              echo config::FOOTER; 
+            }
+            if($_COOKIE['lang']=='eng'){
+              echo config::FOOTERENG;
+            }
+          }
+          ?>
     </div>
     <div class="footer_copyright">
       <img src="img/footer/logo-footer.png" alt="Logo Kaiserstuhl escape">
