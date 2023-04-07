@@ -59,19 +59,10 @@ var_dump($infos);
         <div class="descr">
             <div class="left-column">
                 <p>
-                    "Der Codex" se compose de 3 aventures qui se déroulent dans différents endroits de Kaiserstuhl à partir de mai 2023. Commandez maintenant ce coupon et sécurisez-vous pour 110 € par personne les 3 aventures en une seule fois.
-                </p>
-                <p>
-                    Voyagez dans des époques différentes et plongez-vous dans les histoires de "Kredo Castello", "Spiritus Sancti" et "Vinea Flamara". Découvrez où se cache le secret - Qu'est-ce que le Codex ? Vous serez époustouflé - promis !
+                    <?= $game_description ?>
                 </p>
             </div>
             <div class="right-column">
-                <p>
-                    Une aventure sauvage vous attend et nous vous promettons que des choses se produiront auxquelles vous ne vous attendiez pas !
-                </p>
-                <p>
-                    Nous ne vous en dirons pas trop ! Réservez ce coupon et vivez l'aventure Escape la plus extraordinaire et la plus grande du monde !
-                </p>
             </div>
         </div>
         <img src="img/page_aventure_solo/coridor.jpg" alt="">
@@ -385,43 +376,43 @@ var_dump($infos);
                 <div>
                     <span>Accessible 24h/24, 7j/7</span>
                     <p>
-                        Notre site Web est ouvert jour et nuit
+                        <?=lang::jouretnuit?>
                     </p>
                 </div>
             </div>
             <div class="icon_avant">
                 <img src="img/icons/pile-de-pieces.png" alt="icone piece de monnaie">
                 <div>
-                    <span>Prix garantis</span>
+                    <span><?=lang::prix_garantis?></span>
                     <p>
-                        Pas de frais supplémentaire
+                        <?=lang::frais_supp?>
                     </p>
                 </div>
             </div>
             <div class="icon_avant">
                 <img src="img/icons/email.png" alt="icone enveloppe">
                 <div>
-                    <span>Confirmation immédiate</span>
+                    <span><?=lang::confirmation?></span>
                     <p>
-                        Les billets sont envoyés sur votre adresse e-mail
+                        <?=lang::billet?>
                     </p>
                 </div>
             </div>
             <div class="icon_avant">
                 <img src="img/icons/cadenas-verrouille.png" alt="icone cadenas">
                 <div>
-                    <span>Paiement en ligne</span>
+                    <span><?=lang::paiement_ligne?></span>
                     <p>
-                        100 % sécurisé avec protocole de sécurisation SSL
+                        <?=lang::protocole?>
                     </p>
                 </div>
             </div>
             <div class="icon_avant">
                 <img src="img/icons/smiley.png" alt="icone smiley">
                 <div>
-                    <span>Pas de stress</span>
+                    <span><?=lang::stress?></span>
                     <p>
-                        Votre place est réservée
+                        <?=lang::place_res?>
                     </p>
                 </div>
             </div>

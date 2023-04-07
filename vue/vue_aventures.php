@@ -58,7 +58,7 @@
                         </svg>
                         <p>
                             <?=lang::where_esc?>
-                            <?php//=$game["game_location"]?>
+                            <?=$game["game_lieu"]?>
                         </p>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
         </div>
     </div>
     <div id="aventure_debutant">
-        <h2>Les aventures pour les plus novices</h2>
+        <h2><?=lang::liste_h2_novice?></h2>
         <div class="block_trio_aventure">
         <?php
         //Affichage des escapes games qui sont accessibles aux novices
@@ -109,7 +109,7 @@
                         </svg>
                         <p>
                             <?=lang::where_esc?>
-                            <?php//=$game["game_location"]?>
+                            <?=$game["game_lieu"]?>
                         </p>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                         </svg>
                         <p>
                             <?=lang::where_esc?> 
-                            <?php//=$game["game_location"]?>
+                            <?=$game["game_lieu"]?>
                         </p>
                     </div>
                 </div>

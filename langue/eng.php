@@ -329,4 +329,51 @@ const esp="Learn more";
 
 
 const question="General questions";
+
+
+/** Page aventure solo */
+const cat_prix="Price categories";
+const cren_av="Available slots";
+const offrez_aventure="Offer the adventure to someone";
+const where="where";
+const reserver_av="Book your adventure";
+const choix_jour="Choose your day";
+const choix_creneau="Choose your time slot";
+
+const choix_nbr_personne="Choose the number of people";
+const deux_pers="Group price with 2-3 people";
+const quatre_pers="Group price with 4 people";
+const cinq_pers="Group price with 5 people";
+const six_pers="Group price with 6 people";
+const sept_pers="Group price with 7 people";
+const huit_pers="Group price with 8 people";
+const neuf_pers="Group price with 9 people";
+const dix_pers="Group price with 10 people";
+const onze_pers="Group price with 11 people";
+const douze_pers="Group price with 12 people";
+const plus_douze_pers="Large group price +12 people";
+
+const ajout_panier="Add to cart";
+
+const avantages_resa="Benefits of booking";
+const resa_rapide="Quick and easy booking";
+const reserver="Book your activity in just a few minutes.";
+const acces="Accessible 24/7";
+const jouretnuit="Our website is open day and night";
+const prix_garantis="Price guarantee";
+const frais_supp="No additional fees";
+const confirmation="Immediate confirmation";
+const billet="Tickets are sent to your email address";
+const paiement_ligne="Online payment";
+const protocole="100% secure with SSL security protocol";
+const stress="No stress";
+const place_res="Your spot is reserved";
+
+const lundi="Monday";
+const mardi="Tuesday";
+const mercredi="Wednesday";
+const jeudi="Thursday";
+const vendredi="Friday";
+const samedi="Saturday";
+const dimanche="Sunday";
 }

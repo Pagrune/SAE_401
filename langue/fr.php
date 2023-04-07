@@ -339,7 +339,7 @@ const liste_block1_2="Nos jeux ont lieu dans des lieux pittoresques en plein air
 const liste_block2="Préparez-vous à affronter des défis uniques et à vivre une aventure inoubliable en plein air grâce à notre Escape Game en extérieur&nbsp;!";
 
 const liste_h2_famille="Les aventures à faire en famille";
-const liste_h2_novice="";
+const liste_h2_novice="Les aventures pour les plus novices";
 const liste_h2_confirme="Les aventures pour les plus confirmés";
 const liste_h2_avenir="Escape game à venir";
 
@@ -358,4 +358,52 @@ const esp="En savoir plus";
 
 /** Page FAQ */
 const question="Questions générales";
+
+
+/** Page aventure solo */
+const cat_prix="Catégories de prix";
+const cren_av="Créneaux disponibles";
+const offrez_aventure="Offrez l'aventure à quelqu'un";
+const where="où";
+const reserver_av="Réserver votre aventure";
+const choix_jour="Choisir votre jour";
+const choix_creneau="Choisir votre créneau";
+
+const choix_nbr_personne="Choisir le nombre de personnes";
+const deux_pers="Prix de groupe avec 2 - 3 personnes";
+const quatre_pers="Prix de groupe avec 4 personnes";
+const cinq_pers="Prix de groupe avec 5 personnes";
+const six_pers="Prix de groupe avec 6 personnes";
+const sept_pers="Prix de groupe avec 7 personnes";
+const huit_pers="Prix de groupe avec 8 personnes";
+const neuf_pers="Prix de groupe avec 9 personnes";
+const dix_pers="Prix de groupe avec 10 personnes";
+const onze_pers="Prix de groupe avec 11 personnes";
+const douze_pers="Prix de groupe avec 12 personnes";
+const plus_douze_pers="Prix de grand groupe +12personnes";
+
+const ajout_panier="Ajouter au panier";
+
+const avantages_resa="Les avantages de la réservation";
+const resa_rapide="Réservation rapide et simple";
+const reserver="Réservez votre activité en quelques minutes seulement.";
+const acces="Accessible 24h/24, 7j/7";
+const jouretnuit="Notre site est ouvert jour et nuit";
+const prix_garantis="Prix garantis";
+const frais_supp="Pas de frais supplémentaire";
+const confirmation="Confirmation immédiate";
+const billet="Les billets sont envoyés sur votre adresse e-mail";
+const paiement_ligne="Paiement en ligne";
+const protocole="100% sécurisé avec protocole de sécurisation SSL";
+const stress="Pas de stress";
+const place_res="Votre place est réservée";
+
+const lundi="Lundi";
+const mardi="Mardi";
+const mercredi="Mercredi";
+const jeudi="Jeudi";
+const vendredi="Vendredi";
+const samedi="Samedi";
+const dimanche="Dimanche";
+
 }
