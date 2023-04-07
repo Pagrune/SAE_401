@@ -5,7 +5,6 @@ require "ctlClient.class.php";
 require "ctlAventure.class.php";
 require 'ctlCadeaux.class.php';
 require 'CtlConnexion.class.php';
-require 'CtlCheckout.class.php';
 require 'CtlPanier.class.php';
 
 class ctlRouteur
@@ -19,7 +18,6 @@ class ctlRouteur
     private $ctlCPage;
     private $ctlCadeau;
     private $ctlConnexion;
-    private $ctlCheckout;
     private $ctlPanier;
 
 
@@ -38,7 +36,6 @@ class ctlRouteur
         $this->ctlPage = new ctlPage();
         $this->ctlCadeau= new ctlCadeau();
         $this->ctlConnexion= new ctlConnexion();
-        $this->ctlCheckout= new CtlCheckout();
         $this->ctlPanier= new ctlPanier();
     }
 
@@ -92,8 +89,8 @@ class ctlRouteur
 
 
                     //affichage page paiement    
-                    case 'paiement':
-                        return true;
+                    case 'valid_panier':
+                        $this->ctlPanier->valid_commande();
                         break;
 
                     //affichage du panier
@@ -173,6 +170,9 @@ class ctlRouteur
                         case "politique":
                             $this->ctlPage->confi();
                         break;
+                        case 'valider_ma_commande' : 
+                            $this->ctlPanier->valid_commande();
+                            break;
 
 
 

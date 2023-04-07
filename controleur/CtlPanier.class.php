@@ -30,4 +30,8 @@ class ctlPanier {
         $this->panier();
    }
 
+   public function valid_commande(){
+        $commande=$this->panier->transi_panier_commande($_SESSION["id"]);        
+   }
+
 }
