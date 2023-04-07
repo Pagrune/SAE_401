@@ -348,8 +348,10 @@ const genre_esc="Genre :";
 const duree_esc="Durée :";
 const heures_esc="heures | environ ";
 const where_esc="à";
-const niv_debutant="Convient aux joueurs débutants";
-const niv_confirme="Convient aux joueurs confirmés";
+const niv_esc="Convient aux joueurs ";
+const carac_esc="Caractéristiques";
+
+
 
 const esp="En savoir plus";
 
