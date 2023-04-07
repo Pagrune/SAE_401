@@ -12,12 +12,12 @@ var_dump($infos);
 
             </h1>
             <h2>
-                Caractéristiques
+                <?=lang::carac_esc?>
             </h2>
             <div class="grid_genre">
                 <div class="genre">
                     <p>
-                        Genre :
+                        <?=lang::genre_esc?>
                     </p>
                     <strong><?= $game_genre ?></strong>
                 </div>
@@ -36,7 +36,7 @@ var_dump($infos);
                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                 </svg>
                 <p>
-                    Durée : <?= $game_duree ?> heures | environ <?= $game_parcours ?> km</p>
+                    <?=lang::duree_esc?><?= $game_duree ?> <?=lang::heures_esc?><?= $game_parcours ?> km</p>
             </div>
             <div class="flexitude">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#3E3535" class="bi bi-geo-alt" viewBox="0 0 16 16">
@@ -44,13 +44,13 @@ var_dump($infos);
                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                 </svg>
                 <p>
-                    à
+                    <?=lang::genre_esc?>
                     <?= $game_lieu ?>
                 </p>
             </div>
             <p class="dif_aventure">
                 <span>
-                    Convient aux joueurs <?= $game_categorie ?>
+                    <?=lang::niv_esc?><?= $game_categorie ?>
                 </span>
             </p>
         </div>

@@ -62,11 +62,6 @@
                         </p>
                     </div>
                 </div>
-                <p class="dif_aventure">
-                    <span>
-                        <?=lang::niv_debutant?>
-                    </span>
-                </p>
                 <div class="button_ensavoir">
                     <button class="button_plus">
                         <a href="index.php?action=aventure&id_game=<?=$game["game_id"]?>"><?=lang::esp?></a>
@@ -118,11 +113,6 @@
                         </p>
                     </div>
                 </div>
-                <p class="dif_aventure">
-                    <span>
-                        <?=lang::niv_debutant?>
-                    </span>
-                </p>
                 <div class="button_ensavoir">
                     <button class="button_plus">
                         <a href="index.php?action=aventure&id_game=<?=$game["game_id"]?>"><?=lang::esp?></a>
@@ -174,11 +164,6 @@
                         </p>
                     </div>
                 </div>
-                <p class="dif_aventure">
-                    <span>
-                        <?=lang::niv_confirme?>
-                    </span>
-                </p>
                 <div class="button_ensavoir">
                     <button class="button_plus">
                         <a href="index.php?action=aventure&id_game=<?=$game["game_id"]?>"><?=lang::esp?></a>
