@@ -179,6 +179,9 @@ var_dump($infos);
                                     <div class="leJour">Dimanche</div>
                                 </div>
                                 <div class="cal">
+                                    <form action='' method='post'>
+
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -192,44 +195,44 @@ var_dump($infos);
                     <div class="toggle choix_horraire">
                         <form action="" method="post">
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='09' name="heure_jour">
-                                <label for="">9h</label>
+                                <input class="inputCren" type="radio" id="9heure" data-heure ='09' name="heure_jour">
+                                <label class="labelCren" for="9heure">9h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='10' name="heure_jour">
-                                <label for="">10h</label>
+                                <input class="inputCren" type="radio" id="10heure" data-heure ='10' name="heure_jour">
+                                <label class="labelCren" for="10heure">10h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='11' name="heure_jour">
-                                <label for="">11h</label>
+                                <input class="inputCren" type="radio" id="11heure" data-heure ='11' name="heure_jour">
+                                <label class="labelCren" for="11heure">11h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='12' name="heure_jour">
-                                <label for="">12h</label>
+                                <input class="inputCren" type="radio" id="12heure" data-heure ='12' name="heure_jour">
+                                <label class="labelCren" for="12heure">12h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='13' name="heure_jour">
-                                <label for="">13h</label>
+                                <input class="inputCren" type="radio" id="13heure" data-heure ='13' name="heure_jour">
+                                <label class="labelCren" for="13heure">13h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='14' name="heure_jour">
-                                <label for="">14h</label>
+                                <input class="inputCren" type="radio" id="14heure" data-heure ='14' name="heure_jour">
+                                <label class="labelCren" for="14heure">14h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='15' name="heure_jour">
-                                <label for="">15h</label>
+                                <input class="inputCren" type="radio" id="15heure" data-heure ='15' name="heure_jour">
+                                <label class="labelCren" for="15heure">15h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='16' name="heure_jour">
-                                <label for="">16h</label>
+                                <input class="inputCren" type="radio" id="16heure" data-heure ='16' name="heure_jour">
+                                <label class="labelCren" for="16heure">16h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='17' name="heure_jour">
-                                <label for="">17h</label>
+                                <input class="inputCren" type="radio" id="17heure" data-heure ='17' name="heure_jour">
+                                <label class="labelCren" for="17heure">17h</label>
                             </div>
                             <div>
-                                <input type="radio" id="heure_jour" data-heure ='18' name="heure_jour">
-                                <label for="">18h</label>
+                                <input class="inputCren" type="radio" id="18heure" data-heure ='18' name="heure_jour">
+                                <label class="labelCren" for="18heure">18h</label>
                             </div>
                         </form>
                     </div>
@@ -241,8 +244,8 @@ var_dump($infos);
                     </div>
                     <div class="toggle">
                         <div class="groupe_choix">
-                            <input type="radio" id="taille_groupe" name="taille_groupe"  data-grp="2-3" data-prix=<?=$game_prix_3?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille1" name="taille_groupe"  data-grp="2-3" data-prix=<?=$game_prix_3?>>
+                            <label class="labelGro" for="taille1">
                                 <p>
                                     Prix de groupe avec 2 - 3 personnes
                                 </p>
@@ -250,8 +253,8 @@ var_dump($infos);
                                     <?=$game_prix_3?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe"  data-grp="4" data-prix=<?=$game_prix_4?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille2" name="taille_groupe"  data-grp="4" data-prix=<?=$game_prix_4?>>
+                            <label class="labelGro" for="taille2">
                                 <p>
                                     Prix de groupe avec 4 personnes
                                 </p>
@@ -259,8 +262,8 @@ var_dump($infos);
                                     <?=$game_prix_4?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="5" data-prix=<?=$game_prix_5?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille3" name="taille_groupe" data-grp="5" data-prix=<?=$game_prix_5?>>
+                            <label class="labelGro" for="taille3">
                                 <p>
                                     Prix de groupe avec 5 personnes
                                 </p>
@@ -269,8 +272,8 @@ var_dump($infos);
                                 </p>
                             </label>
                             
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="6" data-prix=<?=$game_prix_6?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille4" name="taille_groupe" data-grp="6" data-prix=<?=$game_prix_6?>>
+                            <label class="labelGro" for="taille4">
                                 <p>
                                     Prix de groupe avec 6 personnes
                                 </p>
@@ -278,8 +281,8 @@ var_dump($infos);
                                     <?=$game_prix_6?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="7" data-prix=<?=$game_prix_7?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille5" name="taille_groupe" data-grp="7" data-prix=<?=$game_prix_7?>>
+                            <label class="labelGro" for="taille5">
                                 <p>
                                     Prix de groupe avec 7 personnes
                                 </p>
@@ -287,8 +290,8 @@ var_dump($infos);
                                     <?=$game_prix_7?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe"data-grp="8" data-prix=<?=$game_prix_8?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille6" name="taille_groupe"data-grp="8" data-prix=<?=$game_prix_8?>>
+                            <label class="labelGro" for="taille6">
                                 <p>
                                     Prix de groupe avec 8 personnes
                                 </p>
@@ -296,8 +299,8 @@ var_dump($infos);
                                     <?=$game_prix_8?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="9" data-prix=<?=$game_prix_9?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille7" name="taille_groupe" data-grp="9" data-prix=<?=$game_prix_9?>>
+                            <label class="labelGro" for="taille7">
                                 <p>
                                     Prix de groupe avec 9 personnes
                                 </p>
@@ -305,8 +308,8 @@ var_dump($infos);
                                     <?=$game_prix_9?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="10" data-prix=<?=$game_prix_10?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille8" name="taille_groupe" data-grp="10" data-prix=<?=$game_prix_10?>>
+                            <label class="labelGro" for="taille8">
                                 <p>
                                     Prix de groupe avec 10 personnes
                                 </p>
@@ -314,8 +317,8 @@ var_dump($infos);
                                     <?=$game_prix_10?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="11" data-prix=<?=$game_prix_11?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille9" name="taille_groupe" data-grp="11" data-prix=<?=$game_prix_11?>>
+                            <label class="labelGro" for="taille9">
                                 <p>
                                     Prix de groupe avec 11 personnes
                                 </p>
@@ -323,8 +326,8 @@ var_dump($infos);
                                     <?=$game_prix_11?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="12" data-prix=<?=$game_prix_12?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille10" name="taille_groupe" data-grp="12" data-prix=<?=$game_prix_12?>>
+                            <label class="labelGro" for="taille10">
                                 <p>
                                     Prix de groupe avec 12 personnes
                                 </p>
@@ -332,8 +335,8 @@ var_dump($infos);
                                     <?=$game_prix_12?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_groupe" data-prix=<?=$game_prix_groupe?>>
-                            <label for="">
+                            <input class="inputGro" type="radio" id="taille11" name="taille_groupe" data-grp="game_prix_groupe" data-prix=<?=$game_prix_groupe?>>
+                            <label class="labelGro" for="taille11">
                                 <p>
                                     Prix de grand groupe  +12 personnes
                                 </p>
