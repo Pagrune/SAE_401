@@ -9,6 +9,8 @@
 - politique de confidentialités trad [*]
 - script bash pour installer le site sur un serveur
 - carte cadeau faire la vérif de la connection pour acheter [*]
+- faire un back-office
+-categorie jeu page aventures+ page aventure
 
 
 

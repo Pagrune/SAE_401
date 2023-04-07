@@ -86,7 +86,7 @@
                             <p>Numéro secret</p>
                             <input type="text" placeholder="000">
                         </div>
-                        <input type="submit" value="Confirmer mon paiement">
+                        <a href="index.php?action=valider_ma_commande">Confirmer ma commande</a>
                     </div>
                     
                 </form>

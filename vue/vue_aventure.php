@@ -332,7 +332,7 @@ var_dump($infos);
                                     <?=$game_prix_12?>
                                 </p>
                             </label>
-                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="game_prix_groupe" data-prix=<?=$game_prix_groupe?>>
+                            <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="groupe" data-prix=<?=$game_prix_groupe?>>
                             <label for="">
                                 <p>
                                     Prix de grand groupe  +12 personnes
