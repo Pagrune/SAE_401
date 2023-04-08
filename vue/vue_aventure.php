@@ -1,15 +1,32 @@
 <?php
 extract($infos);
-var_dump($infos);
+// var_dump($infos);
+
 
 ?>
 <div id="aventure_solo">
+<?php 
+// var_dump($game_latitude);
+$latitude=json_encode($game_latitude, JSON_PRETTY_PRINT);
+$longitude=json_encode($game_longitude, JSON_PRETTY_PRINT);
+?>
     <div class="block-1">
         <img src="img/kredo/kredo.png" alt="escape game Kredo castello">
         <div class="block_carac">
             <h1>
-                <?= $game_nom ?>
-
+                <?php 
+                if(!isset($_COOKIE["lang"])){
+                    echo $game_nom;
+                }
+                else{
+                    if($_COOKIE["lang"]=='fr'){
+                        echo $game_nom;
+                    }
+                    if($_COOKIE['lang']=='eng'){
+                        echo $game_nomeng;
+                    }
+                }
+                ?>
             </h1>
             <h2>
                 <?=lang::carac_esc?>
@@ -22,12 +39,24 @@ var_dump($infos);
                     <strong><?= $game_genre ?></strong>
                 </div>
                 <div class="genre">
-                    <strong>
-                        <?= $game_environnement ?>
-                    </strong>
                     <p>
-                        Escape
+                        <?=lang::lieu?>
                     </p>
+                    <strong>
+                    <?php 
+                        if(!isset($_COOKIE["lang"])){
+                            echo $game_environnement;
+                        }
+                        else{
+                            if($_COOKIE["lang"]=='fr'){
+                                echo $game_environnement;
+                            }
+                            if($_COOKIE['lang']=='eng'){
+                                echo $game_environnementeng;
+                            }
+                        }
+                    ?>
+                    </strong>
                 </div>
             </div>
             <div class="flexitude">
@@ -44,7 +73,7 @@ var_dump($infos);
                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                 </svg>
                 <p>
-                    <?=lang::genre_esc?>
+                    <?=lang::where_esc?>
                     <?= $game_lieu ?>
                 </p>
             </div>
@@ -59,7 +88,19 @@ var_dump($infos);
         <div class="descr">
             <div class="left-column">
                 <p>
-                    <?= $game_description ?>
+                <?php 
+                        if(!isset($_COOKIE["lang"])){
+                            echo $game_description;
+                        }
+                        else{
+                            if($_COOKIE["lang"]=='fr'){
+                                echo $game_description;
+                            }
+                            if($_COOKIE['lang']=='eng'){
+                                echo $game_decriptioneng;
+                            }
+                        }
+                    ?>
                 </p>
             </div>
             <div class="right-column">
@@ -70,79 +111,79 @@ var_dump($infos);
     <div class="block-3">
         <div class="categorie_prix">
             <h2>
-                Catégories de prix
+                <?=lang::cat_prix?>
             </h2>
             <table>
                 <tr>
-                    <td>Prix de groupe avec 2 - 3 personnes</td>
+                    <td><?=lang::deux_pers?></td>
                     <td>
                         <?= $game_prix_3 ?>€
                     </td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 4 personnes</td>
+                    <td><?=lang::quatre_pers?></td>
                     <td>
                         <?= $game_prix_4 ?>€
                     </td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 5 personnes</td>
+                    <td><?=lang::cinq_pers?></td>
                     <td><?= $game_prix_5 ?>€</td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 6 personnes</td>
+                    <td><?=lang::six_pers?></td>
                     <td><?= $game_prix_6 ?>€</td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 7 personnes</td>
+                    <td><?=lang::sept_pers?></td>
                     <td><?= $game_prix_7 ?>€</td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 8 personnes</td>
+                    <td><?=lang::huit_pers?></td>
                     <td><?= $game_prix_8 ?>€</td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 9 personnes</td>
+                    <td><?=lang::neuf_pers?></td>
                     <td><?= $game_prix_9 ?>€</td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 10 personnes</td>
+                    <td><?=lang::dix_pers?></td>
                     <td><?= $game_prix_10 ?>€</td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 11 personnes</td>
+                    <td><?=lang::onze_pers?></td>
                     <td><?= $game_prix_11 ?>€</td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec 12 personnes</td>
+                    <td><?=lang::douze_pers?></td>
                     <td><?= $game_prix_12 ?>€</td>
                 </tr>
                 <tr>
-                    <td>Prix de groupe avec plus de 12 personnes</td>
+                    <td><?=lang::plus_douze_pers?></td>
                     <td><?= $game_prix_groupe ?>€</td>
                 </tr>
             </table>
         </div>
         <div class="creneaux">
             <h2>
-                Créneaux disponibles
+                <?=lang::cren_av?>
             </h2>
             <div>
                 <div class="creneau_offre">
                     <button class="offrir">
-                        <a href="index.php?action=cadeaux">Offrez l'aventure à quelqu'un</a>
+                        <a href="index.php?action=cadeaux"><?=lang::offrez_aventure?></a>
                     </button>
                     <p>
-                        ou
+                        <?=lang::where?>
                     </p>
                 </div>
                 <div class="resa_aventure">
-                    <h3>Réserver votre aventure</h3>
+                    <h3><?=lang::reserver_av?></h3>
                     <div>
                         <div class="choix jour">
                             <img src="img/icons/time-and-calendar.png" alt="icone calendrier">
                             <p>
-                                Choisir votre jour
+                                <?=lang::choix_jour?>
                             </p>
                         </div>
                         <div class="toggle toggle-calendar">
@@ -161,13 +202,13 @@ var_dump($infos);
                             </div>
                             <div class="bigCal">
                                 <div class="jours">
-                                    <div class="leJour">Lundi</div>
-                                    <div class="leJour">Mardi</div>
-                                    <div class="leJour">Mercredi</div>
-                                    <div class="leJour">Jeudi</div>
-                                    <div class="leJour">Vendredi</div>
-                                    <div class="leJour">Samedi</div>
-                                    <div class="leJour">Dimanche</div>
+                                    <div class="leJour"><?=lang::lundi?></div>
+                                    <div class="leJour"><?=lang::mardi?></div>
+                                    <div class="leJour"><?=lang::mercredi?></div>
+                                    <div class="leJour"><?=lang::jeudi?></div>
+                                    <div class="leJour"><?=lang::vendredi?></div>
+                                    <div class="leJour"><?=lang::samedi?></div>
+                                    <div class="leJour"><?=lang::dimanche?></div>
                                 </div>
                                 <div class="cal">
                                     <form action='' method='post'>
@@ -180,7 +221,7 @@ var_dump($infos);
                     <div class="choix creneau">
                         <img src="img/icons/horloge.png" alt="icone horraire">
                         <p>
-                            Choisir votre créneau
+                            <?=lang::choix_creneau?>
                         </p>
                     </div>
                     <div class="toggle choix_horraire">
@@ -230,7 +271,7 @@ var_dump($infos);
                     <div class="choix groupe">
                         <img src="img/icons/contact.png" alt="icone groupe">
                         <p>
-                            Choisir le nombre de personnes
+                            <?=lang::choix_nbr_personne?>
                         </p>
                     </div>
                     <div class="toggle">
@@ -238,106 +279,106 @@ var_dump($infos);
                             <input class="inputGro" type="radio" id="taille1" name="taille_groupe"  data-grp="3" data-prix=<?=$game_prix_3?>>
                             <label class="labelGro" for="taille1">
                                 <p>
-                                    Prix de groupe avec 2 - 3 personnes
+                                    <?=lang::deux_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_3?>
+                                    <?=$game_prix_3?> €
                                 </p>
                             </label>
                             <input class="inputGro" type="radio" id="taille2" name="taille_groupe"  data-grp="4" data-prix=<?=$game_prix_4?>>
                             <label class="labelGro" for="taille2">
                                 <p>
-                                    Prix de groupe avec 4 personnes
+                                    <?=lang::quatre_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_4?>
+                                    <?=$game_prix_4?> €
                                 </p>
                             </label>
                             <input class="inputGro" type="radio" id="taille3" name="taille_groupe" data-grp="5" data-prix=<?=$game_prix_5?>>
                             <label class="labelGro" for="taille3">
                                 <p>
-                                    Prix de groupe avec 5 personnes
+                                    <?=lang::cinq_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_5?>
+                                    <?=$game_prix_5?> €
                                 </p>
                             </label>
                             
                             <input class="inputGro" type="radio" id="taille4" name="taille_groupe" data-grp="6" data-prix=<?=$game_prix_6?>>
                             <label class="labelGro" for="taille4">
                                 <p>
-                                    Prix de groupe avec 6 personnes
+                                    <?=lang::six_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_6?>
+                                    <?=$game_prix_6?> €
                                 </p>
                             </label>
                             <input class="inputGro" type="radio" id="taille5" name="taille_groupe" data-grp="7" data-prix=<?=$game_prix_7?>>
                             <label class="labelGro" for="taille5">
                                 <p>
-                                    Prix de groupe avec 7 personnes
+                                    <?=lang::sept_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_7?>
+                                    <?=$game_prix_7?> €
                                 </p>
                             </label>
                             <input class="inputGro" type="radio" id="taille6" name="taille_groupe"data-grp="8" data-prix=<?=$game_prix_8?>>
                             <label class="labelGro" for="taille6">
                                 <p>
-                                    Prix de groupe avec 8 personnes
+                                    <?=lang::huit_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_8?>
+                                    <?=$game_prix_8?> €
                                 </p>
                             </label>
                             <input class="inputGro" type="radio" id="taille7" name="taille_groupe" data-grp="9" data-prix=<?=$game_prix_9?>>
                             <label class="labelGro" for="taille7">
                                 <p>
-                                    Prix de groupe avec 9 personnes
+                                    <?=lang::neuf_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_9?>
+                                    <?=$game_prix_9?> €
                                 </p>
                             </label>
                             <input class="inputGro" type="radio" id="taille8" name="taille_groupe" data-grp="10" data-prix=<?=$game_prix_10?>>
                             <label class="labelGro" for="taille8">
                                 <p>
-                                    Prix de groupe avec 10 personnes
+                                    <?=lang::dix_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_10?>
+                                    <?=$game_prix_10?> €
                                 </p>
                             </label>
                             <input class="inputGro" type="radio" id="taille9" name="taille_groupe" data-grp="11" data-prix=<?=$game_prix_11?>>
                             <label class="labelGro" for="taille9">
                                 <p>
-                                    Prix de groupe avec 11 personnes
+                                    <?=lang::onze_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_11?>
+                                    <?=$game_prix_11?> €
                                 </p>
                             </label>
                             <input class="inputGro" type="radio" id="taille10" name="taille_groupe" data-grp="12" data-prix=<?=$game_prix_12?>>
                             <label class="labelGro" for="taille10">
                                 <p>
-                                    Prix de groupe avec 12 personnes
+                                    <?=lang::douze_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_12?>
+                                    <?=$game_prix_12?> €
                                 </p>
                             </label>
                             <input type="radio" id="taille_groupe" name="taille_groupe" data-grp="groupe" data-prix=<?=$game_prix_groupe?>>
-                            <label for="">
+                            <label class="labelGro" for="">
                                 <p>
-                                    Prix de grand groupe  +12 personnes
+                                    <?=lang::plus_douze_pers?>
                                 </p>
                                 <p>
-                                    <?=$game_prix_groupe?>
+                                    <?=$game_prix_groupe?> €
                                 </p>
                             </label>
                             <button class="add" data-id="<?= $game_id ?>">
                                 <img src="img/header/paniers.png" alt="Icone panier">
-                                <p>Ajouter au panier</p>
+                                <p><?=lang::ajout_panier?></p>
                             </button>
                         </div>
                     </div>
@@ -362,22 +403,22 @@ var_dump($infos);
     </div>
     <div class="block-avantage">
         <h2>
-            Les avantages de la réservation
+            <?=lang::avantages_resa?>
         </h2>
         <div class="grid_avantage">
             <div class="icon_avant">
                 <img src="img/icons/thunder.png" alt="icone éclair">
                 <div>
-                    <span>Réservation rapide et simple</span>
+                    <span><?=lang::resa_rapide?></span>
                     <p>
-                        Réservez votre activité en quelques minutes seulement
+                        <?=lang::reserver?>
                     </p>
                 </div>
             </div>
             <div class="icon_avant">
                 <img src="img/icons/lhorloge.png" alt="icone horloge">
                 <div>
-                    <span>Accessible 24h/24, 7j/7</span>
+                    <span><?=lang::acces?></span>
                     <p>
                         <?=lang::jouretnuit?>
                     </p>
@@ -422,3 +463,10 @@ var_dump($infos);
         </div>
     </div>
 </div>
+<?php
+$latitude ="<script>let lat=".$latitude."</script>";
+$longitude ="<script>let long=".$longitude."</script>";
+// var_dump($latitude);
+echo $latitude;
+echo $longitude;
+?>

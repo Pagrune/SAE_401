@@ -345,7 +345,7 @@ const liste_h2_avenir="Escape game à venir";
 
 
 const genre_esc="Genre :";
-const duree_esc="Durée :";
+const duree_esc="Durée : ";
 const heures_esc="heures | environ ";
 const where_esc="à";
 const niv_esc="Convient aux joueurs ";
@@ -368,6 +368,7 @@ const where="où";
 const reserver_av="Réserver votre aventure";
 const choix_jour="Choisir votre jour";
 const choix_creneau="Choisir votre créneau";
+const lieu="Lieu:";
 
 const choix_nbr_personne="Choisir le nombre de personnes";
 const deux_pers="Prix de groupe avec 2 - 3 personnes";

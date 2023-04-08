@@ -33,7 +33,21 @@
             if ($game["game_categorie"]=="familial"){
                 ?>
             <div class="block_aventure">
-                <h3><?=$game["game_nom"]?></h3>
+                <h3>
+                    <?php 
+                    if(!isset($_COOKIE["lang"])){
+                        echo $game["game_nom"];
+                    }
+                    else{
+                        if($_COOKIE["lang"]=='fr'){
+                            echo $game["game_nom"];
+                        }
+                        if($_COOKIE['lang']=='eng'){
+                            echo $game["game_nomeng"];
+                        }
+                    }
+                    ?>
+                </h3>
                 <img src="img/kredo/kredo.png" alt="Image escape game Kredo">
                 <div class="genre_aventure">
                     <p>
@@ -84,7 +98,21 @@
             if ($game["game_categorie"]=="novice"){
                 ?>
             <div class="block_aventure">
-                <h3><?=$game["game_nom"]?></h3>
+                <h3>
+                    <?php 
+                        if(!isset($_COOKIE["lang"])){
+                            echo $game["game_nom"];
+                        }
+                        else{
+                            if($_COOKIE["lang"]=='fr'){
+                                echo $game["game_nom"];
+                            }
+                            if($_COOKIE['lang']=='eng'){
+                                echo $game["game_nomeng"];
+                            }
+                        }
+                    ?>
+                </h3>
                 <img src="img/kredo/kredo.png" alt="Image escape game Kredo">
                 <div class="genre_aventure">
                     <p>
@@ -135,7 +163,21 @@
             if ($game["game_categorie"]=="expert"){
                 ?>
             <div class="block_aventure">
-                <h3><?=$game["game_nom"]?></h3>
+                <h3>
+                    <?php 
+                        if(!isset($_COOKIE["lang"])){
+                            echo $game["game_nom"];
+                        }
+                        else{
+                            if($_COOKIE["lang"]=='fr'){
+                                echo $game["game_nom"];
+                            }
+                            if($_COOKIE['lang']=='eng'){
+                                echo $game["game_nomeng"];
+                            }
+                        }
+                    ?>
+                </h3>
                 <img src="img/kredo/kredo.png" alt="Image escape game Kredo">
                 <div class="genre_aventure">
                     <p>

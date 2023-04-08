@@ -106,6 +106,10 @@ if(document.querySelector('#map')){
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-    
-    var marker = L.marker([47.75, 7.3333]).addTo(map);
+
+
+    console.log(lat);
+    console.log(long);
+    var marker = L.marker([lat, long]).addTo(map);
+
 }
