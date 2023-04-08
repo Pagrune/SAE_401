@@ -68,14 +68,21 @@
         <div class="mes_resa">
         <img src="img/kredo/kredo.png" alt="">
         <div class="info_resa">
-            <h3>$reservation['</h3>
+            <h3><?php
+            if($_Cookie['lang']=="fr" or !isset($_Cookie["lang"]))
+                $reservation["game_nom"];
+            else
+                $reservation["game_nomeng"];
+            ?>
+            
+        </h3>
             <div class="resa_nbr">
                 <img src="img/icons/contact.png" alt="icône nombre de personne">
                 <p>
                     2-3 <?=lang::compte_personne?>
                 </p>
             </div>
-            <p class="tarif">69€</p>
+            <p class="tarif"><?=$reservation["resa_prix"]?>€</p>
         </div>
         <div class="creneau_resa">
             <h4>'.lang::compte_creneau.'</h4>

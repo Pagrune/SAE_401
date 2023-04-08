@@ -20,7 +20,7 @@ class resa extends database {
      *      [bool] : false si le client n'a pas de réservation
      */
     public function GetResaClient($id_client){
-        $req = 'SELECT * FROM booking WHERE id_user=?;';   
+        $req = 'SELECT * FROM booking inner JOIN game on resa_idgame=game_id WHERE id_user=?;';   
         $resa =  $this->execReqPrep($req, array($id_client));
         return $resa;
       }
