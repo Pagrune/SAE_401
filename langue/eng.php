@@ -319,7 +319,7 @@ const liste_h2_confirme="Adventures for the most experienced";
 const liste_h2_avenir="Upcoming Escape Games";
 
 const genre_esc="Genre:";
-const duree_esc="Duration:";
+const duree_esc="Duration: ";
 const heures_esc="hours | approximately ";
 const where_esc="in";
 const niv_esc="Suitable for ";
@@ -339,6 +339,7 @@ const where="where";
 const reserver_av="Book your adventure";
 const choix_jour="Choose your day";
 const choix_creneau="Choose your time slot";
+const lieu="Place:";
 
 const choix_nbr_personne="Choose the number of people";
 const deux_pers="Group price with 2-3 people";
