@@ -1,9 +1,15 @@
 <?php
 extract($infos);
-var_dump($infos);
+// var_dump($infos);
+
 
 ?>
 <div id="aventure_solo">
+<?php 
+// var_dump($game_latitude);
+$latitude=json_encode($game_latitude, JSON_PRETTY_PRINT);
+$longitude=json_encode($game_longitude, JSON_PRETTY_PRINT);
+?>
     <div class="block-1">
         <img src="img/kredo/kredo.png" alt="escape game Kredo castello">
         <div class="block_carac">
@@ -457,3 +463,10 @@ var_dump($infos);
         </div>
     </div>
 </div>
+<?php
+$latitude ="<script>let lat=".$latitude."</script>";
+$longitude ="<script>let long=".$longitude."</script>";
+// var_dump($latitude);
+echo $latitude;
+echo $longitude;
+?>
