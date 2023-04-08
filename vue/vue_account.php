@@ -61,14 +61,18 @@
         </div>';
     }
     else{
-        echo '<div class="mes_resa">
+        var_dump($resa);
+        foreach($resa as $reservation){
+            ?>
+       
+        <div class="mes_resa">
         <img src="img/kredo/kredo.png" alt="">
         <div class="info_resa">
-            <h3>Kredo Castello</h3>
+            <h3>$reservation['</h3>
             <div class="resa_nbr">
                 <img src="img/icons/contact.png" alt="icône nombre de personne">
                 <p>
-                    2-3 '.lang::compte_personne.'
+                    2-3 <?=lang::compte_personne?>
                 </p>
             </div>
             <p class="tarif">69€</p>
@@ -79,7 +83,9 @@
             <p class="date_resa">27/04/2023</p>
             <p class="heure_resa"> 15h30</p>
         </div>
-    </div>';
+    </div>
+    <?php
+        }
     }
     ?>
     

@@ -7,13 +7,13 @@ if(document.querySelector("#aventure_solo")){
     bouton = document.querySelector(".add");
     bouton.addEventListener("click", AddToCart);
 
-    document.querySelectorAll("#date_jour").forEach(e=>{
+    document.querySelectorAll(".inputJour").forEach(e=>{
         e.addEventListener("click", saveDate);
     });
-    document.querySelectorAll("#heure_jour").forEach(e=>{
+    document.querySelectorAll(".inputCren").forEach(e=>{
         e.addEventListener("click", saveHeure);
     });
-    document.querySelectorAll("#taille_groupe").forEach(e=>{
+    document.querySelectorAll(".inputGro").forEach(e=>{
         e.addEventListener("click", saveNbpersonne);
     });
 }

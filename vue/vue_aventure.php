@@ -235,7 +235,7 @@ var_dump($infos);
                     </div>
                     <div class="toggle">
                         <div class="groupe_choix">
-                            <input class="inputGro" type="radio" id="taille1" name="taille_groupe"  data-grp="2-3" data-prix=<?=$game_prix_3?>>
+                            <input class="inputGro" type="radio" id="taille1" name="taille_groupe"  data-grp="3" data-prix=<?=$game_prix_3?>>
                             <label class="labelGro" for="taille1">
                                 <p>
                                     Prix de groupe avec 2 - 3 personnes

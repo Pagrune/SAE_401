@@ -10,7 +10,7 @@ class panier extends database {
     public function EnregPanier($idgame, $id_client, $panier_id_session, $date, $heure, $nb_personne, $prix){
         if (!empty($id_client)){
         $req='INSERT INTO panier (panier_id_client, panier_idgame, panier_date, panier_heure, panier_prix, panier_nbpersonne, panier_session_client) VALUES (?,?,?,?,?,?,?);';
-        $result=$this->execReqPrep($req, array($id_client, $idgame, $date,$heure, $prix,$nb_personne, $panier_id_client));
+        $result=$this->execReqPrep($req, array($id_client, $idgame, $date,$heure, $prix,$nb_personne, $id_client));
     } else{
             $req='INSERT INTO panier ( panier_idgame, panier_date, panier_heure, panier_prix, panier_nbpersonne, panier_session_client) VALUES (?,?,?,?,?,?);';
             $result=$this->execReqPrep($req, array($idgame, $date,$heure, $prix,$nb_personne,  $panier_id_session));
@@ -45,11 +45,13 @@ class panier extends database {
 
     public function transi_panier_commande($id){
         $req1="SELECT * from panier where panier_id_client=?;";
-        $results=$this->execReqPrep($req1, array($id));
+        $results=$this->execReqPrep($req1, array((int)$id));
         var_dump($results);
+        if($results>0){
         foreach ($results as $result){
             $this->transfo_panier_commande($result);
             $this->delEltPanier($result["panier_elt"]);
+        }
         }
         return $results;
     }
@@ -57,10 +59,13 @@ class panier extends database {
 
     public function transfo_panier_commande($ligne_panier){
         $req="INSERT into booking (resa_horaire, id_user, resa_idgame, resa_nbpersonne, resa_date, resa_prix, resa_date_transaction) values (?,?,?,?,?,?,?);";
-        var_dump($ligne_panier["panier_nbpersonne"]);
-        $req_prix="SELECT game_prix_".$ligne_panier["panier_nbpersonne"]." FROM game;";
-        $resultat_prix=$this->execReq($req_prix);
-        $result=$this->execReqPrep($req, array($ligne_panier["panier_heure"],$ligne_panier["panier_id_client"],$ligne_panier["panier_idgame"],$ligne_panier["panier_nbpersonne"],$ligne_panier["panier_date"], floatval($resultat_prix), time()));
-        return [$resultat_prix, $result];
+        var_dump((int)$ligne_panier["panier_idgame"]);
+        $req_prix="SELECT game_prix_".$ligne_panier["panier_nbpersonne"]." game_prix  FROM game where game_id=?;";
+        $resultat_prix=$this->execReqPrep($req_prix, array((int)$ligne_panier["panier_idgame"]));
+        $resultat_prix=$resultat_prix[0]['game_prix'];
+        // var_dump(array(strval($ligne_panier["panier_heure"]),$ligne_panier["panier_id_client"],(int)$ligne_panier["panier_idgame"],$ligne_panier["panier_nbpersonne"],strval($ligne_panier["panier_date"]), strval($resultat_prix), strval(time())));
+        $result=$this->execReqPrep($req, array($ligne_panier["panier_heure"],$ligne_panier["panier_id_client"],$ligne_panier["panier_idgame"],$ligne_panier["panier_nbpersonne"],$ligne_panier["panier_date"], strval($resultat_prix), strval(time())));
+        
+        return $result;
     }
 }
