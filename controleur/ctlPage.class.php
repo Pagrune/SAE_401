@@ -1,18 +1,23 @@
 <?php
 require_once "vue/vue.class.php";
 require_once "modele/faq.class.php";
+require_once "modele/escGame.class.php";
 
 class ctlPage {
     private $page;
     private $faq;
+    private $game;
 
     public function __construct(){
         $this->faq = new FAQ();
+        $this->game = new EscGame();
     }
 
     public function accueil(){
+        $most_populars= $this->game->getEscGame(1);
+        $new= $this->game->getEscGame(2);
         $vue = new vue("accueil"); // Instancie la vue appropriée
-        $vue->afficher(array()); 
+        $vue->afficher(array('most_popular'=>$infos, 'new'=>$new)); 
     }
     
     public function contact(){

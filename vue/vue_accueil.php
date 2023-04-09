@@ -1,3 +1,7 @@
+<?php
+var_dump($most_popular);
+?>
+
 <div id="home">
     <div class="block-1">
         <div>
