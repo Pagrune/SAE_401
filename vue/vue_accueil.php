@@ -26,7 +26,7 @@ var_dump($most_popular);
                 </div>
                 <div class="news-right">
                     <div>
-                    <?=lang::accueuil_right_news?>
+                    <!-- <?=lang::accueuil_right_news?> -->
                         <?php
                         if(!isset($_COOKIE["lang"])){
                             echo $most_popular["game_description"];
@@ -42,18 +42,19 @@ var_dump($most_popular);
                         ?>
                     </div>
                     <div>
-                        <p>
-                            Durée : 2 heures | environ 2,5 km
-                            <br>
-                            à Ihringen am Kaiserstuhl
-                        </p>
+                    <p>
+                    <?=lang::duree_esc?><?= $most_popular['game_duree'] ?> <?=lang::heures_esc?><?= $most_popular['game_parcours'] ?> km
+                    </p>
                         <strong>
-                            Convient aux joueurs confirmés
+                            <?php
+                            echo lang::niv_esc;
+                            echo $most_popular['game_categorie'];
+                            ?>
                         </strong>
                     </div>
                     <div class='button_news'>
                         <button class="button_plus">
-                            <a>En savoir plus</a>
+                            <a> <?=lang::esp?></a>
                         </button>
                     </div>
                 </div>
@@ -122,7 +123,7 @@ var_dump($most_popular);
                 </div>
                 <div class="popular_button">
                     <button class="button_plus">
-                        <a>En savoir plus</a>
+                        <a> <?=lang::esp?></a>
                     </button>
                 </div>
             </div>
