@@ -23,7 +23,18 @@
                 <div class="news-right">
                     <div>
                         <?= lang::accueuil_right_news ?>
-
+                        <?php
+                        if (!isset($_COOKIE["lang"])) {
+                            echo $most_popular["game_description"];
+                        } else {
+                            if ($_COOKIE["lang"] == 'fr') {
+                                echo $most_popular["game_description"];
+                            }
+                            if ($_COOKIE['lang'] == 'eng') {
+                                echo $most_popular["game_decriptioneng"];
+                            }
+                        }
+                        ?>
                     </div>
                     <div>
                         <p>
