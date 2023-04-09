@@ -105,6 +105,9 @@ header .header-selector .header-langue button img {
 header .header-selector .menu_icon_mobile {
   margin-left: 70%;
 }
+header .header-selector .menu_icon_mobile > * {
+  transition: 0.5s;
+}
 header .header-selector .block_menu_mobile {
   display: none;
 }
@@ -202,6 +205,7 @@ footer .footer_copyright p {
 }
 #home .block-1 .block-2 {
   margin-left: 2%;
+  gap: 60px;
 }
 #home .block-1 .block-2 p {
   text-align: justify;
@@ -260,14 +264,13 @@ footer .footer_copyright p {
   width: 140vw;
   display: flex;
   animation: slider_animation 5s 5s infinite linear;
+  transition: 0.5s;
 }
 #home .block-3 .block-avis .block_slider #slider .slider-parent .slide {
   width: 70vw;
-  display: grid;
   grid-template-columns: 50% 50%;
 }
 #home .block-3 .block-avis .block_slider #slider .slider-parent .slide .block-reviews-star {
-  margin-left: 8%;
   margin-top: 8%;
 }
 #home .block-3 .block-avis .block_slider #slider .slider-parent .slide .desc_reviews {
@@ -354,10 +357,11 @@ footer .footer_copyright p {
   height: 30vh;
 }
 #aventures .block-1 .img_boussole {
-  width: 100%;
+  width: 80%;
 }
 #aventures .block-1 .block-2 {
   margin-left: 2%;
+  gap: 60px;
 }
 #aventures .block-1 .block-2 p {
   text-align: justify;
@@ -382,6 +386,7 @@ footer .footer_copyright p {
   border-radius: 5px;
   background-color: white;
   margin-right: auto;
+  margin-top: 20px;
   margin-left: auto;
 }
 #aventures .block_trio_aventure .block_aventure .genre_aventure p {
@@ -897,7 +902,7 @@ footer .footer_copyright p {
   background-color: #3E3535;
   height: 30px;
   display: flex;
-  gap: 80px;
+  gap: 65px;
   color: white;
   padding-left: 70px;
 }
@@ -1320,17 +1325,6 @@ footer .footer_copyright p {
   margin-top: 0;
 }
 
-@keyframes slider_animation {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-70vw);
-  }
-  100% {
-    transform: initial;
-  }
-}
 @media screen and (min-width: 1024px) {
   h1 {
     text-align: initial;
@@ -1541,6 +1535,7 @@ footer .footer_copyright p {
   #cadeau .block-3 .block-avis .block_slider .arrow_slider {
     width: 40px;
     height: 40px;
+    cursor: pointer;
   }
   #home .block-3 .block-avis .block_slider #slider,
   #aventures .block-3 .block-avis .block_slider #slider,
@@ -1553,13 +1548,14 @@ footer .footer_copyright p {
   #cadeau .block-3 .block-avis .block_slider #slider .slider-parent {
     width: 90vw;
     display: flex;
+    transition: 0.5s;
   }
   #home .block-3 .block-avis .block_slider #slider .slider-parent .slide,
   #aventures .block-3 .block-avis .block_slider #slider .slider-parent .slide,
   #cadeau .block-3 .block-avis .block_slider #slider .slider-parent .slide {
     width: 45vw;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 350px 50%;
   }
   #home .block-3 .block-avis .block_slider #slider .slider-parent .slide .block-reviews-star,
   #aventures .block-3 .block-avis .block_slider #slider .slider-parent .slide .block-reviews-star,
@@ -1891,6 +1887,7 @@ footer .footer_copyright p {
   }
   #aventure_solo .block-1 {
     display: grid;
+    margin-top: 30px;
     grid-template-columns: 1fr 1fr;
   }
   #aventure_solo .block-1 .block_carac h2 {
@@ -1933,6 +1930,7 @@ footer .footer_copyright p {
   }
   #aventure_solo .toggle-calendar .cal > div {
     padding: 10px;
+    font-size: 15px;
     margin-bottom: 10px;
   }
   #aventure_solo .toggle-calendar .mois {
@@ -1963,11 +1961,10 @@ footer .footer_copyright p {
   #aventure_solo .toggle-calendar .jours {
     background-color: #3E3535;
     height: 30px;
-    width: 100%;
     display: flex;
-    gap: 69px;
+    gap: 65px;
     color: white;
-    padding-left: 70px;
+    padding-left: 60px;
   }
   #aventure_solo .toggle-calendar .leJour {
     margin: auto 0px auto 0px;
@@ -2042,6 +2039,7 @@ footer .footer_copyright p {
   }
   #aventure_solo .block-3 {
     display: grid;
+    margin-bottom: 30px;
     grid-template-columns: 50% 50%;
   }
   #aventure_solo .choix p {
@@ -2246,16 +2244,5 @@ footer .footer_copyright p {
   }
   #panier .code_cadeau input[type=submit] {
     padding: 1%;
-  }
-  @keyframes slider_animation {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(-45vw);
-    }
-    100% {
-      transform: initial;
-    }
   }
 }/*# sourceMappingURL=style.css.map */

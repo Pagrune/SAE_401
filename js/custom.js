@@ -18,7 +18,15 @@ let letoggle = document.querySelectorAll(".el-toggle");
 letoggle.forEach(e =>
     e.addEventListener("click", toggle_faq)
 );
+// Slider accueil 
+document.querySelector(".arrow_droite").addEventListener("click", () => {
+    document.querySelector(".slider-parent").style.transform = "translateX(-50%)"
+})
 
+document.querySelector(".arrow_gauche").addEventListener("click", () => {
+    document.querySelector(".slider-parent").style.transform = "translateX(0px)"
+})
+// FAQ 
 function toggle_faq() {
     this.nextElementSibling.classList.toggle('open');
     if (document.querySelector('.open')) {
@@ -99,7 +107,7 @@ if (document.querySelector('.btn_plus')) {
 }
 
 /** Map */
-if(document.querySelector('#map')){
+if (document.querySelector('#map')) {
     var map = L.map('map').setView([48.866667, 2.333333], 6);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
