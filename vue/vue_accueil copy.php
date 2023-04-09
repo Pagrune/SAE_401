@@ -26,7 +26,7 @@
                     </div>
                     <div>
                         <p>
-                            Durée : 2 heures | environ 2,5 km
+                            <?=lang::right_news?> 2 heures | environ 2,5 km
                             <br>
                             à Ihringen am Kaiserstuhl
                         </p>

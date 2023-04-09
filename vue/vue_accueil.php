@@ -1,3 +1,7 @@
+<?php
+var_dump($most_popular);
+?>
+
 <div id="home">
     <div class="block-1">
         <div>
@@ -22,19 +26,19 @@
                 </div>
                 <div class="news-right">
                     <div>
-                        <?= lang::accueuil_right_news ?>
+                    <?=lang::accueuil_right_news?>
                         <?php
-                        if (!isset($_COOKIE["lang"])) {
+                        if(!isset($_COOKIE["lang"])){
                             echo $most_popular["game_description"];
-                        } else {
-                            if ($_COOKIE["lang"] == 'fr') {
+                        }
+                        else{
+                            if($_COOKIE["lang"]=='fr'){
                                 echo $most_popular["game_description"];
                             }
-                            if ($_COOKIE['lang'] == 'eng') {
+                            if($_COOKIE['lang']=='eng'){
                                 echo $most_popular["game_decriptioneng"];
                             }
                         }
-                        // ah 
                         ?>
                     </div>
                     <div>
