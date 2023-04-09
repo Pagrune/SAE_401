@@ -121,7 +121,7 @@ else{
 		!isset($_POST['cle'])
 	) {
 
-		echo '{"erreur": "Données non transmises"}';
+		echo ' {"erreur": "Données non transmises"}';
 
 	} elseif(rand(0, 1) == 1) { /* Une chance sur deux que le paiement soit accepté */
 

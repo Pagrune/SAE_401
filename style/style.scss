@@ -128,6 +128,9 @@ header {
         .menu_icon_mobile {
             margin-left: 70%;
         }
+        .menu_icon_mobile>* {
+            transition: 0.5s;
+        }
 
         .block_menu_mobile {
             display: none;
@@ -243,6 +246,7 @@ footer {
 
         .block-2 {
             margin-left: 2%;
+            gap: 60px;
 
             p {
                 text-align: justify;
@@ -317,14 +321,15 @@ footer {
                         width: 140vw;
                         display: flex;
                         animation: slider_animation 5s 5s infinite linear;
+                        transition: 0.5s;
 
                         .slide {
                             width: 70vw;
-                            display: grid;
+                            // display: grid;
                             grid-template-columns: 50% 50%;
 
                             .block-reviews-star {
-                                margin-left: 8%;
+                                // margin-left: 8%;
                                 margin-top: 8%;
                             }
 
@@ -438,11 +443,12 @@ footer {
         }
 
         .img_boussole {
-            width: 100%;
+            width: 80%;
         }
 
         .block-2 {
             margin-left: 2%;
+            gap: 60px;
 
             p {
                 text-align: justify;
@@ -471,6 +477,7 @@ footer {
                 border-radius: 5px;
                 background-color: white;
                 margin-right: auto;
+                margin-top: 20px;
                 margin-left: auto;
 
                 p {
@@ -1095,7 +1102,7 @@ footer {
             background-color: #3E3535;
             height: 30px;
             display: flex;
-            gap: 80px;
+            gap: 65px;
             color: white;
             padding-left: 70px;
         }
@@ -1573,19 +1580,19 @@ footer {
     }
 }
 
-@keyframes slider_animation {
-    0% {
-        transform: translateX(0);
-    }
+// @keyframes slider_animation {
+//     0% {
+//         transform: translateX(0);
+//     }
 
-    50% {
-        transform: translateX(-70vw);
-    }
+//     50% {
+//         transform: translateX(-70vw);
+//     }
 
-    100% {
-        transform: initial;
-    }
-}
+//     100% {
+//         transform: initial;
+//     }
+// }
 
 
 @media screen and (min-width: 1024px) {
@@ -1805,6 +1812,7 @@ footer {
                     .arrow_slider {
                         width: 40px;
                         height: 40px;
+                        cursor: pointer;
                     }
 
                     #slider {
@@ -1814,11 +1822,13 @@ footer {
                         .slider-parent {
                             width: 90vw;
                             display: flex;
+                            transition: 0.5s;
 
                             .slide {
                                 width: 45vw;
                                 display: grid;
-                                grid-template-columns: 50% 50%;
+                                grid-template-columns: 350px 50%;
+                                
 
                                 .block-reviews-star {
                                     margin-left: 8%;
@@ -2170,6 +2180,7 @@ footer {
     #aventure_solo {
         .block-1 {
             display: grid;
+            margin-top: 30px;
             grid-template-columns: 1fr 1fr;
 
             .block_carac {
@@ -2227,6 +2238,7 @@ footer {
 
             .cal>div {
                 padding: 10px;
+                font-size: 15px;
                 margin-bottom: 10px;
             }
 
@@ -2262,11 +2274,11 @@ footer {
             .jours {
                 background-color: #3E3535;
                 height: 30px;
-                width: 100%;
+                // width: 100%;
                 display: flex;
-                gap: 69px;
+                gap: 65px;
                 color: white;
-                padding-left: 70px;
+                padding-left: 60px;
             }
 
             .leJour {
@@ -2370,6 +2382,7 @@ footer {
 
         .block-3 {
             display: grid;
+            margin-bottom: 30px;
             grid-template-columns: 50% 50%;
         }
 
@@ -2642,17 +2655,17 @@ footer {
     }
 
 
-    @keyframes slider_animation {
-        0% {
-            transform: translateX(0);
-        }
+    // @keyframes slider_animation {
+    //     0% {
+    //         transform: translateX(0);
+    //     }
 
-        50% {
-            transform: translateX(-45vw);
-        }
+    //     50% {
+    //         transform: translateX(-45vw);
+    //     }
 
-        100% {
-            transform: initial;
-        }
-    }
+    //     100% {
+    //         transform: initial;
+    //     }
+    // }
 }
