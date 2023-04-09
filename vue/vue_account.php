@@ -61,7 +61,7 @@
         </div>';
     }
     else{
-        var_dump($resa);
+        
         foreach($resa as $reservation){
             ?>
        
@@ -69,26 +69,28 @@
         <img src="img/kredo/kredo.png" alt="">
         <div class="info_resa">
             <h3><?php
-            if($_Cookie['lang']=="fr" or !isset($_Cookie["lang"]))
-                $reservation["game_nom"];
-            else
-                $reservation["game_nomeng"];
+            if($_COOKIE['lang']=="fr" or !isset($_COOKIE["lang"])){
+                echo $reservation["game_nom"];
+            }
+            else{
+                echo $reservation["game_nomeng"];
+            }
             ?>
             
         </h3>
             <div class="resa_nbr">
                 <img src="img/icons/contact.png" alt="icône nombre de personne">
                 <p>
-                    2-3 <?=lang::compte_personne?>
+                <?=$reservation["resa_nbpersonne"]?> <?=lang::compte_personne?>
                 </p>
             </div>
             <p class="tarif"><?=$reservation["resa_prix"]?>€</p>
         </div>
         <div class="creneau_resa">
-            <h4>'.lang::compte_creneau.'</h4>
+            <h4><?=lang::compte_creneau?></h4>
             <div class="line"></div>
-            <p class="date_resa">27/04/2023</p>
-            <p class="heure_resa"> 15h30</p>
+            <p class="date_resa"><?=$reservation["resa_date"]?></p>
+            <p class="heure_resa"> <?=$reservation["resa_horaire"]?>h</p>
         </div>
     </div>
     <?php

@@ -1,6 +1,6 @@
-- ajouter les coordonnées dans la carte leaflet
-- système de Paiement
-- faire le système de validation de réservation
+- ajouter les coordonnées dans la carte leaflet [*]
+- système de Paiement [*]
+- faire le système de validation de réservation [*]
 - trouver une solution pour la page contact
 - faire le panier [*]
 - faire en sorte que les créneaux déjà réservés soient invalides 
