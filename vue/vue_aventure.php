@@ -103,8 +103,6 @@ $longitude=json_encode($game_longitude, JSON_PRETTY_PRINT);
                     ?>
                 </p>
             </div>
-            <div class="right-column">
-            </div>
         </div>
         <img src="img/page_aventure_solo/coridor.jpg" alt="">
     </div>
