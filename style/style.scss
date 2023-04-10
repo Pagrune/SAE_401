@@ -2237,12 +2237,14 @@ footer {
         .toggle-calendar {
             position: relative;
             width: 100%;
+            
 
             .cal {
                 display: grid;
                 grid-template-columns: repeat(7, 1fr);
                 width: 30vw;
                 padding: 3%;
+                transform: translateX(-12%);
             }
 
             .cal>div {
@@ -2282,6 +2284,7 @@ footer {
 
             .jours {
                 background-color: #3E3535;
+                display: none !important;
                 height: 30px;
                 // width: 100%;
                 display: flex;

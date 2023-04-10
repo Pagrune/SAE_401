@@ -1943,6 +1943,7 @@ footer .footer_copyright p {
     grid-template-columns: repeat(7, 1fr);
     width: 30vw;
     padding: 3%;
+    transform: translateX(-12%);
   }
   #aventure_solo .toggle-calendar .cal > div {
     padding: 10px;
@@ -1976,6 +1977,7 @@ footer .footer_copyright p {
   }
   #aventure_solo .toggle-calendar .jours {
     background-color: #3E3535;
+    display: none !important;
     height: 30px;
     display: flex;
     gap: 65px;
