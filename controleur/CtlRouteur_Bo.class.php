@@ -6,13 +6,15 @@ require "ctlAventure.class.php";
 require 'ctlCadeaux.class.php';
 require 'CtlConnexion.class.php';
 require 'CtlPanier.class.php';
+require 'CtlResa.class.php';
+require 'ctlBo.class.php';
 
-class ctlRouteur
+class ctlRouteurBo
 {
 
     
 
-
+    private $ctlBo;
     private $ctlEscGame;
     private $ctlClient;
     private $ctlCPage;
@@ -31,32 +33,34 @@ class ctlRouteur
         $this->ctlConnexion= new ctlConnexion();
         $this->ctlPanier= new ctlPanier();
         $this->ctlResa= new CtlResa();
+        $this->ctlBo = new ctlBo();
     }
 
 
-    public function ctlRouteurBo(){
+    public function Routage_Bo(){
 
         if (isset($_GET["action"])) {
             switch ($_GET["action"]) {
-                case 'réservation':
-                    $this->ctlResa->getResa();
+                case 'resa':
+                    $this->ctlBo->getResas();
                     break;
 
                 case 'client':
-                    $this->ctlResa->getResa();
+                    $this->ctlClient->getClients();
                 break;
 
                 case 'game':
-                    $this->ctlResa->getResa();
+                    $this->ctlEscGame->getgames();
                 break;
 
                 default : 
                     $this->ctlPage->Bo();
+                    break;
 
 
-            }
+            }}
         else{
-            require 'vue/vue_accueil.php';
+            $this->ctlPage->Bo();
         }}
     }
 
