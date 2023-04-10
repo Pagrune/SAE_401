@@ -467,6 +467,9 @@ footer .footer_copyright p {
   margin-right: auto;
   margin-bottom: 4%;
 }
+#panier .panier .mes_resa img {
+  width: 100%;
+}
 #panier .panier .mes_resa .info_resa h3 {
   font-size: 3rem;
   margin-bottom: 8%;
@@ -2178,6 +2181,9 @@ footer .footer_copyright p {
     border: solid 4px black;
     width: 90%;
     flex-wrap: wrap;
+  }
+  #panier .panier .mes_resa img {
+    width: 40%;
   }
   #panier .panier .mes_resa .info_resa h3 {
     font-size: 3rem;

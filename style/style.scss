@@ -579,6 +579,9 @@ footer {
             padding: 2%;
             margin-right: auto;
             margin-bottom: 4%;
+            img{
+                width: 100%;
+            }
 
             .info_resa {
                 h3 {
@@ -2498,6 +2501,7 @@ footer {
                 border: solid 4px black;
                 width: 90%;
 
+
                 .info_resa {
                     h3 {
                         font-size: 3rem;
@@ -2560,6 +2564,9 @@ footer {
                 border: solid 4px black;
                 width: 90%;
                 flex-wrap: wrap;
+                img{
+                    width: 40%;
+                }
 
                 .info_resa {
                     h3 {

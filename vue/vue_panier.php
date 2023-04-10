@@ -7,9 +7,9 @@
             ?>
         
         <div class="mes_resa">
-            <img src="img/kredo/kredo.png" alt="">
+            <img src="img/jeux/img_jeux_<?=$gay['panier_idgame']?>.png" alt="">
             <div class="info_resa">
-                <h3>Kredo Castello</h3>
+                <!-- <h3><?=$gay['panier_nbpersonne']?></h3> -->
                 <div class="resa_nbr">
                     <img src="img/icons/contact.png" alt="icône nombre de personne">
                     <p>
