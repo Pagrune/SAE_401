@@ -407,4 +407,18 @@ const vendredi="Vendredi";
 const samedi="Samedi";
 const dimanche="Dimanche";
 
+const mon_panier="Mon panier";
+const valid_panier="Valider mon panier";
+const connex_panier="Me connecter pour valider mon panier";
+const supprimer_jeu="Supprimer ce jeu";
+const mon_code="Mon code cadeau";
+const util_code="Utiliser mon code cadeau";
+const paiement="Paiement";
+const expire="Expire / fin";
+const mois="MM/AA";
+const denomination="M(e) PRENOM NOM";
+const numero_secret="Numéro secret";
+const confirm_commande="Confirmer ma commande";
+const recap_comm="Récapitulatif de la commande";
+const panier_vide="Votre panier est vide";
 }

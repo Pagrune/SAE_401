@@ -1,5 +1,5 @@
 <div id="panier">
-    <h1>Mon panier</h1>
+    <h1><?= lang::mon_panier ?></h1>
     <div class=panier>
         <?php
         if($reponse>0){
@@ -13,27 +13,27 @@
                 <div class="resa_nbr">
                     <img src="img/icons/contact.png" alt="icône nombre de personne">
                     <p>
-                        <?=$gay['panier_nbpersonne']?> personnes
+                        <?=$gay['panier_nbpersonne']?> <?= lang::compte_personne ?>
                     </p>
                 </div>
                 <p class="tarif"><?=$gay['panier_prix']?>€</p>
             </div>
             <div class="creneau_resa">
-                <h4>Mon créneau</h4>
+                <h4><?= lang::compte_creneau ?></h4>
                 <div class="line"></div>
                 <p class="date_resa"><?=$gay['panier_date']?></p>
                 <p class="heure_resa"> <?=$gay['panier_heure']?>h</p>
             </div>
-            <a class="supp_jeu" href="index.php?action=supp_panier&del_id_elt=<?=$gay['panier_elt']?>">Supprimer ce jeu</a>
+            <a class="supp_jeu" href="index.php?action=supp_panier&del_id_elt=<?=$gay['panier_elt']?>"><?= lang::supprimer_jeu ?></a>
         </div>
         <?php }
         ?>
        <div class="valid_panier">
             <div class="code_cadeau">
                 <label for="">
-                    <input id="code_reduc" type="text" placeholder="Mon code cadeau">
+                    <input id="code_reduc" type="text" placeholder="<?= lang::mon_code ?>">
                 </label>
-                <input type="submit"  id='verif_carte' value="Utiliser mon code">
+                <input type="submit"  id='verif_carte' value="<?= lang::util_code ?>">
             </div>
             <div id="verif_carte_message">
                 
@@ -41,13 +41,13 @@
             
                 <?php if(isset($_SESSION['id'])){
                     echo '
-                    <button class="btn_valid_panier paiement_js"><img src="img/header/paniers.png" alt="icône panier"><span>Valider mon panier</span>';
+                    <button class="btn_valid_panier paiement_js"><img src="img/header/paniers.png" alt="icône panier"><span>'.lang::valid_panier.'</span>';
                 }
                 else{
                     echo  '<button class="btn_valid_panier"><a class="" href="index.php?action=connexion">
                             <img src="img/header/paniers.png" alt="icône panier">
                             <span>
-                                Me connecter pour valider mon panier
+                                '.lang::connex_panier.'
                             </span>
                         </a>';
                 }
@@ -64,7 +64,7 @@
         ?>
     <div class="paiement">
         <div class="title_paiement">
-            <h2>Paiement</h2>
+            <h2><?= lang::paiement ?></h2>
             <div class="logo_cb">
                 <img src="img/paiement/Visa_Inc._logo.svg.webp" alt="logo Visa">
                 <img src="img/paiement/MasterCard_Logo.png" alt="Logo Mastercard">
@@ -77,22 +77,22 @@
                         <input type="text" class="numero" placeholder="0000 0000 0000 0000">
                         <div>
                             <p>
-                                Expire / fin
+                                <?= lang::expire ?>
                             </p>
-                            <input type="text" class="date" placeholder="MM/AA">
+                            <input type="text" class="date" placeholder="<?= lang::mois ?>">
                         </div>
-				        <input type="text" class="nom" placeholder="M(e) PRENOM NOM">
+				        <input type="text" class="nom" placeholder="<?= lang::denomination ?>">
                         <div class="dosCarte">
-                            <p>Numéro secret</p>
+                            <p><?= lang::numero_secret ?></p>
                             <input type="text" placeholder="000">
                         </div>
-                        <a href="index.php?action=valider_ma_commande">Confirmer ma commande</a>
+                        <a href="index.php?action=valider_ma_commande"><?= lang::confirm_commande ?></a>
                     </div>
                     
                 </form>
                 <div class='recap_commande'>
                     <h3>
-                        Récapitulatif de la commande
+                        <?= lang::recap_comm ?>
                     </h3>
                     <p>
                         69€
@@ -110,7 +110,7 @@
 <?php
 }
 else{
-    echo ' votre panier est vide';
+    echo lang::panier_vide;
 }
 
 	// if(
