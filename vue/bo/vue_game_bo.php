@@ -5,7 +5,7 @@ foreach($games as $game){
     ?>
     <h2><?=$game['game_nomeng']?></h2>
 
-    <form action="bo.php?action=modif_game&game=<?=$game['game_id']?>">
+    <form action="bo.php?action=modif_game&game=<?=$game['game_id']?>" method='post'>
     <label for="">game_genre <select name="game_genre" id="">
         <option value="<?=$game['game_genre']?>"><?=$game['game_genre']?></option>
         <option value="fantastique">fantastique</option>
@@ -130,7 +130,7 @@ foreach($games as $game){
 
     <input type="submit" value='valider' required>
 
-    <a href="bo.php?action=delete_game&game=<?=$game['id_game']?>"></a>
+    <a href="bo.php?action=delete_game&game=<?=$game['game_id']?>"></a>
     </form>
 
 
