@@ -46,11 +46,19 @@ class ctlRouteurBo
                     break;
 
                 case 'client':
-                    $this->ctlClient->getClients();
+                    $this->ctlBo->getClients();
+                    break;
                 break;
 
                 case 'game':
-                    $this->ctlEscGame->getgames();
+                    $this->ctlBo->getGames();
+                break;
+
+                case 'modif_game':
+                    $this->ctlBo->modif_game($_GET['game']);
+                break;
+                case 'delete_game':
+                    $this->ctlBo->del_game($_GET['game']);
                 break;
 
                 default : 

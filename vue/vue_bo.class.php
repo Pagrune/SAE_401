@@ -38,7 +38,7 @@ class vue_bo {
     
     extract($data);   // Extrait les valeurs du tableau associatif $data dans des variables 
     ob_start();
-
+    var_dump($this->fichierVue);
     require $this->fichierVue;   // Génère le contenu de la page en fonction de l'action
 
     $contenu = ob_get_clean();

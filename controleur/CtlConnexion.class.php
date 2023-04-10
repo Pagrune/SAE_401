@@ -87,7 +87,7 @@ class ctlConnexion{
         }
         //ajout dans un un tableau associatif des éléments à auto-invoquer
         if(!empty($_POST["prenom_connex"])){
-            $valeurs["prenom"]=$_POST["nom_connex"];
+            $valeurs["prenom"]=$_POST["prenom_connex"];
             var_dump($valeurs);
         }
 
