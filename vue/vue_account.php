@@ -7,6 +7,9 @@
                 <label for="nom_compte">
                     <input type="text" id="nom_compte" <?php if(isset($client['user_nom']) && !empty($client['user_nom'])) echo'value='.$client['user_nom'] ?> name="nom_compte" placeholder="<?=lang::compte_nom?>" required>
                 </label>
+                <?php 
+                // var_dump($client);
+                ?>
                 <label for="prenom_compte">
                     <input type="text" id="prenom_compte" <?php
                     if(isset($client['user_prenom']) && !empty($client['user_prenom'])) echo'value='.$client['user_prenom'] ?> name="prenom_compte" placeholder="<?=lang::compte_prenom?>" required>

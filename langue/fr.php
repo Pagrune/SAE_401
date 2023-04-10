@@ -20,7 +20,7 @@ class lang{
     const accueuil_right_news = '<p>Voyagez à travers différentes époques et plongez-vous dans les histoires de "Kredo Castello", "Spiritus Sancti" et "Vinea Flamara".</p>
     <p>Découvrez où se trouve le secret - Qu\'est-ce que le Codex? Ça va vous étonner - promis!</p>';
 
-    const accueuil_bloc_avis = "<h3>Les derniers avis</h3>";
+    const accueuil_bloc_avis = "Les derniers avis";
 
     const accueuil_bloc_popular = "<h2>Popular</h2><h3>Découvrez l’aventure préférée des enquêteurs</h3>";
 
@@ -407,4 +407,21 @@ const vendredi="Vendredi";
 const samedi="Samedi";
 const dimanche="Dimanche";
 
+const mon_panier="Mon panier";
+const valid_panier="Valider mon panier";
+const connex_panier="Me connecter pour valider mon panier";
+const supprimer_jeu="Supprimer ce jeu";
+const mon_code="Mon code cadeau";
+const util_code="Utiliser mon code cadeau";
+const paiement="Paiement";
+const expire="Expire / fin";
+const mois="MM/AA";
+const denomination="M(e) PRENOM NOM";
+const numero_secret="Numéro secret";
+const confirm_commande="Confirmer ma commande";
+const recap_comm="Récapitulatif de la commande";
+const panier_vide="Votre panier est vide";
+
+const review_1="J'ai fait Kredo Castello et j'ai adoré avec ma famille ! Nous cherchions de nouvelles activités à faire ensemble et nous avons été servis ! Nous y retournerons lors de la prochaine réunion de famille, c'est sûr.";
+const review_2="Je suis une fan d'escape game et de la nature, et Kaiserstuhl Escape est la fusion parfaite des deux !";
 }

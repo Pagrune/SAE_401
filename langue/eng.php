@@ -377,4 +377,22 @@ const jeudi="Thursday";
 const vendredi="Friday";
 const samedi="Saturday";
 const dimanche="Sunday";
+
+const mon_panier="My shopping cart";
+const valid_panier="Validate my cart";
+const connex_panier="Log in to validate my cart";
+const supprimer_jeu="Delete this game";
+const mon_code="My gift code";
+const util_code="Use my gift code";
+const paiement='Payment';
+const expire="Expires / Ends";
+const mois="MM/YY";
+const denomination="Me FIRST NAME LAST NAME";
+const numero_secret="Secret number";
+const confirm_commande="Confirm my order";
+const recap_comm="Order summary";
+const panier_vide="Your cart is empty";
+
+const review_1="I did Kredo Castello and loved it with my family! We were looking for new things to do as a family and we were not disappointed! We will definitely come back for the next family reunion.";
+const review_2="I am a fan of escape games and nature, and Kaiserstuhl Escape is the perfect fusion of both!";
 }
