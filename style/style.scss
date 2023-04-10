@@ -16,6 +16,8 @@ body {
     background-image: url("../img/background/fond.jpg");
     font-family: $roboto;
     position: relative;
+    // display: grid;
+    // grid-template-rows: auto 1fr auto;
 }
 
 h1 {

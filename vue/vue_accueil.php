@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="block-avis">
-                <h3><?= lang::accueuil_bloc_avis ?></h3>
+                <?= lang::accueuil_bloc_avis ?>
                 <div class="block_slider">
                     <img class="arrow_slider arrow_gauche" src="img/slidder/arrow_left.png" alt="icône flèche gauche">
                     <div id="slider">
