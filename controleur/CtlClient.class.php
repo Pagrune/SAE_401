@@ -14,7 +14,9 @@ class ctlClient{
         $this->resa = new resa();
     }
 
-
+    public function getClients(){
+        
+    }
     /*********************************************
      * Affichage des infos d'un client comprenant ses commandes et ses infos
      * 

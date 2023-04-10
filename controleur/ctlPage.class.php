@@ -1,5 +1,6 @@
 <?php
 require_once "vue/vue.class.php";
+require_once "vue/vue_bo.class.php";
 require_once "modele/faq.class.php";
 require_once "modele/escGame.class.php";
 
@@ -50,5 +51,10 @@ class ctlPage {
     public function erreur($message){
         $vue = new vue("erreur"); // Instancie la vue appropriée
         $vue->afficher(array("message" => $message)); // Affiche la liste des erreur dans la vue
+    }
+
+    public function Bo(){
+        $vue = new vue_bo('bo');
+        $vue->afficher_bo(array()); // Affiche la liste des erreur dans la vue
     }
 }

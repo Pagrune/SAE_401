@@ -62,6 +62,13 @@ class resa extends database {
             return FALSE;
         }
       }
+
+
+      public function getResa(){
+        $req= "SELECT * FROM booking;";
+        $result=$this->execReq($req);
+        return $result;
+      }
     }
 
 

@@ -3,12 +3,12 @@
 require_once "modele/resa.class.php";
 // require_once "modele/"
 
-class CtlResa(){
+class CtlResa{
 
      private $resa;
 
      public function __construct(){
-        $this->resa=new Resa()
+        $this->resa=new Resa();
      }
 
      public function pack(){
