@@ -113,26 +113,26 @@ else{
     echo ' votre panier est vide';
 }
 
-	if(
-		!isset($_POST['montant']) || 
-		!isset($_POST['numero']) || 
-		!isset($_POST['date']) || 
-		!isset($_POST['nom']) || 
-		!isset($_POST['cle'])
-	) {
+	// if(
+	// 	!isset($_POST['montant']) || 
+	// 	!isset($_POST['numero']) || 
+	// 	!isset($_POST['date']) || 
+	// 	!isset($_POST['nom']) || 
+	// 	!isset($_POST['cle'])
+	// ) {
 
-		echo ' {"erreur": "Données non transmises"}';
+	// 	echo ' {"erreur": "Données non transmises"}';
 
-	} elseif(rand(0, 1) == 1) { /* Une chance sur deux que le paiement soit accepté */
+	// } elseif(rand(0, 1) == 1) { /* Une chance sur deux que le paiement soit accepté */
 
-		/* Simulation d'un délai d'attente pour valider le paiement */
-		sleep(rand(1,2));
-		echo '{"statut": "Paiement accepté"}';
+	// 	/* Simulation d'un délai d'attente pour valider le paiement */
+	// 	sleep(rand(1,2));
+	// 	echo '{"statut": "Paiement accepté"}';
 
-	} else {
+	// } else {
 
-		/* Simulation d'un délai d'attente pour valider le paiement */
-		sleep(rand(1,2));
-		echo '{"statut": "Paiement refusé par la banque"}';
+	// 	/* Simulation d'un délai d'attente pour valider le paiement */
+	// 	sleep(rand(1,2));
+	// 	echo '{"statut": "Paiement refusé par la banque"}';
 
-	}
+	// }
