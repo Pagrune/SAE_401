@@ -1,6 +1,6 @@
-<?php
-var_dump($games);
+<a href="bo.php">home</a>
 
+<?php
 foreach($games as $game){
     ?>
     <h2><?=$game['game_nomeng']?></h2>
@@ -129,8 +129,8 @@ foreach($games as $game){
     
 
     <input type="submit" value='valider' required>
-
-    <a href="bo.php?action=delete_game&game=<?=$game['game_id']?>"></a>
+    </br></br></br>
+    <a href="bo.php?action=delete_game&game=<?=$game['game_id']?>">delete game</a>
     </form>
 
 

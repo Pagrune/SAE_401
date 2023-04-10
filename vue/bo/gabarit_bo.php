@@ -6,7 +6,7 @@
   <title>Back-office</title>
 </head>
 <body>
-salut
+
 <?=$contenu?>
 
 </body>

@@ -69,6 +69,19 @@ class resa extends database {
         $result=$this->execReq($req);
         return $result;
       }
-    }
+
+      public function modif_resa($horaire, $client, $id_game, $nb_personne, $date, $prix, $id_resa){
+        $req="UPDATE booking set resa_horaire=?, id_user=?, resa_idgame=?, resa_nbpersonne=?, resa_date=?, resa_prix=? where resa_id=?;";
+        $result=$this->execReqPrep($req, array($horaire, $client, $id_game, $nb_personne, $date, $prix, $id_resa));
+        return $result;
+      }
+
+      public function delete_resa($id_resa){
+        $req="DELETE from booking where resa_id=?;";
+        $result=$this->execReqPrep($req, array($id_resa));
+        return $result;
+      }
+
+}
 
 

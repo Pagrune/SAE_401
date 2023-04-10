@@ -66,4 +66,9 @@ class client extends database {
     //return isset($resultat[0]) ? $resultat[0] : FALSE;    // Retourne FALSE si le client n'existe pas
   }
 
+  public function delete_client($user){
+    $req='DELETE from user where user_id=?;';
+    $result=$this->execReqPrep($req, array($user));
+  }
+  
 }
