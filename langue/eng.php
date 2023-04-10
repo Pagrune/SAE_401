@@ -14,7 +14,7 @@ class lang{
     </p>';
     const accueuil_left_news = '<h2>News</h2>
     
-    <h3>A new adventure coming soon</h3>';
+    <h3>The new adventure</h3>';
     const accueuil_right_news = '<p>Travel through different eras and immerse yourself in the stories of "Kredo Castello," "Spiritus Sancti," and "Vinea Flamara."</p>
     
     <p>Discover where the secret lies - What is the Codex? It will surprise you - promise!</p>';

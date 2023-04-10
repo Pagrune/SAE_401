@@ -19,13 +19,17 @@ letoggle.forEach(e =>
     e.addEventListener("click", toggle_faq)
 );
 // Slider accueil 
-document.querySelector(".arrow_droite").addEventListener("click", () => {
-    document.querySelector(".slider-parent").style.transform = "translateX(-50%)"
-})
+if(document.querySelector('#home')){
+    document.querySelector(".arrow_droite").addEventListener("click", () => {
+        document.querySelector(".slider-parent").style.transform = "translateX(-50%)";
+    })
+    
+    document.querySelector(".arrow_gauche").addEventListener("click", () => {
+        document.querySelector(".slider-parent").style.transform = "translateX(0px)";
+    })
+}
 
-document.querySelector(".arrow_gauche").addEventListener("click", () => {
-    document.querySelector(".slider-parent").style.transform = "translateX(0px)"
-})
+
 // FAQ 
 function toggle_faq() {
     this.nextElementSibling.classList.toggle('open');

@@ -48,7 +48,7 @@
                     }
                     ?>
                 </h3>
-                <img src="img/kredo/kredo.png" alt="Image escape game Kredo">
+                <img src="img/jeux/img_jeux_<?=$game['game_id']?>.png" alt="Image escape game">
                 <div class="genre_aventure">
                     <p>
                         <?=lang::genre_esc?>
@@ -113,7 +113,7 @@
                         }
                     ?>
                 </h3>
-                <img src="img/kredo/kredo.png" alt="Image escape game Kredo">
+                <img src="img/jeux/img_jeux_<?=$game['game_id']?>.png" alt="Image escape game">
                 <div class="genre_aventure">
                     <p>
                         <?=lang::genre_esc?>
@@ -178,7 +178,7 @@
                         }
                     ?>
                 </h3>
-                <img src="img/kredo/kredo.png" alt="Image escape game Kredo">
+                <img src="img/jeux/img_jeux_<?=$game['game_id']?>.png" alt="Image escape game">
                 <div class="genre_aventure">
                     <p>
                         <?=lang::genre_esc?>
@@ -222,7 +222,7 @@
         <h2><?=lang::liste_h2_avenir?></h2>
         <div>
             <h3>23 Mai 2023</h3>
-            <img src="img/page_aventures/new_escape.png" alt="">
+            <img src="img/jeux/img_jeux_4.png" alt="nouveau jeu à venir">
         </div>
 
     </div>

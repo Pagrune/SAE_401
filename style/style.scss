@@ -276,6 +276,15 @@ footer {
 
             .news-right {
                 margin-bottom: 12%;
+                .descri_news{
+                    height: 42vh;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    font-size: 1.5rem;
+                    p{
+                        font-size: 2.5rem;
+                    }
+                }
 
                 .button_news {
                     width: 70%;
@@ -288,6 +297,8 @@ footer {
 
                         a {
                             font-size: 50px;
+                            text-decoration: none;
+                            color: white;
                         }
                     }
                 }
@@ -373,6 +384,8 @@ footer {
 
                     a {
                         font-size: 50px;
+                        color: white;
+                        text-decoration: none;
                     }
                 }
             }
@@ -527,7 +540,6 @@ footer {
 
     #futur_escape {
         div {
-            border: $gris 5px solid;
             border-radius: 5px;
             padding: 5%;
             margin: 2%;
@@ -1780,6 +1792,12 @@ footer {
                 .news-right {
                     margin-left: 6%;
                     margin-bottom: 0;
+                    .descri_news{
+                        height: 42vh;
+                        p{
+                            font-size: 1.2rem;
+                        }
+                    }
 
                     .button_news {
                         width: 70%;
@@ -1827,7 +1845,7 @@ footer {
                             .slide {
                                 width: 45vw;
                                 display: grid;
-                                grid-template-columns: 350px 50%;
+                                grid-template-columns: 46% 50%;
                                 
 
                                 .block-reviews-star {
@@ -1970,12 +1988,6 @@ footer {
             }
         }
 
-        #futur_escape {
-            div {
-                padding: 7%;
-                margin: 7%;
-            }
-        }
     }
 
     #cadeau,
@@ -2211,16 +2223,13 @@ footer {
             grid-template-columns: 1fr 1fr;
 
             .descr {
-                margin: 4%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+                margin-left: 4%;
+                margin-right: 4%;
+                margin-bottom: 4%;
+                margin-top: 2%;
 
                 .left-column {
                     margin-right: 4%;
-                }
-
-                .right-column {
-                    margin-left: 4%;
                 }
             }
         }
@@ -2228,12 +2237,14 @@ footer {
         .toggle-calendar {
             position: relative;
             width: 100%;
+            
 
             .cal {
                 display: grid;
                 grid-template-columns: repeat(7, 1fr);
                 width: 30vw;
                 padding: 3%;
+                transform: translateX(-12%);
             }
 
             .cal>div {
@@ -2273,6 +2284,7 @@ footer {
 
             .jours {
                 background-color: #3E3535;
+                display: none !important;
                 height: 30px;
                 // width: 100%;
                 display: flex;

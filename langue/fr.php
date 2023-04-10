@@ -15,7 +15,7 @@ class lang{
 </p>';
 
     const accueuil_left_news = '<h2>News</h2>
-<h3>Une nouvelle aventure bientôt de sortie</h3>';
+<h3>La nouvelle aventure</h3>';
 
     const accueuil_right_news = '<p>Voyagez à travers différentes époques et plongez-vous dans les histoires de "Kredo Castello", "Spiritus Sancti" et "Vinea Flamara".</p>
     <p>Découvrez où se trouve le secret - Qu\'est-ce que le Codex? Ça va vous étonner - promis!</p>';

@@ -6,7 +6,7 @@ require "config/config.class.php";
 
 if(!isset($_COOKIE["lang"])){
     require_once './langue/fr.php';
-    echo "langue/fr.php";
+    // echo "langue/fr.php";
 }
 else{
     if($_COOKIE["lang"]=='fr'){

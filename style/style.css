@@ -227,6 +227,15 @@ footer .footer_copyright p {
 #home .block-3 .block-news .news-right {
   margin-bottom: 12%;
 }
+#home .block-3 .block-news .news-right .descri_news {
+  height: 42vh;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+#home .block-3 .block-news .news-right .descri_news p {
+  font-size: 2.5rem;
+}
 #home .block-3 .block-news .news-right .button_news {
   width: 70%;
   margin-left: auto;
@@ -238,6 +247,8 @@ footer .footer_copyright p {
 }
 #home .block-3 .block-news .news-right .button_news .button_plus a {
   font-size: 50px;
+  text-decoration: none;
+  color: white;
 }
 #home .block-3 .block-avis {
   z-index: 1;
@@ -304,6 +315,8 @@ footer .footer_copyright p {
 }
 #home .block-3 .block-popular .popular_button .button_plus a {
   font-size: 50px;
+  color: white;
+  text-decoration: none;
 }
 #home .block-4 {
   margin: 2%;
@@ -422,7 +435,6 @@ footer .footer_copyright p {
   text-decoration: none;
 }
 #aventures #futur_escape div {
-  border: #3E3535 5px solid;
   border-radius: 5px;
   padding: 5%;
   margin: 2%;
@@ -1499,6 +1511,16 @@ footer .footer_copyright p {
     margin-left: 6%;
     margin-bottom: 0;
   }
+  #home .block-3 .block-news .news-right .descri_news,
+  #aventures .block-3 .block-news .news-right .descri_news,
+  #cadeau .block-3 .block-news .news-right .descri_news {
+    height: 42vh;
+  }
+  #home .block-3 .block-news .news-right .descri_news p,
+  #aventures .block-3 .block-news .news-right .descri_news p,
+  #cadeau .block-3 .block-news .news-right .descri_news p {
+    font-size: 1.2rem;
+  }
   #home .block-3 .block-news .news-right .button_news,
   #aventures .block-3 .block-news .news-right .button_news,
   #cadeau .block-3 .block-news .news-right .button_news {
@@ -1555,7 +1577,7 @@ footer .footer_copyright p {
   #cadeau .block-3 .block-avis .block_slider #slider .slider-parent .slide {
     width: 45vw;
     display: grid;
-    grid-template-columns: 350px 50%;
+    grid-template-columns: 46% 50%;
   }
   #home .block-3 .block-avis .block_slider #slider .slider-parent .slide .block-reviews-star,
   #aventures .block-3 .block-avis .block_slider #slider .slider-parent .slide .block-reviews-star,
@@ -1693,10 +1715,6 @@ footer .footer_copyright p {
   }
   #aventures .block_trio_aventure .block_aventure .button_ensavoir a {
     font-size: 23px;
-  }
-  #aventures #futur_escape div {
-    padding: 7%;
-    margin: 7%;
   }
   #cadeau,
   #contact {
@@ -1908,15 +1926,13 @@ footer .footer_copyright p {
     grid-template-columns: 1fr 1fr;
   }
   #aventure_solo .block-2 .descr {
-    margin: 4%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    margin-top: 2%;
   }
   #aventure_solo .block-2 .descr .left-column {
     margin-right: 4%;
-  }
-  #aventure_solo .block-2 .descr .right-column {
-    margin-left: 4%;
   }
   #aventure_solo .toggle-calendar {
     position: relative;
@@ -1927,6 +1943,7 @@ footer .footer_copyright p {
     grid-template-columns: repeat(7, 1fr);
     width: 30vw;
     padding: 3%;
+    transform: translateX(-12%);
   }
   #aventure_solo .toggle-calendar .cal > div {
     padding: 10px;
@@ -1960,6 +1977,7 @@ footer .footer_copyright p {
   }
   #aventure_solo .toggle-calendar .jours {
     background-color: #3E3535;
+    display: none !important;
     height: 30px;
     display: flex;
     gap: 65px;

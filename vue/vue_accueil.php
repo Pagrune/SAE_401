@@ -1,5 +1,6 @@
 <?php
-var_dump($most_popular);
+// var_dump($most_popular);
+// var_dump($new);
 ?>
 
 <div id="home">
@@ -22,38 +23,43 @@ var_dump($most_popular);
             <div class="block-news">
                 <div class="news-left">
                     <?= lang::accueuil_left_news ?>
-                    <img src="img/kredo/kredo.png" alt="Kredo castello escape game">
+                    <img src="img/jeux/img_jeux_<?=$new['game_id']?>.png" alt="Img escape game">
                 </div>
                 <div class="news-right">
-                    <div>
-                    <?=lang::accueuil_right_news?>
-                        <?php
+                    <div class="descri_news">
+                    <!-- <?=lang::accueuil_right_news?> -->
+                    <p>
+                    <?php
                         if(!isset($_COOKIE["lang"])){
-                            echo $most_popular["game_description"];
+                            echo $new["game_description"];
                         }
                         else{
                             if($_COOKIE["lang"]=='fr'){
-                                echo $most_popular["game_description"];
+                                echo $new["game_description"];
                             }
                             if($_COOKIE['lang']=='eng'){
-                                echo $most_popular["game_decriptioneng"];
+                                echo $new["game_decriptioneng"];
                             }
                         }
                         ?>
+                    </p>
+                    
                     </div>
+                    <p>...</p>
                     <div>
-                        <p>
-                            Durée : 2 heures | environ 2,5 km
-                            <br>
-                            à Ihringen am Kaiserstuhl
-                        </p>
+                    <p>
+                    <?=lang::duree_esc?><?= $new['game_duree'] ?> <?=lang::heures_esc?><?= $new['game_parcours'] ?> km
+                    </p>
                         <strong>
-                            Convient aux joueurs confirmés
+                            <?php
+                            echo lang::niv_esc;
+                            echo $new['game_categorie'];
+                            ?>
                         </strong>
                     </div>
                     <div class='button_news'>
                         <button class="button_plus">
-                            <a>En savoir plus</a>
+                            <a href="index.php?action=aventure&id_game=<?=$new["game_id"]?>"> <?=lang::esp?></a>
                         </button>
                     </div>
                 </div>
@@ -109,20 +115,21 @@ var_dump($most_popular);
         <div class="block-popular">
             <?= lang::accueuil_bloc_popular ?>
             <div class="popular-img">
-                <img src="img/kredo/kredo.png" alt="Kredo castello escape game">
+                <img src="img/jeux/img_jeux_<?=$most_popular['game_id']?>.png" alt="Img escape game">
                 <div>
                     <p>
-                        Durée : 2 heures | environ 2,5 km
-                        <br>
-                        à Ihringen am Kaiserstuhl
+                    <?=lang::duree_esc?><?= $most_popular['game_duree'] ?> <?=lang::heures_esc?><?= $most_popular['game_parcours'] ?> km
                     </p>
                     <strong>
-                        Convient aux joueurs confirmés
+                        <?php
+                            echo lang::niv_esc;
+                            echo $most_popular['game_categorie'];
+                        ?>
                     </strong>
                 </div>
                 <div class="popular_button">
                     <button class="button_plus">
-                        <a>En savoir plus</a>
+                        <a href="index.php?action=aventure&id_game=<?=$most_popular["game_id"]?>"> <?=lang::esp?></a>
                     </button>
                 </div>
             </div>
