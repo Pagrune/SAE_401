@@ -131,8 +131,8 @@ class ctlConnexion{
             $msg_erreur_champs_vide.='veuillez renseigner votre ville </br>';
         }
         //ajout dans un un tableau associatif des éléments à auto-invoquer
-        if(!empty($_POST["tel_connex"])){
-            $valeurs["tel"]=$_POST["tel_connex"];
+        if(!empty($_POST["ville_connex"])){
+            $valeurs["ville"]=$_POST["ville_connex"];
         }
 
 
