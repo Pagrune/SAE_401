@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="block-avis">
-                <?= lang::accueuil_bloc_avis ?>
+                <h3><?= lang::accueuil_bloc_avis ?></h3>
                 <div class="block_slider">
                     <img class="arrow_slider arrow_gauche" src="img/slidder/arrow_left.png" alt="icône flèche gauche">
                     <div id="slider">
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="desc_reviews">
                                     <p>
-                                        J’ai fait Kredo Castello et j’ai adoré avec la famille ! Nous cherchions de nouvelles choses à faire en famille et nous avons été servi ! Nous allons revenir à la prochaine réunion de famille c’est sûr.
+                                        <?= lang::review_1 ?>
                                     </p>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="desc_reviews">
                                     <p>
-                                        Je suis une personne fan des escape game et la nature. Et Kaiserstuhl Escape est la fusion des deux parfaite !
+                                        <?= lang::review_2 ?>
                                     </p>
                                 </div>
 
