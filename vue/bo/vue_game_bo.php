@@ -5,7 +5,7 @@ foreach($games as $game){
     ?>
     <h2><?=$game['game_nomeng']?></h2>
 
-    <form action="bo.php?action=modif_game&game=<?=$game['game_id']?>" method='post'>
+    <form action="bo.php?action=modif_game&game=<?=$game['game_id']?>" enctype="multipart/form-data" method='post'>
     <label for="">game_genre <select name="game_genre" id="">
         <option value="<?=$game['game_genre']?>"><?=$game['game_genre']?></option>
         <option value="fantastique">fantastique</option>
@@ -124,10 +124,18 @@ foreach($games as $game){
     <label for="">game prix groupe
         <input type="text" value='<?=$game['game_prix_groupe']?>' name='prix_groupe' required>
     </label>
-    <br>
+    <br></br>
+    <label>changer la miniature de l'escape game</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="100000000">
+        <input type="file" name="image_escape" class="texte" accept="image/png">
+        
+</br></br>
+    <label>changer l'image secondaire du jeu</label>
+    <input type="hidden" name="MAX_FILE_SIZE" value="100000000">
+    <input type="file" name="image_contexte" class="texte" accept="image/png">
 
     
-
+</br></br>
     <input type="submit" value='valider' required>
     </br></br></br>
     <a href="bo.php?action=delete_game&game=<?=$game['game_id']?>">delete game</a>
