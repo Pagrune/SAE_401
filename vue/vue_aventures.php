@@ -222,7 +222,7 @@
         <h2><?=lang::liste_h2_avenir?></h2>
         <div>
             <h3>23 Mai 2023</h3>
-            <img src="img/jeux/img_jeux_4.png" alt="nouveau jeu à venir">
+            <img src="img/jeux/img_jeux_upcoming.png" alt="nouveau jeu à venir">
         </div>
 
     </div>
