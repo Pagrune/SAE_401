@@ -154,14 +154,13 @@ class ctlBo
         $this->getGames();
     }
 
-    public function new_game()
-    {
-        if (isset($_POST['valider']) && $_POST['valider'] == 'valider') {
-            $result = $this->game->getEscGames();
-            $nombre = count($result);
+    public function new_game(){
+        if(isset($_POST['valider'])&& $_POST['valider']=='Confirm'){
+            $result=$this->game->getEscGames();  
+            $nombre=count($result);
             $nombre++;
-            if (isset($_FILES['image_escape'])) {
-                $infos = new SplFileInfo($_FILES['image_escape']['name']);
+            if(isset($_FILES['image_escape'])){    
+                $infos= new SplFileInfo($_FILES['image_escape']['name']); 
                 $extension_upload = $infos->getExtension();
                 $extensions_autorisees = array('png');
                 $allowed_types = array('image/png');
@@ -169,22 +168,25 @@ class ctlBo
 
                 if ($_FILES['image_escape']['error'] !== UPLOAD_ERR_OK) {
                     echo '<p>Erreur lors du téléversement du fichier.</p>';
-                    // $this->getGames();
+                    $this->getGames();
                     // die();
-                } else {
+                } 
+                else {
                     $file_type = $_FILES['image_escape']['type'];
                     $file_size = $_FILES['image_escape']['size'];
-                    if (!in_array($file_type, $allowed_types)) {
-                        echo '<p>Le format de fichier n\'est pas supporté.</p>';
-                        // $this->getGames();
+                }
+                if (!in_array($file_type, $allowed_types)) {
+                    echo '<p>Le format de fichier n\'est pas supporté.</p>';
+                    $this->getGames();
                     // die();
-                    } elseif ($file_size > $max_size) {
-                        echo '<p>Le fichier est trop volumineux.</p>';
-                    // $this->getGames();
+                } elseif ($file_size > $max_size) {
+                    echo '<p>Le fichier est trop volumineux.</p>';
+                    $this->getGames();
                     // die();
-                    }else{
+                }else{
+
                         move_uploaded_file($_FILES['image_escape']['tmp_name'], './img/jeux/img_jeux_'.$nombre.'.'.$extension_upload);
-                        echo '<p>Le fichier a été téléversé avec succès.</p>';
+                    echo '<p>Le fichier a été téléversé avec succès.</p>';
                     }
 
             }
@@ -197,30 +199,30 @@ class ctlBo
 
                 if ($_FILES['image_contexte']['error'] !== UPLOAD_ERR_OK) {
                     echo '<p>Erreur lors du téléversement du fichier.</p>';
-                } else {
+                } 
+                else {
                     $file_type = $_FILES['image_escape']['type'];
                     $file_size = $_FILES['image_escape']['size'];
-                    if (!in_array($file_type, $allowed_types)) {
+                }
+                if (!in_array($file_type, $allowed_types)) {
                     echo '<p>Le format de fichier n\'est pas supporté.</p>';
                 } elseif ($file_size > $max_size) {
                     echo '<p>Le fichier est trop volumineux.</p>';
-                } else {
-                    move_uploaded_file($_FILES['image_contexte']['tmp_name'], './img/jeux/img_jeux2_' . $nombre . '.' . $extension_upload);
+                }else{
+                    move_uploaded_file($_FILES['image_contexte']['tmp_name'], './img/jeux/img_jeux2_'.$nombre.'.'.$extension_upload);
                     echo '<p>Le fichier a été téléversé avec succès.</p>';
                 }
-                }
-                
                 // var_dump($_POST['game_genre'],(int)$_POST['duree'],$_POST['lieu'],$_POST['categorie'],(int)$_POST['nbjoueur'],$_POST['environnement'],$_POST['environnementeng'],$_POST['nom'],$_POST['nomeng'],$_POST['description'],$_POST['decriptioneng'],(float)$_POST['prix'],(float)$_POST['parcours'],(int)$_POST['nbenigme'],(float)$_POST['latitude'],(float)$_POST['longitude'],(float)$_POST['prix_3'],(float)$_POST['prix_4'],(float)$_POST['prix_5'],(float)$_POST['prix_6'],(float)$_POST['prix_7'],(float)$_POST['prix_8'],(float)$_POST['prix_9'],(float)$_POST['prix_10'],(float)$_POST['prix_11'],(float)$_POST['prix_12'],(float)$_POST['prix_groupe']);
 
 
-                $req = $this->game->enreg_game($_POST['game_genre'], (int)$_POST['duree'], $_POST['lieu'], $_POST['categorie'], (int)$_POST['nbjoueur'], $_POST['environnement'], $_POST['environnementeng'], $_POST['nom'], $_POST['nomeng'], $_POST['description'], $_POST['decriptioneng'], (float)$_POST['prix'], (float)$_POST['parcours'], (int)$_POST['nbenigme'], $_POST['latitude'], $_POST['longitude'], (float)$_POST['prix_3'], (float)$_POST['prix_4'], (float)$_POST['prix_5'], (float)$_POST['prix_6'], (float)$_POST['prix_7'], (float)$_POST['prix_8'], (float)$_POST['prix_9'], (float)$_POST['prix_10'], (float)$_POST['prix_11'], (float)$_POST['prix_12'], (float)$_POST['prix_groupe']);
+                $req=$this->game->enreg_game($_POST['game_genre'],(int)$_POST['duree'],$_POST['lieu'],$_POST['categorie'],(int)$_POST['nbjoueur'],$_POST['environnement'],$_POST['environnementeng'],$_POST['nom'],$_POST['nomeng'],$_POST['description'],$_POST['decriptioneng'],(float)$_POST['prix'],(float)$_POST['parcours'],(int)$_POST['nbenigme'],$_POST['latitude'],$_POST['longitude'],(float)$_POST['prix_3'],(float)$_POST['prix_4'],(float)$_POST['prix_5'],(float)$_POST['prix_6'],(float)$_POST['prix_7'],(float)$_POST['prix_8'],(float)$_POST['prix_9'],(float)$_POST['prix_10'],(float)$_POST['prix_11'],(float)$_POST['prix_12'],(float)$_POST['prix_groupe']);
 
-                // var_dump($req);
+                var_dump($req);
                 $this->getGames();
             }
-        } else {
+
+        }else{
             $this->new_game_form();
-        }
         }
     }
 
