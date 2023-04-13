@@ -400,4 +400,7 @@ const resa_success="Your reservation has been successfully added";
 const continuer_achat="Continue shopping";
 const aller_panier="Go to cart";
 const or="or";
+
+const erreur_resa_av="Error: Please fill in all fields";
+const continuer_resa="Continue my booking";
 }

@@ -456,6 +456,16 @@ footer .footer_copyright p {
 #panier h1 {
   font-size: 70px;
 }
+#panier .paiement_js {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+#panier .paiement_js .paiement_js_valid {
+  color: white !important;
+  font-size: 1.5rem !important;
+}
 #panier .panier .mes_resa {
   display: flex;
   flex-direction: column;
@@ -558,6 +568,7 @@ footer .footer_copyright p {
 #panier .paiement {
   border: solid 4px black;
   padding: 3%;
+  display: none;
 }
 #panier .paiement .title_paiement {
   display: flex;
@@ -601,7 +612,7 @@ footer .footer_copyright p {
   font-size: 2rem;
 }
 #panier .paiement .partie_paiement form input[type=text] {
-  width: 100%;
+  width: 96%;
   padding: 2%;
   font-size: 2rem;
   margin-bottom: 2%;
@@ -633,6 +644,19 @@ footer .footer_copyright p {
   text-align: center;
   margin-top: 8%;
   font-size: 4rem;
+}
+#panier .paiement .confirm_commande {
+  background-color: #F3A93E;
+  border: none;
+  width: 26%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 4%;
 }
 
 #politique,
@@ -853,6 +877,12 @@ footer .footer_copyright p {
   top: 35%;
   left: 26%;
   z-index: 1002;
+}
+#aventure_solo .add-to-cart.no-fill {
+  width: 44%;
+}
+#aventure_solo .add-to-cart.no-fill .choix_panier {
+  justify-content: center;
 }
 #aventure_solo .add-to-cart .choix_panier {
   display: flex;
@@ -1997,16 +2027,18 @@ footer .footer_copyright p {
   #aventure_solo .block-2 .descr .left-column {
     margin-right: 4%;
   }
+  #aventure_solo .bigCal {
+    width: 2%;
+  }
   #aventure_solo .toggle-calendar {
     position: relative;
     width: 100%;
   }
   #aventure_solo .toggle-calendar .cal {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    width: 30vw;
+    grid-template-columns: repeat(7, 687%);
     padding: 3%;
-    transform: translateX(-12%);
+    transform: translateX(-23%);
   }
   #aventure_solo .toggle-calendar .cal > div {
     padding: 10px;
@@ -2290,8 +2322,11 @@ footer .footer_copyright p {
     text-align: right;
     font-size: 1.5rem;
   }
+  #panier .confirm_commande {
+    width: 50% !important;
+  }
   #panier .partie_paiement {
-    flex-direction: row;
+    flex-direction: row !important;
   }
   #panier .partie_paiement form {
     flex: 0 0 50%;
@@ -2301,10 +2336,12 @@ footer .footer_copyright p {
   }
   #panier .partie_paiement .recap_commande {
     padding: 2%;
-    width: 34%;
+    width: 28% !important;
+    height: 50%;
     background-color: #AA8773;
     border: none;
     color: white;
+    margin-top: 12%;
   }
   #panier .partie_paiement .recap_commande h3 {
     text-align: center;

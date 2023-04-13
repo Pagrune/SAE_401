@@ -429,4 +429,7 @@ const resa_success="Votre réservation a été ajoutée avec succès";
 const continuer_achat="Continuer mes achats";
 const aller_panier="Aller au panier";
 const or="ou";
+
+const erreur_resa_av="Erreur : Veuillez renseigner tous les champs";
+const continuer_resa="Continuer ma réservation";
 }
