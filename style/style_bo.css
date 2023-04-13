@@ -7,6 +7,15 @@ body {
   position: relative;
 }
 
+h1 {
+  margin-left: 4%;
+  margin-top: 4%;
+  margin-bottom: 1%;
+  font-family: "Ultra", serif;
+  font-size: 3.2rem;
+  font-weight: initial;
+}
+
 header .header_logo {
   display: flex;
 }
@@ -91,4 +100,25 @@ header .block_menu_ordi button {
   text-align: center;
   padding: 2%;
   height: 100%;
+}
+
+#client_bo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#client_bo .grid {
+  margin-top: 20px;
+  display: grid;
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 4%;
+}
+#client_bo a {
+  color: #98251E;
+  text-decoration: none;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style_bo.css.map */

@@ -19,6 +19,15 @@ body{
     position: relative;
 }
 
+h1{
+    margin-left: 4%;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    font-family: $ultra;
+    font-size: 3.2rem;
+    font-weight: initial;
+}
+
 header{
     .header_logo {
         display: flex;
@@ -110,5 +119,26 @@ header{
             padding: 2%;
             height: 100%;
         }
+    }
+}
+
+#client_bo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    .grid{
+        margin-top : 20px; 
+        display: grid;
+        border: solid 2px black;
+        border-radius: 5px;
+        padding: 4%;
+    }
+    a{
+        color: $bordeau;
+        text-decoration: none;
+        font-size: 1.5rem;
     }
 }
