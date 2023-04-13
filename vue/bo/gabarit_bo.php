@@ -24,6 +24,7 @@
       </button>
     </div>
   </header>
+  
 <?=$contenu?>
 
 </body>
