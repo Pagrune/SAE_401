@@ -17,6 +17,7 @@ class ctlPage {
     public function accueil(){
         $most_populars= $this->game->getEscGame(1);
         $new= $this->game->getEscGame(2);
+        // var_dump($new);
         $vue = new vue("accueil"); // Instancie la vue appropriée
         $vue->afficher(array('most_popular'=>$most_populars[0], 'new'=>$new[0])); 
     }

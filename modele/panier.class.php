@@ -46,7 +46,7 @@ class panier extends database {
     public function transi_panier_commande($id){
         $req1="SELECT * from panier where panier_id_client=?;";
         $results=$this->execReqPrep($req1, array((int)$id));
-        var_dump($results);
+        // var_dump($results);
         if($results>0){
         foreach ($results as $result){
             $this->transfo_panier_commande($result);
@@ -63,10 +63,10 @@ class panier extends database {
         $req_prix="SELECT game_prix_".$ligne_panier["panier_nbpersonne"]." game_prix  FROM game where game_id=?;";
         $resultat_prix=$this->execReqPrep($req_prix, array((int)$ligne_panier["panier_idgame"]));
         $resultat_prix=$resultat_prix[0]['game_prix'];
-        var_dump($resultat_prix);
+        // var_dump($resultat_prix);
         // var_dump(array(strval($ligne_panier["panier_heure"]),$ligne_panier["panier_id_client"],(int)$ligne_panier["panier_idgame"],$ligne_panier["panier_nbpersonne"],strval($ligne_panier["panier_date"]), strval($resultat_prix), strval(time())));
         $result=$this->execReqPrep($req, array($ligne_panier["panier_heure"],$ligne_panier["panier_id_client"],$ligne_panier["panier_idgame"],$ligne_panier["panier_nbpersonne"],$ligne_panier["panier_date"], strval($resultat_prix), strval(time())));
-        var_dump($result);
+        // var_dump($result);
         return $result;
     }
 }

@@ -65,7 +65,7 @@ class ctlBo
     public function new_faq()
     {
         $req = $this->faq->enreg_faq($_POST['questionfr'], $_POST['repfr'], $_POST['questionen'], $_POST['repen']);
-        var_dump($req);
+        //($req);
         $this->enreg_faq();
     }
 
@@ -93,9 +93,9 @@ class ctlBo
     public function modif_game($id_game)
     {
         $req = $this->game->modif_game($_POST['game_genre'], $_POST['duree'], $_POST['lieu'], $_POST['categorie'], $_POST['nbjoueur'], $_POST['environnement'], $_POST['environnementeng'], $_POST['nom'], $_POST['nomeng'], $_POST['description'], $_POST['decriptioneng'], $_POST['prix'], $_POST['parcours'], $_POST['nbenigme'], $_POST['latitude'], $_POST['longitude'], $_POST['prix_3'], $_POST['prix_4'], $_POST['prix_5'], $_POST['prix_6'], $_POST['prix_7'], $_POST['prix_8'], $_POST['prix_9'], $_POST['prix_10'], $_POST['prix_11'], $_POST['prix_12'], $_POST['prix_groupe'], $id_game);
-        var_dump($req);
+        //($req);
         if (isset($_FILES['image_escape']) && !empty($_FILES['image_escape'])) {
-            var_dump('coucou');
+            //('coucou');
             $infos = new SplFileInfo($_FILES['image_escape']['name']);
             $extension_upload = $infos->getExtension();
             $extensions_autorisees = array('png');
@@ -213,7 +213,7 @@ class ctlBo
 
                 $req = $this->game->enreg_game($_POST['game_genre'], (int)$_POST['duree'], $_POST['lieu'], $_POST['categorie'], (int)$_POST['nbjoueur'], $_POST['environnement'], $_POST['environnementeng'], $_POST['nom'], $_POST['nomeng'], $_POST['description'], $_POST['decriptioneng'], (float)$_POST['prix'], (float)$_POST['parcours'], (int)$_POST['nbenigme'], $_POST['latitude'], $_POST['longitude'], (float)$_POST['prix_3'], (float)$_POST['prix_4'], (float)$_POST['prix_5'], (float)$_POST['prix_6'], (float)$_POST['prix_7'], (float)$_POST['prix_8'], (float)$_POST['prix_9'], (float)$_POST['prix_10'], (float)$_POST['prix_11'], (float)$_POST['prix_12'], (float)$_POST['prix_groupe']);
 
-                var_dump($req);
+                // var_dump($req);
                 $this->getGames();
             }
         } else {

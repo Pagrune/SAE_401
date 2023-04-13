@@ -17,9 +17,9 @@ class CtlCadeau{
 
     public function EnregCadeau($value_cadeau){
         $code=database::random_string();
-        var_dump($code);
+         // var_dump($code);
         $new_carte=$this->cadeau->enregCadeau($value_cadeau, $code);
-        var_dump($new_carte);
+         // var_dump($new_carte);
         $this->cadeau();
     }
 

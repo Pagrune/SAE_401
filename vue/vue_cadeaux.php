@@ -29,7 +29,7 @@
 
             <?php 
                 if(!empty($_POST["value_cadeau"])){
-                    var_dump($_POST["value_cadeau"]);
+                    // var_dump($_POST["value_cadeau"]);
                 }
             ?>
         </div>

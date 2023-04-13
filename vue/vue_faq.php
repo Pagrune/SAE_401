@@ -1,5 +1,5 @@
  <!-- <?php
-var_dump($faq);
+// var_dump($faq);
 ?> -->
 <div id="faq">
     <h1>

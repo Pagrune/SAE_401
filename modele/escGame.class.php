@@ -30,7 +30,7 @@ class EscGame extends database {
       [array] : Tableau associatif contenant les information du jeu ou FALSE en cas d'erreur
   *******************************************************/
   public function getEscGame($id_game){
-    $req='SELECT *FROM `game`where game_id=?;';
+    $req='SELECT * FROM `game` where game_id=?;';
     $resultat= $this->execReqPrep($req, array($id_game));
     return $resultat; 
   }

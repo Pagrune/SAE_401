@@ -88,7 +88,7 @@ class ctlConnexion{
         //ajout dans un un tableau associatif des éléments à auto-invoquer
         if(!empty($_POST["prenom_connex"])){
             $valeurs["prenom"]=$_POST["prenom_connex"];
-            var_dump($valeurs);
+             // var_dump($valeurs);
         }
 
 
@@ -185,7 +185,7 @@ class ctlConnexion{
         }
         else{
             // die();
-            var_dump($msg_erreur_champs_vide);
+             // var_dump($msg_erreur_champs_vide);
             $vue=new vue('crea_compte');
             $vue->afficher(['message'=>$msg_erreur_champs_vide, 'valeur'=>$valeurs]);
         }
@@ -203,8 +203,8 @@ class ctlConnexion{
      *      Si incorrect : affichage de la vue avec un message d'erreur dépendant du type de problème
      ****************************/
     public function connexion_check(){
-        // var_dump($_POST["identifiant"]);
-        // var_dump($_POST["mdp"]);
+        //  // var_dump($_POST["identifiant"]);
+        //  // var_dump($_POST["mdp"]);
         if(!empty($_POST["identifiant"]) && !empty($_POST["mdp"])){
             $email=$_POST["identifiant"];
             $mdp=$_POST["mdp"];
@@ -268,8 +268,7 @@ class ctlConnexion{
         session_unset();
         session_destroy();
         //redirection vers la page d'accueil
-        $vue=new vue('accueil');
-        $vue->afficher([]);
+        header('Location:index.php');
     }
     
 }    
