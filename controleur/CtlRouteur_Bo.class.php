@@ -56,7 +56,7 @@ class ctlRouteurBo
                         $this->ctlBo->modif_game($_GET['game']);
                         break;
                     case 'new_game':
-                        $this->ctlBo->new_game_form();
+                        $this->ctlBo->new_game();
                         break;
 
                     case 'client':
