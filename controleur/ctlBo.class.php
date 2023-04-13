@@ -65,7 +65,7 @@ class ctlBo
     public function new_faq()
     {
         $req = $this->faq->enreg_faq($_POST['questionfr'], $_POST['repfr'], $_POST['questionen'], $_POST['repen']);
-        var_dump($req);
+        // var_dump($req);
         $this->enreg_faq();
     }
 
@@ -81,7 +81,7 @@ class ctlBo
         $req = $this->faq->modif_faq($_POST['questionfr'], $_POST['repfr'], $_POST['questionen'], $_POST['repen'], $id_faq);
         $this->getFaqs();
     }
-    //nul
+    
 
     public function getGames()
     {
@@ -109,8 +109,7 @@ class ctlBo
             } else {
                 $file_type = $_FILES['image_escape']['type'];
                 $file_size = $_FILES['image_escape']['size'];
-            }
-            if (!in_array($file_type, $allowed_types)) {
+                if (!in_array($file_type, $allowed_types)) {
                 echo '<p>Le format de fichier n\'est pas supporté.</p>';
                 // $this->getGames();
                 // die();
@@ -123,6 +122,8 @@ class ctlBo
                     move_uploaded_file($_FILES['image_escape']['tmp_name'], './img/jeux/img_jeux_'.$id_game.'.'.$extension_upload);
                 echo '<p>Le fichier a été téléversé avec succès.</p>';
                 }
+            }
+            
 
         }
         if(isset($_FILES['image_contexte']) && !empty($_FILES['image_escape'])){    
@@ -136,18 +137,17 @@ class ctlBo
                 echo '<p>Erreur lors du téléversement du fichier.</p>';
             } else {
                 $file_type = $_FILES['image_escape']['type'];
-                $file_size = $_FILES['image_escape']['size'];
-            }
-            if (!in_array($file_type, $allowed_types)) {
-                echo '<p>Le format de fichier n\'est pas supporté.</p>';
-            } elseif ($file_size > $max_size) {
-                echo '<p>Le fichier est trop volumineux.</p>';
-            }else{
-                    
-                    move_uploaded_file($_FILES['image_contexte']['tmp_name'], './img/jeux/img_jeux2_'.$id_game.'.'.$extension_upload);
+                $file_size = $_FILES['image_escape']['size']; 
+                if (!in_array($file_type, $allowed_types)) {
+                    echo '<p>Le format de fichier n\'est pas supporté.</p>';
+                } elseif ($file_size > $max_size) {
+                    echo '<p>Le fichier est trop volumineux.</p>';
+                }else{
+                move_uploaded_file($_FILES['image_contexte']['tmp_name'], './img/jeux/img_jeux2_'.$id_game.'.'.$extension_upload);
                 echo '<p>Le fichier a été téléversé avec succès.</p>';
                 }
-
+            }
+           
         }
         // $req=$this->game->modif_game($_POST['game_genre'],$_POST['duree'],$_POST['lieu'],$_POST['categorie'],$_POST['nbjoueur'],$_POST['environnement'],$_POST['environnementeng'],$_POST['nom'],$_POST['nomeng'],$_POST['description'],$_POST['decriptioneng'],$_POST['prix'],$_POST['parcours'],$_POST['nbenigme'], $_POST['latitude'], $_POST['longitude'],$_POST['prix_3'],$_POST['prix_4'],$_POST['prix_5'],$_POST['prix_6'],$_POST['prix_7'],$_POST['prix_8'],$_POST['prix_9'],$_POST['prix_10'],$_POST['prix_11'],$_POST['prix_12'],$_POST['prix_groupe'], $id_game);
         // var_dump($req);
@@ -182,10 +182,9 @@ class ctlBo
                         echo '<p>Le fichier est trop volumineux.</p>';
                     // $this->getGames();
                     // die();
-                }else{
-                        
+                    }else{
                         move_uploaded_file($_FILES['image_escape']['tmp_name'], './img/jeux/img_jeux_'.$nombre.'.'.$extension_upload);
-                    echo '<p>Le fichier a été téléversé avec succès.</p>';
+                        echo '<p>Le fichier a été téléversé avec succès.</p>';
                     }
 
             }
@@ -201,8 +200,7 @@ class ctlBo
                 } else {
                     $file_type = $_FILES['image_escape']['type'];
                     $file_size = $_FILES['image_escape']['size'];
-                }
-                if (!in_array($file_type, $allowed_types)) {
+                    if (!in_array($file_type, $allowed_types)) {
                     echo '<p>Le format de fichier n\'est pas supporté.</p>';
                 } elseif ($file_size > $max_size) {
                     echo '<p>Le fichier est trop volumineux.</p>';
@@ -210,6 +208,8 @@ class ctlBo
                     move_uploaded_file($_FILES['image_contexte']['tmp_name'], './img/jeux/img_jeux2_' . $nombre . '.' . $extension_upload);
                     echo '<p>Le fichier a été téléversé avec succès.</p>';
                 }
+                }
+                
                 // var_dump($_POST['game_genre'],(int)$_POST['duree'],$_POST['lieu'],$_POST['categorie'],(int)$_POST['nbjoueur'],$_POST['environnement'],$_POST['environnementeng'],$_POST['nom'],$_POST['nomeng'],$_POST['description'],$_POST['decriptioneng'],(float)$_POST['prix'],(float)$_POST['parcours'],(int)$_POST['nbenigme'],(float)$_POST['latitude'],(float)$_POST['longitude'],(float)$_POST['prix_3'],(float)$_POST['prix_4'],(float)$_POST['prix_5'],(float)$_POST['prix_6'],(float)$_POST['prix_7'],(float)$_POST['prix_8'],(float)$_POST['prix_9'],(float)$_POST['prix_10'],(float)$_POST['prix_11'],(float)$_POST['prix_12'],(float)$_POST['prix_groupe']);
 
 
@@ -220,6 +220,7 @@ class ctlBo
             }
         } else {
             $this->new_game_form();
+        }
         }
     }
 
