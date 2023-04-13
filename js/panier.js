@@ -71,6 +71,7 @@ function AddToCart(){
         })
         .then(function(text) {       // Utilisation de la réponse.
             console.log(text);
+            addpanier();
         })
         
     }

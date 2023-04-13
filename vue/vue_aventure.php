@@ -4,6 +4,7 @@ extract($infos);
 
 
 ?>
+<div id="filtre"></div>
 <div id="aventure_solo">
     <?php
     // var_dump($game_latitude);
@@ -169,7 +170,7 @@ extract($infos);
                         <a href="index.php?action=cadeaux"><?= lang::offrez_aventure ?></a>
                     </button>
                     <p>
-                        <?= lang::where ?>
+                        <?= lang::or ?>
                     </p>
                 </div>
                 <div class="resa_aventure">
@@ -371,7 +372,7 @@ extract($infos);
                                     <?= $game_prix_groupe ?> €
                                 </p>
                             </label>
-                            <button class="add" data-id="<?= $game_id ?>">
+                            <button id="popup-panier" class="add" data-id="<?= $game_id ?>">
                                 <img src="img/header/paniers.png" alt="Icone panier">
                                 <p><?= lang::ajout_panier ?></p>
                             </button>
@@ -381,17 +382,18 @@ extract($infos);
 
             </div>
         </div>
-        <!-- <div class="add-to-cart">
-        <div class="choix_panier">
-            <button>
-                <p>Continuer mes achats</p>
-            </button>
-            <button class="add">
-                <img src="img/header/paniers.png" alt="Icone panier">
-                <p>Aller au panier</p>
-            </button>
-        </div>               
-    </div> -->
+        <div class="add-to-cart">
+            <p><?= lang::resa_success ?></p>
+            <div class="choix_panier">
+                <button class="continue_achat">
+                    <p><?= lang::continuer_achat ?></p>
+                </button>
+                <button class="add-panier">
+                    <img src="img/header/paniers.png" alt="Icone panier">
+                    <a href="index.php?action=panier"><?= lang::aller_panier ?></a>
+                </button>
+            </div>               
+        </div>
     </div>
     <div class="carte">
         <div id="map"></div>

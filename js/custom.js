@@ -110,6 +110,28 @@ if (document.querySelector('.btn_plus')) {
     AfficherMois();
 }
 
+
+/** Fonction qui sert à ouvrir un pop up de validation de commande */
+// document.querySelector('#popup-panier').addEventListener('click', addpanier);
+
+function addpanier(){
+    document.querySelector('.add-to-cart').classList.add('visible');
+    if(document.querySelector(".visible")){
+        document.querySelector(".add-to-cart").style.display="flex";
+        document.querySelectorAll('.open').forEach(e=> e.classList.remove('open'));
+        document.querySelector('#filtre').style.display="block";
+    }
+}
+
+
+/** Fonction pour fermer le pop up quand on souhaite continuer nos achats et ne pas aller au panier */
+document.querySelector('.continue_achat').addEventListener('click', closepopup);
+
+function closepopup(){
+    document.querySelector(".add-to-cart").style.display="none";
+    document.querySelector("#filtre").style.display="none";
+}
+
 /** Map */
 if (document.querySelector('#map')) {
     var map = L.map('map').setView([48.866667, 2.333333], 6);

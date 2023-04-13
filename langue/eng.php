@@ -395,4 +395,9 @@ const panier_vide="Your cart is empty";
 
 const review_1="I did Kredo Castello and loved it with my family! We were looking for new things to do as a family and we were not disappointed! We will definitely come back for the next family reunion.";
 const review_2="I am a fan of escape games and nature, and Kaiserstuhl Escape is the perfect fusion of both!";
+
+const resa_success="Your reservation has been successfully added";
+const continuer_achat="Continue shopping";
+const aller_panier="Go to cart";
+const or="or";
 }
