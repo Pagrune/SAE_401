@@ -51,11 +51,11 @@
         </label>
          
         <label for="">game description
-            <textarea name="description" cols="30" rows="10"></textarea>
+            <input name="description" type='text'>
         </label>
          
         <label for="">game description eng
-            <textarea name="decriptioneng" cols="30" rows="10"></textarea>
+            <input name="decriptioneng" type="text">
         </label>
          
         <label for="">game prix
