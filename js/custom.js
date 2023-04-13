@@ -142,15 +142,18 @@ if(document.querySelector('.paiement_js')){
 }
 
 /** Pop up carte cadeau */
-document.querySelector('#achat_carte').addEventListener("click", cartecadeau );
+if(document.querySelector('#achat_carte')){
+    document.querySelector('#achat_carte').addEventListener("click", cartecadeau );
 
-function cartecadeau(){
-    document.querySelector('.carte_confirm').classList.add('visible');
-    if(document.querySelector(".visible")){
-        document.querySelector(".carte_confirm").style.display="flex";
-        document.querySelector('#filtre').style.display="block";
+    function cartecadeau(){
+        document.querySelector('.carte_confirm').classList.add('visible');
+        if(document.querySelector(".visible")){
+            document.querySelector(".carte_confirm").style.display="flex";
+            document.querySelector('#filtre').style.display="block";
+        }
     }
 }
+
 
 
 
