@@ -78,6 +78,7 @@ class ctlBo
         $req = $this->faq->modif_faq($_POST['questionfr'], $_POST['repfr'], $_POST['questionen'], $_POST['repen'], $id_faq);
         $this->getFaqs();
     }
+    //nul
 
     public function getGames()
     {
