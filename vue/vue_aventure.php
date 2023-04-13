@@ -383,7 +383,7 @@ extract($infos);
             </div>
         </div>
         <div class="add-to-cart">
-            <p><?= lang::resa_success ?></p>
+            <p class="resa_selec"><?= lang::resa_success ?></p>
             <div class="choix_panier">
                 <button class="continue_achat">
                     <p><?= lang::continuer_achat ?></p>
@@ -391,6 +391,14 @@ extract($infos);
                 <button class="add-panier">
                     <img src="img/header/paniers.png" alt="Icone panier">
                     <a href="index.php?action=panier"><?= lang::aller_panier ?></a>
+                </button>
+            </div>               
+        </div>
+        <div class="add-to-cart no-fill">
+            <p class="resa_selec"><?= lang::erreur_resa_av ?></p>
+            <div class="choix_panier">
+                <button class="continue_achat">
+                    <p><?= lang::continuer_resa ?></p>
                 </button>
             </div>               
         </div>

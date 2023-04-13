@@ -73,10 +73,15 @@ function AddToCart(){
             console.log(text);
             addpanier();
         })
+        // .catch(function(error){
+        //     addpanier();
+        //     document.querySelector('p:first-child').textContent="Erreur : Veuillez renseigner tous les champs avant de valider";
+        // })
         
     }
     else{
-        console.log("echec");
+        // console.log("echec");
+        champpascomplet();
     }
         
 }

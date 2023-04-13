@@ -1025,6 +1025,12 @@ footer {
         top: 35%;
         left: 26%;
         z-index: 1002;
+        &.no-fill{
+            width: 44%;
+            .choix_panier{
+                justify-content: center;
+            }
+        }
         .choix_panier{
             display: flex;
             justify-content: space-between;

@@ -854,6 +854,12 @@ footer .footer_copyright p {
   left: 26%;
   z-index: 1002;
 }
+#aventure_solo .add-to-cart.no-fill {
+  width: 44%;
+}
+#aventure_solo .add-to-cart.no-fill .choix_panier {
+  justify-content: center;
+}
 #aventure_solo .add-to-cart .choix_panier {
   display: flex;
   justify-content: space-between;

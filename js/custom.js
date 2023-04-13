@@ -123,12 +123,20 @@ function addpanier(){
     }
 }
 
+function champpascomplet(){
+    document.querySelector('.no-fill').classList.add('visible');
+    if(document.querySelector(".visible")){
+        document.querySelector(".no-fill").style.display="flex";
+        document.querySelector('#filtre').style.display="block";
+    }
+}
+
 
 /** Fonction pour fermer le pop up quand on souhaite continuer nos achats et ne pas aller au panier */
-document.querySelector('.continue_achat').addEventListener('click', closepopup);
+document.querySelectorAll('.continue_achat').forEach(e=> e.addEventListener('click', closepopup));
 
 function closepopup(){
-    document.querySelector(".add-to-cart").style.display="none";
+    document.querySelectorAll(".add-to-cart").forEach(e=> e.style.display="none");
     document.querySelector("#filtre").style.display="none";
 }
 
