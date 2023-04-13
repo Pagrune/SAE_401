@@ -568,6 +568,17 @@ footer {
         font-size: 70px;
     }
 
+    .paiement_js{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        .paiement_js_valid{
+            color: white !important;
+            font-size: 1.5rem !important;
+        }
+    }
+
     .panier {
         .mes_resa {
             display: flex;
@@ -693,6 +704,7 @@ footer {
     .paiement {
         border: solid 4px black;
         padding: 3%;
+        display: none;
 
         .title_paiement {
             display: flex;
@@ -742,7 +754,7 @@ footer {
                 }
 
                 input[type=text] {
-                    width: 100%;
+                    width: 96%;
                     padding: 2%;
                     font-size: 2rem;
                     margin-bottom: 2%;
@@ -781,6 +793,19 @@ footer {
                 }
             }
         }
+        .confirm_commande{
+            background-color: #F3A93E;
+            border: none;
+            width: 26%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2%;
+            font-size: 1.4rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 4%;
+        }   
     }
 }
 
@@ -2690,8 +2715,12 @@ footer {
             }
         }
 
+        .confirm_commande{
+            width: 50% !important;
+        }
+
         .partie_paiement {
-            flex-direction: row;
+            flex-direction: row !important;
 
             form {
                 flex: 0 0 50%;
@@ -2703,10 +2732,12 @@ footer {
 
             .recap_commande {
                 padding: 2%;
-                width: 34%;
+                width: 28% !important;
+                height: 50%;
                 background-color: $beige;
                 border: none;
                 color: white;
+                margin-top: 12%;
 
                 h3 {
                     text-align: center;

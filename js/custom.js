@@ -131,6 +131,17 @@ function champpascomplet(){
     }
 }
 
+/** Ouverture du système de paiement */
+if(document.querySelector('.paiement_js')){
+    document.querySelector('.paiement_js').addEventListener('click', gopaiement);
+
+    function gopaiement(){
+        console.log('hola amigos');
+        document.querySelector('.paiement').style.display="block";
+    }
+}
+
+
 
 /** Fonction pour fermer le pop up quand on souhaite continuer nos achats et ne pas aller au panier */
 document.querySelectorAll('.continue_achat').forEach(e=> e.addEventListener('click', closepopup));

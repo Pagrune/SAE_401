@@ -41,7 +41,7 @@
             
                 <?php if(isset($_SESSION['id'])){
                     echo '
-                    <button class="btn_valid_panier paiement_js"><img src="img/header/paniers.png" alt="icône panier"><span>'.lang::valid_panier.'</span>';
+                    <button class="btn_valid_panier paiement_js"><img src="img/header/paniers.png" alt="icône panier"><span class="paiement_js_valid">'.lang::valid_panier.'</span>';
                 }
                 else{
                     echo  '<button class="btn_valid_panier"><a class="" href="index.php?action=connexion">
@@ -86,7 +86,7 @@
                             <p><?= lang::numero_secret ?></p>
                             <input type="text" placeholder="000">
                         </div>
-                        <a href="index.php?action=valider_ma_commande"><?= lang::confirm_commande ?></a>
+                        <a class='confirm_commande' href="index.php?action=valider_ma_commande"><?= lang::confirm_commande ?></a>
                     </div>
                     
                 </form>
@@ -95,7 +95,13 @@
                         <?= lang::recap_comm ?>
                     </h3>
                     <p>
-                        69€
+                        <?php
+                        $prix=0;
+                        foreach($reponse as $gay){
+                            $prix+=$gay['panier_prix'];
+                        }
+                        echo $prix."€";
+                        ?>
                     </p>
                 </div>
                 
