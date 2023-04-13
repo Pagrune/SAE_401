@@ -25,7 +25,7 @@ class ctlBo
 
     public function logout_bo()
     {
-        setcookie('connect_bo', null, time() - 3600);
+        setcookie('connect_bo', '', time() - 3600);
         $this->vue = new vue_bo('bo_connexion');
         $this->vue->afficher_bo(array());
     }

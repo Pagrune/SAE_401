@@ -12,14 +12,14 @@ $jaune : #F3A93E;
 $bordeau : #98251E;
 
 
-body{
+body {
     margin: 0;
     background-image: url("../img/background/fond.jpg");
     font-family: $roboto;
     position: relative;
 }
 
-header{
+header {
     .header_logo {
         display: flex;
 
@@ -35,22 +35,26 @@ header{
             }
         }
     }
-    .block_menu_ordi{
+
+    .block_menu_ordi {
         background-color: #3E3535;
         display: flex;
         align-items: center;
         justify-content: space-around;
         padding: 1%;
-        a{
+
+        a {
             color: white;
             text-decoration: none;
             font-size: 2rem;
         }
-        .icon_home{
+
+        .icon_home {
             display: flex;
             align-items: center;
         }
-        button{
+
+        button {
             background-color: transparent;
             border: none;
             display: flex;
@@ -61,8 +65,8 @@ header{
 
 
 /** Vue connexion **/
-#connexion{
-    form{
+#connexion {
+    form {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -72,17 +76,48 @@ header{
         margin-right: auto;
         margin-top: 4%;
     }
-    label{
+
+    label {
         font-size: 2.5rem;
     }
+
     input[type=text],
     input[type=password] {
         padding: 1%;
         font-size: 2rem;
         width: 100%;
     }
-    input[type=submit]{
+
+    input[type=submit] {
         background-color: $jaune;
     }
 }
 
+// Vue nouvelles questions 
+#new_questions {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4%;
+    }
+
+    label {
+        font-size: 2.5rem;
+    }
+
+    input[type=text],
+    input[type=password] {
+        padding: 1%;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    input[type=submit] {
+        background-color: $jaune;
+    }
+}
