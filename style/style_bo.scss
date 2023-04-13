@@ -12,7 +12,7 @@ $jaune : #F3A93E;
 $bordeau : #98251E;
 
 
-body{
+body {
     margin: 0;
     background-image: url("../img/background/fond.jpg");
     font-family: $roboto;
@@ -44,22 +44,26 @@ header{
             }
         }
     }
-    .block_menu_ordi{
+
+    .block_menu_ordi {
         background-color: #3E3535;
         display: flex;
         align-items: center;
         justify-content: space-around;
         padding: 1%;
-        a{
+
+        a {
             color: white;
             text-decoration: none;
             font-size: 2rem;
         }
-        .icon_home{
+
+        .icon_home {
             display: flex;
             align-items: center;
         }
-        button{
+
+        button {
             background-color: transparent;
             border: none;
             display: flex;
@@ -70,8 +74,8 @@ header{
 
 
 /** Vue connexion **/
-#connexion{
-    form{
+#connexion {
+    form {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -81,16 +85,19 @@ header{
         margin-right: auto;
         margin-top: 4%;
     }
-    label{
+
+    label {
         font-size: 2.5rem;
     }
+
     input[type=text],
     input[type=password] {
         padding: 1%;
         font-size: 2rem;
         width: 100%;
     }
-    input[type=submit]{
+
+    input[type=submit] {
         background-color: $jaune;
         border: none;
         padding: 2%;
@@ -100,16 +107,118 @@ header{
     }
 }
 
-/** Vue gestion du menu **/
+// Vue nouvelles questions 
+#new_questions {
+    form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding: 2%;
+        width: 60%;
+    }
 
-#menu_admin{
+    label {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    input[type=text],
+    input[type=password] {
+        padding: 1%;
+        font-size: 2rem;
+        width: 100%;
+        border-radius: 5px;
+
+    }
+
+    input[type=submit] {
+        background-color: $jaune;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        width: 200px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .titre {
+        font-family: $ultra;
+        color: #3E3535;
+        font-size: 30pt;
+        margin: 20px 0px 20px 0px;
+    }
+}
+
+#faq {
+    form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding: 2%;
+        width: 94%;
+    }
+
+    label {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    textarea,
+    input[type=password] {
+        padding: 1%;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 14pt;
+        font-family: $roboto;
+        resize: none;
+    }
+
+    input[type=submit] {
+        background-color: $jaune;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: $roboto;
+        border-radius: 5px;
+    }
+
+    .btnSup {
+        background-color: $bordeau;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: $roboto;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .titre {
+        font-family: $ultra;
+        color: #3E3535;
+        font-size: 30pt;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .btn {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+#menu_admin {
     margin: 4%;
-    div{
+
+    div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         grid-gap: 3rem;
-        a{
+
+        a {
             background-color: #AA8773;
             color: white;
             text-decoration: none;
@@ -121,6 +230,64 @@ header{
         }
     }
 }
+
+
+#booking {
+    form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding: 2%;
+        width: 60%;
+    }
+
+    label {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    input[type=text],
+    input[type=password] {
+        padding: 1%;
+        font-size: 2rem;
+        width: 100%;
+        border-radius: 5px;
+
+    }
+
+    input[type=submit] {
+        background-color: $jaune;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: $roboto;
+        border-radius: 5px;
+    }
+
+    .btnSup {
+        background-color: $bordeau;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: $roboto;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .titre {
+        font-family: $ultra;
+        color: #3E3535;
+        font-size: 30pt;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .btn {
+        display: flex;
+        gap: 10px;
 
 /** Page gestion des clients **/
 
@@ -229,5 +396,6 @@ header{
         text-decoration: none;
         font-size: 1.5rem;
         cursor: pointer;
+
     }
 }

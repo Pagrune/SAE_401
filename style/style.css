@@ -5,6 +5,12 @@ body {
   background-image: url("../img/background/fond.jpg");
   font-family: "Roboto Slab", serif;
   position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  min-height: 80vh;
 }
 
 h1 {
