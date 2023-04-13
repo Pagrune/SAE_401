@@ -59,13 +59,14 @@ class panier extends database {
 
     public function transfo_panier_commande($ligne_panier){
         $req="INSERT into booking (resa_horaire, id_user, resa_idgame, resa_nbpersonne, resa_date, resa_prix, resa_date_transaction) values (?,?,?,?,?,?,?);";
-        var_dump((int)$ligne_panier["panier_idgame"]);
+        // var_dump((int)$ligne_panier["panier_idgame"]);
         $req_prix="SELECT game_prix_".$ligne_panier["panier_nbpersonne"]." game_prix  FROM game where game_id=?;";
         $resultat_prix=$this->execReqPrep($req_prix, array((int)$ligne_panier["panier_idgame"]));
         $resultat_prix=$resultat_prix[0]['game_prix'];
+        var_dump($resultat_prix);
         // var_dump(array(strval($ligne_panier["panier_heure"]),$ligne_panier["panier_id_client"],(int)$ligne_panier["panier_idgame"],$ligne_panier["panier_nbpersonne"],strval($ligne_panier["panier_date"]), strval($resultat_prix), strval(time())));
         $result=$this->execReqPrep($req, array($ligne_panier["panier_heure"],$ligne_panier["panier_id_client"],$ligne_panier["panier_idgame"],$ligne_panier["panier_nbpersonne"],$ligne_panier["panier_date"], strval($resultat_prix), strval(time())));
-        
+        var_dump($result);
         return $result;
     }
 }

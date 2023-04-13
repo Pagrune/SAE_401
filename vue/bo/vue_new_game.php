@@ -1,3 +1,7 @@
+<a href="bo.php">home</a>
+<a href='bo.php?action=logout'>déconnexion</a>
+
+
 <form action="bo.php?action=new_game" enctype="multipart/form-data" method='post'>
     <label for="">game_genre <select name="game_genre" id="">
         <option value="fantastique">fantastique</option>

@@ -19,10 +19,32 @@ class ctlBo{
 
     }
 
+    public function logout_bo(){
+        setcookie('connect_bo', null, time()-3600 );
+        $this->vue= new vue_bo('bo_connexion');
+        $this->vue->afficher_bo(array());
+    }
+
+    public function connexion(){
+        if(isset($_POST["mdp"]) && isset($_POST["mdp"])){
+            if( $_POST["mdp"]=='root' and $_POST["mdp"]=='root'){
+                setcookie('connect_bo', true);
+                echo '<a href="bo.php">accéder au Back-office</a>';                    
+            }
+            else{
+                $this->vue= new vue_bo('bo_connexion');
+            $this->vue->afficher_bo(array()); 
+            }
+        }else{
+            $this->vue= new vue_bo('bo_connexion');
+            $this->vue->afficher_bo(array());
+        }
+    }
+
     public function getResas(){
         $result=$this->resa->getResa();  
         $this->vue= new vue_bo('resa_bo');
-        $this->vue->afficher_bo(array("resas"=>$result));
+        $this->vue->afficher_bo(array("resas"=>$result));   
     }
 
     public function modif_resa($id_resa){

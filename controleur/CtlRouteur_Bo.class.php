@@ -38,48 +38,62 @@ class ctlRouteurBo
 
 
     public function Routage_Bo(){
+        if(!isset($_COOKIE["connect_bo"])){
+            $reponse=$this->ctlBo->connexion();
+            // echo 'je suis gay';
+        }
+        else{     
+            if (isset($_GET["action"])) {
+                switch ($_GET["action"]) {
+                    case 'resa':
+                        $this->ctlBo->getResas();
+                        break;
 
-        if (isset($_GET["action"])) {
-            switch ($_GET["action"]) {
-                case 'resa':
-                    $this->ctlBo->getResas();
+                    case 'modif_game':
+                        $this->ctlBo->modif_game($_GET['game']);
+                    break;
+                    case 'new_game':
+                        $this->ctlBo->new_game();
+                        break;
+
+                    case 'client':
+                        $this->ctlBo->getClients();
+                        break;
                     break;
 
-                case 'modif_game':
-                    $this->ctlBo->modif_game($_GET['game']);
-                break;
-                case 'new_game':
-                    $this->ctlBo->new_game();
+                    case 'del_user':
+                        $this->ctlBo->del_user($_GET["user"]);
                     break;
 
-                case 'client':
-                    $this->ctlBo->getClients();
-                    break;
-                break;
-
-                case 'del_user':
-                    $this->ctlBo->del_user($_GET["user"]);
-                break;
-
-                case 'game':
-                    $this->ctlBo->getGames();
-                break;
-
-                case 'modif_game':
-                    $this->ctlBo->modif_game($_GET['game']);
-                break;
-                case 'delete_game':
-                    $this->ctlBo->del_game($_GET['game']);
-                break;
-
-                default : 
-                    $this->ctlPage->Bo();
+                    case 'game':
+                        $this->ctlBo->getGames();
                     break;
 
+                    case 'modif_game':
+                        $this->ctlBo->modif_game($_GET['game']);
+                    break;
+                    case 'delete_game':
+                        $this->ctlBo->del_game($_GET['game']);
+                    break;
 
-            }}
-        else{
-            $this->ctlPage->Bo();
-        }}
-    }
+                    case 'logout':
+                        $this->ctlBo->logout_bo();
+                        break;
+
+                    default : 
+                        $this->ctlPage->Bo();
+                        break;
+
+
+                }
+            }
+            else{
+                $this->ctlPage->Bo();
+             }
+        }
+    }   
+
+
+
+}
 

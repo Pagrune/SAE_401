@@ -21,7 +21,7 @@ class ctlPanier {
         }  
         
         $vue=new Vue('panier');
-        var_dump($req);
+        // var_dump($req);
         $vue->afficher(array('reponse'=>$req));
     }
 
