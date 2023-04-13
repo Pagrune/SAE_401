@@ -1,10 +1,11 @@
+<h1>Reservation management</h1>
 <?php
 // var_dump($resas);
 
 
 foreach ($resas as $resa) {
 ?>
-    <h1>Reservation management</h1>
+    
     <div id="booking">
         <form action="bo.php?action=modif_resa&resa=<?= $resa['resa_id'] ?>" method="post">
             <div class="titre">Réservation n°<?= $resa['resa_id'] ?></div>

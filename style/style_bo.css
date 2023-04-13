@@ -185,7 +185,6 @@ header .block_menu_ordi button {
   height: 100%;
 }
 
-
 #booking form {
   display: flex;
   flex-direction: column;
@@ -233,7 +232,8 @@ header .block_menu_ordi button {
 #booking .btn {
   display: flex;
   gap: 10px;
-=======
+}
+
 /** Page gestion des clients **/
 #client_bo {
   display: grid;

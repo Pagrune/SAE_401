@@ -1,7 +1,8 @@
+<h1>F.A.Q. management</h1>
 <?php
 foreach ($faq as $faqs) {
 ?>
-    <h1>F.A.Q. management</h1>
+   
     <div id="faq">
         <form action="bo.php?action=modif_faq&faq=<?= $faqs['faq_id'] ?>" enctype="multipart/form-data" method='post' style="display: grid">
             <div class="titre">In french</div>
