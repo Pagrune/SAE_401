@@ -1,4 +1,5 @@
 <a href="bo.php">home</a>
+<a href='bo.php?action=logout'>déconnexion</a>
 
 <?php
 // var_dump($resas);

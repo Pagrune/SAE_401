@@ -72,12 +72,20 @@
         <img src="img/kredo/kredo.png" alt="">
         <div class="info_resa">
             <h3><?php
-            if($_COOKIE['lang']=="fr" or !isset($_COOKIE["lang"])){
+            if(!isset($_COOKIE["lang"])){
                 echo $reservation["game_nom"];
+
             }
             else{
+                if($_COOKIE['lang']=="fr")
+                echo $reservation["game_nom"];
+
+                if($_COOKIE['lang']=="eng")
                 echo $reservation["game_nomeng"];
             }
+        
+            
+            
             ?>
             
         </h3>

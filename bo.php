@@ -20,6 +20,7 @@ require "config/config.class.php";
 //         echo 'langue/fr.php';
 //     }
 // }
+    $objrouteur_bo = new ctlRouteurBo();
+    $objrouteur_bo->Routage_Bo();
 
-$objrouteur_bo = new ctlRouteurBo();
-$objrouteur_bo->Routage_Bo();
+

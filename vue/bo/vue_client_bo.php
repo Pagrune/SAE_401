@@ -4,7 +4,8 @@
 foreach($clients as $client){
     
 ?>
-
+<a href="bo.php">home</a>
+<a href='bo.php?action=logout'>déconnexion</a>
 <div class="presentation_client">
     <div class="grid" style='margin-top : 20px; display: grid; grid-template-column : 1fr 1fr;'>
         <div>

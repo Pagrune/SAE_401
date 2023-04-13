@@ -56,8 +56,8 @@ class resa extends database {
       public function EnregNewResa($id_client, $horraire, $id_game, $nb_personne, $date){
         $verif_dispo = $this-> GetResaGame($date, $horraire,$id_game);
         if(!count($verif_dispo)){
-            $req="INSERT INTO booking (resa_horaire, id_user,resa_idgame, resa_idpersonne, resa_date) VALUES (?,?,?,?);";
-            $resa = $this->execReqPrep($req, array($horraire, $id_clientn, $id_game, $nb_personne ));
+            $req="INSERT INTO booking (resa_horaire, id_user,resa_idgame, resa_idpersonne, resa_date) VALUES (?,?,?,?,?);";
+            $resa = $this->execReqPrep($req, array($horraire, $id_client, $id_game, $nb_personne, $dat ));
         }else{
             return FALSE;
         }
