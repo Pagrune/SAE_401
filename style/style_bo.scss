@@ -122,6 +122,8 @@ header{
     }
 }
 
+/** Page gestion des clients **/
+
 #client_bo{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -140,5 +142,92 @@ header{
         color: $bordeau;
         text-decoration: none;
         font-size: 1.5rem;
+    }
+}
+
+/** Page gestion des jeux **/
+#game_management{
+    h2{
+        font-family: $ultra;
+        font-size: 1.8rem;
+        font-weight: initial;
+        margin-left: 4%;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    label{
+        display: grid;
+        margin-bottom: 2%;
+    }
+    input{
+        padding: 1%;
+    }
+    select{
+        padding: 1%;
+    }
+    .coordinates{
+        display: flex;
+        justify-content: space-between;
+        label{
+            flex: 0 0 46%;
+        }
+    }
+    .confirm_change{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input[type=submit]{
+            background-color: $jaune;
+            border: none;
+            padding: 1%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+       
+        a{
+            background-color: $bordeau;
+            padding: 1%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            margin-left: 4%;
+            
+        }
+    }
+}
+
+#game_new{
+    form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    label{
+        display: grid;
+        margin-bottom: 2%;
+    }
+    input{
+        padding: 1%;
+    }
+    select{
+        padding: 1%;
+    }
+    input[type=submit]{
+        background-color: $jaune;
+        border: none;
+        padding: 1%;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 }
