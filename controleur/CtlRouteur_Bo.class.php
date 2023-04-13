@@ -1,9 +1,9 @@
 <?php
 
 require "ctlPage.class.php";
-require "ctlClient.class.php";
-require "ctlAventure.class.php";
-require 'ctlCadeaux.class.php';
+require "CtlClient.class.php";
+require "CtlAventure.class.php";
+require 'CtlCadeaux.class.php';
 require 'CtlConnexion.class.php';
 require 'CtlPanier.class.php';
 require 'CtlResa.class.php';

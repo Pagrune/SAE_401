@@ -1,5 +1,5 @@
 <?php
-require "controleur/ctlRouteur_Bo.class.php";
+require "controleur/CtlRouteur_Bo.class.php";
 require "config/config.class.php";
 
 // if(!isset($_COOKIE["lang"])){
@@ -22,5 +22,3 @@ require "config/config.class.php";
 // }
     $objrouteur_bo = new ctlRouteurBo();
     $objrouteur_bo->Routage_Bo();
-
-
