@@ -141,6 +141,17 @@ if(document.querySelector('.paiement_js')){
     }
 }
 
+/** Pop up carte cadeau */
+document.querySelector('#achat_carte').addEventListener("click", cartecadeau );
+
+function cartecadeau(){
+    document.querySelector('.carte_confirm').classList.add('visible');
+    if(document.querySelector(".visible")){
+        document.querySelector(".carte_confirm").style.display="flex";
+        document.querySelector('#filtre').style.display="block";
+    }
+}
+
 
 
 /** Fonction pour fermer le pop up quand on souhaite continuer nos achats et ne pas aller au panier */

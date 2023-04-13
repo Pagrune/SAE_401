@@ -138,7 +138,7 @@ class ctlRouteur
                     
                     //enregistrement d'une nouvelle carte cadeau
                     case "enregcadeaux":
-                        var_dump($_POST["value_cadeau"]);
+                        // var_dump($_POST["value_cadeau"]);
                         $this->ctlCadeau->EnregCadeau($_POST["value_cadeau"]);
                     break;
 

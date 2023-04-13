@@ -1460,6 +1460,21 @@ footer {
 #contact {
     padding-top: 12vh;
 
+    .add-to-cart{
+        position: fixed;
+        background-color: white;
+        border: solid 3px black;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: 2;
+        margin: 2%;
+        padding: 2%;
+        top: 35%;
+        left: 26%;
+        z-index: 1002;
+    }
     .block-1 {
         margin-bottom: 4vh;
 

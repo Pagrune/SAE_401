@@ -1,3 +1,4 @@
+<div id="filtre"></div>
 <div id="cadeau">
     <div class="block-1">
         <img src="img/page_cadeaux/carte_cadeau.jpg" alt="Carte cadeau">
@@ -26,6 +27,15 @@
                 </label>
                 <input id="achat_carte" name="achat_carte" type="submit" value="<?=lang::carte_value?>">
             </form>
+
+            <div class="add-to-cart carte_confirm">
+                <p class="resa_selec">Merci pour votre achat d'une carte cadeau d'un montant de <?=$_POST["value_cadeau"]?> €</p>
+                <div class="choix_panier">
+                    <button class="add-panier">
+                        <p>Fermer</p>
+                    </button>
+                </div>               
+            </div>
 
             <?php 
                 if(!empty($_POST["value_cadeau"])){
