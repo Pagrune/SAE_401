@@ -1,27 +1,28 @@
-<a href="bo.php">home</a>
-<a href='bo.php?action=logout'>déconnexion</a>
-
 <?php
 foreach ($faq as $faqs) {
 ?>
-    <!-- <h2>$faqs[]</h2> -->
-
-    <form action="bo.php?action=modif_faq&faq=<?= $faqs['faq_id'] ?>" enctype="multipart/form-data" method='post' style="display: grid">
-        <label for="">Question
-            <input type="text" value='<?= $faqs['faq_titre'] ?>' required name='questionfr'>
-        </label>
-        <label for="">Réponse
-            <input type="text" value='<?= $faqs['faq_rep'] ?>' required name='repfr'>
-        </label>
-        <label for="">Question
-            <input type="text" value='<?= $faqs['faq_titre_eng'] ?>' required name='questionen'>
-        </label>
-        <label for="">Answer
-            <input type="text" value='<?= $faqs['faq_rep_eng'] ?>' required name='repen'>
-        </label>
-        <input type="submit" value='valider' required>
-        <a href="bo.php?action=delete_faq&faq=<?= $faqs['faq_id'] ?>">delete question</a>
-    </form>
-
+    <h1>F.A.Q. management</h1>
+    <div id="faq">
+        <form action="bo.php?action=modif_faq&faq=<?= $faqs['faq_id'] ?>" enctype="multipart/form-data" method='post' style="display: grid">
+            <div class="titre">In french</div>
+            <label for="">Question
+                <textarea value='' required name='questionfr'><?= $faqs['faq_titre'] ?></textarea>
+            </label>
+            <label for="">Réponse
+                <textarea value='' required name='repfr'><?= $faqs['faq_rep'] ?></textarea>
+            </label>
+            <div class="titre">In english</div>
+            <label for="">Question
+                <textarea value='' required name='questionen'><?= $faqs['faq_titre_eng'] ?></textarea>
+            </label>
+            <label for="">Answer
+                <textarea value='' required name='repen'><?= $faqs['faq_rep_eng'] ?></textarea>
+            </label>
+            <div class="btn">
+                <a class="btnSup" href="bo.php?action=delete_faq&faq=<?= $faqs['faq_id'] ?>">Delete the question</a>
+                <input type="submit" value='Save the changes' required>
+            </div>
+        </form>
+    </div>
 <?php
 }

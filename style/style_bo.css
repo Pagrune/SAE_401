@@ -75,24 +75,85 @@ header .block_menu_ordi button {
 #new_questions form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 2%;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4%;
+  width: 60%;
 }
 #new_questions label {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 #new_questions input[type=text],
 #new_questions input[type=password] {
   padding: 1%;
   font-size: 2rem;
   width: 100%;
+  border-radius: 5px;
 }
 #new_questions input[type=submit] {
   background-color: #F3A93E;
+  border: none;
+  padding: 2%;
+  margin: 4%;
+  width: 200px;
+  font-size: 2rem;
+  color: white;
+}
+#new_questions .titre {
+  font-family: "Ultra", serif;
+  color: #3E3535;
+  font-size: 30pt;
+  margin: 20px 0px 20px 0px;
+}
+
+#faq form {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  width: 94%;
+}
+#faq label {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+#faq textarea,
+#faq input[type=password] {
+  padding: 1%;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14pt;
+  font-family: "Roboto Slab", serif;
+  resize: none;
+}
+#faq input[type=submit] {
+  background-color: #F3A93E;
+  border: none;
+  padding: 2%;
+  margin: 4%;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  border-radius: 5px;
+}
+#faq .btnSup {
+  background-color: #98251E;
+  border: none;
+  padding: 2%;
+  margin: 4%;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#faq .titre {
+  font-family: "Ultra", serif;
+  color: #3E3535;
+  font-size: 30pt;
+  margin: 20px 0px 20px 0px;
+}
+#faq .btn {
+  display: flex;
+  gap: 10px;
 }
 
 #menu_admin {
@@ -113,4 +174,53 @@ header .block_menu_ordi button {
   text-align: center;
   padding: 2%;
   height: 100%;
+}
+
+#booking form {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  width: 60%;
+}
+#booking label {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+#booking input[type=text],
+#booking input[type=password] {
+  padding: 1%;
+  font-size: 2rem;
+  width: 100%;
+  border-radius: 5px;
+}
+#booking input[type=submit] {
+  background-color: #F3A93E;
+  border: none;
+  padding: 2%;
+  margin: 4%;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  border-radius: 5px;
+}
+#booking .btnSup {
+  background-color: #98251E;
+  border: none;
+  padding: 2%;
+  margin: 4%;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#booking .titre {
+  font-family: "Ultra", serif;
+  color: #3E3535;
+  font-size: 30pt;
+  margin: 20px 0px 20px 0px;
+}
+#booking .btn {
+  display: flex;
+  gap: 10px;
 }/*# sourceMappingURL=style_bo.css.map */

@@ -103,16 +103,14 @@ header {
     form {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         padding: 2%;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4%;
+        width: 60%;
     }
 
     label {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 30px;
     }
 
     input[type=text],
@@ -120,20 +118,98 @@ header {
         padding: 1%;
         font-size: 2rem;
         width: 100%;
+        border-radius: 5px;
+
     }
 
     input[type=submit] {
         background-color: $jaune;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        width: 200px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .titre {
+        font-family: $ultra;
+        color: #3E3535;
+        font-size: 30pt;
+        margin: 20px 0px 20px 0px;
     }
 }
-#menu_admin{
+
+#faq {
+    form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding: 2%;
+        width: 94%;
+    }
+
+    label {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    textarea,
+    input[type=password] {
+        padding: 1%;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 14pt;
+        font-family: $roboto;
+        resize: none;
+    }
+
+    input[type=submit] {
+        background-color: $jaune;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: $roboto;
+        border-radius: 5px;
+    }
+
+    .btnSup {
+        background-color: $bordeau;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: $roboto;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .titre {
+        font-family: $ultra;
+        color: #3E3535;
+        font-size: 30pt;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .btn {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+#menu_admin {
     margin: 4%;
-    div{
+
+    div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         grid-gap: 3rem;
-        a{
+
+        a {
             background-color: #AA8773;
             color: white;
             text-decoration: none;
@@ -143,5 +219,64 @@ header {
             padding: 2%;
             height: 100%;
         }
+    }
+}
+
+#booking {
+    form {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding: 2%;
+        width: 60%;
+    }
+
+    label {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    input[type=text],
+    input[type=password] {
+        padding: 1%;
+        font-size: 2rem;
+        width: 100%;
+        border-radius: 5px;
+
+    }
+
+    input[type=submit] {
+        background-color: $jaune;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: $roboto;
+        border-radius: 5px;
+    }
+
+    .btnSup {
+        background-color: $bordeau;
+        border: none;
+        padding: 2%;
+        margin: 4%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: $roboto;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .titre {
+        font-family: $ultra;
+        color: #3E3535;
+        font-size: 30pt;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .btn {
+        display: flex;
+        gap: 10px;
     }
 }
