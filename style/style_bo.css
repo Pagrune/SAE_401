@@ -7,6 +7,15 @@ body {
   position: relative;
 }
 
+h1 {
+  margin-left: 4%;
+  margin-top: 4%;
+  margin-bottom: 1%;
+  font-family: "Ultra", serif;
+  font-size: 3.2rem;
+  font-weight: initial;
+}
+
 header .header_logo {
   display: flex;
 }
@@ -176,6 +185,7 @@ header .block_menu_ordi button {
   height: 100%;
 }
 
+
 #booking form {
   display: flex;
   flex-direction: column;
@@ -223,4 +233,106 @@ header .block_menu_ordi button {
 #booking .btn {
   display: flex;
   gap: 10px;
+=======
+/** Page gestion des clients **/
+#client_bo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#client_bo .grid {
+  margin-top: 20px;
+  display: grid;
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 4%;
+}
+#client_bo a {
+  color: #98251E;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/** Page gestion des jeux **/
+#game_management h2 {
+  font-family: "Ultra", serif;
+  font-size: 1.8rem;
+  font-weight: initial;
+  margin-left: 4%;
+}
+#game_management form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+#game_management label {
+  display: grid;
+  margin-bottom: 2%;
+}
+#game_management input {
+  padding: 1%;
+}
+#game_management select {
+  padding: 1%;
+}
+#game_management .coordinates {
+  display: flex;
+  justify-content: space-between;
+}
+#game_management .coordinates label {
+  flex: 0 0 46%;
+}
+#game_management .confirm_change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#game_management .confirm_change input[type=submit] {
+  background-color: #F3A93E;
+  border: none;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#game_management .confirm_change a {
+  background-color: #98251E;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 4%;
+}
+
+#game_new form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+#game_new label {
+  display: grid;
+  margin-bottom: 2%;
+}
+#game_new input {
+  padding: 1%;
+}
+#game_new select {
+  padding: 1%;
+}
+#game_new input[type=submit] {
+  background-color: #F3A93E;
+  border: none;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }/*# sourceMappingURL=style_bo.css.map */
