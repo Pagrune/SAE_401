@@ -1,14 +1,16 @@
 
 
+<div id="connexion">
+    <form action="bo.php" method='post'>
+        <label for="">Login</label>
+        <input type="text" name='id' placeholder="Your login">
 
-<form action="bo.php" method='post'>
-    <label for="">identifiant</label>
-    <input type="text" name='id'>
+        <label for="">Password</label>
+        <input type="password" name='mdp' placeholder="Your Password">
+        <input type="submit" value="valider">
+    </form>
+</div>
 
-    <label for="">mdp</label>
-    <input type="text" name='mdp'>
-    <input type="submit" value="valider">
-</form>
 
 id : root </br>
 mdp : root 

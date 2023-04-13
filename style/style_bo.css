@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+body {
+  margin: 0;
+  background-image: url("../img/background/fond.jpg");
+  font-family: "Roboto Slab", serif;
+  position: relative;
+}
+
+header .header_logo {
+  display: flex;
+}
+header .header_logo a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header .header_logo a img {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header .block_menu_ordi {
+  background-color: #3E3535;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1%;
+}
+header .block_menu_ordi a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+header .block_menu_ordi .icon_home {
+  display: flex;
+  align-items: center;
+}
+header .block_menu_ordi button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+/** Vue connexion **/
+#connexion form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+#connexion label {
+  font-size: 2.5rem;
+}
+#connexion input[type=text],
+#connexion input[type=password] {
+  padding: 1%;
+  font-size: 2rem;
+  width: 100%;
+}
+#connexion input[type=submit] {
+  background-color: #F3A93E;
+}/*# sourceMappingURL=style_bo.css.map */
