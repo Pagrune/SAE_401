@@ -2003,16 +2003,18 @@ footer .footer_copyright p {
   #aventure_solo .block-2 .descr .left-column {
     margin-right: 4%;
   }
+  #aventure_solo .bigCal {
+    width: 2%;
+  }
   #aventure_solo .toggle-calendar {
     position: relative;
     width: 100%;
   }
   #aventure_solo .toggle-calendar .cal {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    width: 30vw;
+    grid-template-columns: repeat(7, 687%);
     padding: 3%;
-    transform: translateX(-12%);
+    transform: translateX(-23%);
   }
   #aventure_solo .toggle-calendar .cal > div {
     padding: 10px;
