@@ -9,14 +9,14 @@
 - politique de confidentialités trad [*]
 - script bash pour installer le site sur un serveur
 - carte cadeau faire la vérif de la connection pour acheter [*]
-- faire un back-office
--categorie jeu page aventures+ page aventure
+- faire un back-office [*]
+-categorie jeu page aventures+ page aventure (je sais plus ce que c'est)
 
 
 
 
 Pauline : 
-- faire style du bouton 'valider mon panier' connecté et pas connecté 
+- faire style du bouton 'valider mon panier' connecté et pas connecté [*]
 - page account [*]
 - finir la page panier [*]
 - faire une zone de review sur la page aventure [*]
