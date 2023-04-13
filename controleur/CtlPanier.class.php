@@ -19,7 +19,6 @@ class ctlPanier {
         else{
             $req=$this->panier->getPanier('',session_id());
         }  
-        
         $vue=new Vue('panier');
         // var_dump($req);
         $vue->afficher(array('reponse'=>$req));

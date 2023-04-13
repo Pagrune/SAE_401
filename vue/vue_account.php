@@ -64,12 +64,12 @@
         </div>';
     }
     else{
-        
+        // var_dump($res    a);
         foreach($resa as $reservation){
             ?>
        
         <div class="mes_resa">
-        <img src="img/kredo/kredo.png" alt="">
+        <img src="img/jeux/img_jeux_<?=$reservation["game_id"]?>.png" alt="" style="width:30%;">
         <div class="info_resa">
             <h3><?php
             if(!isset($_COOKIE["lang"])){

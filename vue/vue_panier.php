@@ -94,7 +94,7 @@
                     <h3>
                         <?= lang::recap_comm ?>
                     </h3>
-                    <p>
+                    <p id='affichage_prix'>
                         <?php
                         $prix=0;
                         foreach($reponse as $gay){
@@ -103,6 +103,9 @@
                         echo $prix."€";
                         ?>
                     </p>
+                    <script>
+                        console.log()
+                        </script>
                 </div>
                 
             </div>

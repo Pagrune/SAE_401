@@ -114,6 +114,7 @@ function verifCadeau(){
                 document.querySelector("#verif_carte_message").innerText='Votre code n\'est pas valide';
             }else{
                 document.querySelector("#verif_carte_message").innerText='Votre code est valide, il va être appliqué au montant de votre commande.'
+                document.querySelector("#affichage_prix").innerText+=`-${json[0]['carte_value']} de carte cadeau`;
             }
         })
     
