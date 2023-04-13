@@ -41,7 +41,6 @@ class ctlRouteurBo
     {
         if (!isset($_COOKIE["connect_bo"])) {
             $reponse = $this->ctlBo->connexion();
-            // echo 'je suis gay';
         } else {
             if (isset($_GET["action"])) {
                 switch ($_GET["action"]) {
@@ -53,7 +52,7 @@ class ctlRouteurBo
                         $this->ctlBo->modif_game($_GET['game']);
                         break;
                     case 'new_game':
-                        $this->ctlBo->new_game();
+                        $this->ctlBo->new_game_form();
                         break;
 
                     case 'client':
