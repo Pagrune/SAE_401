@@ -5,6 +5,7 @@ require_once "modele/resa.class.php";
 require_once "modele/escGame.class.php";
 require_once "modele/faq.class.php";
 require_once "vue/vue_bo.class.php";
+require_once "ctlPage.class.php";
 
 
 class ctlBo
@@ -13,6 +14,7 @@ class ctlBo
     private $resa;
     private $client;
     private $game;
+    private $ctlCPage;
     private $faq;
 
     public function __construct()
@@ -36,6 +38,7 @@ class ctlBo
             if ($_POST["mdp"] == 'root' and $_POST["mdp"] == 'root') {
                 setcookie('connect_bo', true);
                 echo '<a href="bo.php">accéder au Back-office</a>';
+                // $this->ctlPage->Bo();
             } else {
                 $this->vue = new vue_bo('bo_connexion');
                 $this->vue->afficher_bo(array());

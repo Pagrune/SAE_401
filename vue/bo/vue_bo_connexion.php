@@ -7,7 +7,7 @@
 
         <label for="">Password</label>
         <input type="password" name='mdp' placeholder="Your Password">
-        <input type="submit" value="valider">
+        <input type="submit" value="Confirm">
     </form>
 </div>
 
